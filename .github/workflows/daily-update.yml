@@ -1,0 +1,37 @@
+name: Generate Data
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 5 AM Eastern (10 UTC)
+  workflow_dispatch:  # For manual runs
+
+# Give the workflow permission to push to the repository
+permissions:
+  contents: write
+
+jobs:
+  generate-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install datamule # You'll need to add any other dependencies here
+      
+      - name: Run generate-data script
+        run: python code/generate-data.py
+      
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generate data update"
+          git push

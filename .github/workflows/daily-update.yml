@@ -22,8 +22,14 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
-        run: pip install datamule # You'll need to add any other dependencies here
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install wheel setuptools
+          pip install Cython
+      
+      - name: Install package dependencies
+        run: pip install datamule
       
       - name: Run generate-data script
         run: python code/generate-data.py

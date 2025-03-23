@@ -5,7 +5,7 @@ import csv
 import os
 import gzip
 
-def construct_sec_phrases(text_queries, file_path, start_date=None):
+def construct_sec_phrases(text_queries, file_path, start_date=None,submission_type=None):
     """
     Search SEC filings for multiple text queries and write results to a single GZIP-compressed CSV file.
     Removes duplicate entries.
@@ -35,7 +35,7 @@ def construct_sec_phrases(text_queries, file_path, start_date=None):
     # Process each query and collect results
     for text_query in text_queries:
         print(f"Processing query: '{text_query}'")
-        results = query(f'"{text_query}"', filing_date=(start_date, end_date), requests_per_second=5.0)
+        results = query(f'"{text_query}"', filing_date=(start_date, end_date), requests_per_second=5.0,quiet=True,submission_type=submission_type)
         
         for result in results:
             filing_date = result['_source']['file_date']

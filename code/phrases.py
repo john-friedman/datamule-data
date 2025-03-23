@@ -3,20 +3,25 @@ from datetime import datetime
 import pytz
 import csv
 import os
+import gzip
 
 def construct_sec_phrases(text_queries, file_path, start_date=None):
     """
-    Search SEC filings for multiple text queries and write results to a single CSV file.
+    Search SEC filings for multiple text queries and write results to a single GZIP-compressed CSV file.
     Removes duplicate entries.
     
     Parameters:
     text_queries (list): List of text queries to search for (e.g. ["inclusion", "inclusive"])
-    file_path (str): Path to output CSV file
+    file_path (str): Path to output CSV file (will be appended with .gz)
     start_date (str, optional): Start date for search in YYYY-MM-DD format. Defaults to "2001-01-01".
     """
     if start_date is None:
         start_date = "2001-01-01"
     end_date = datetime.now(pytz.timezone("US/Eastern")).strftime("%Y-%m-%d")
+    
+    # Make sure file path ends with .gz
+    if not file_path.endswith('.gz'):
+        file_path = file_path + '.gz'
     
     # Create directory path if it doesn't exist
     directory = os.path.dirname(file_path)
@@ -49,10 +54,10 @@ def construct_sec_phrases(text_queries, file_path, start_date=None):
                     
         print(f"Completed query: '{text_query}'")
     
-    # Write the deduplicated results to CSV
-    with open(file_path, 'w', newline='') as csvfile:
+    # Write the deduplicated results to GZIP compressed CSV
+    with gzip.open(file_path, 'wt', newline='') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['query', 'filing_date', 'cik', 'accession_number'])
         writer.writerows(all_results)
     
-    print(f"Wrote {len(all_results)} unique results to {file_path}")
+    print(f"Wrote {len(all_results)} unique results to {file_path} (GZIP compressed)")

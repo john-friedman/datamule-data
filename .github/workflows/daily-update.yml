@@ -2,7 +2,7 @@ name: Generate Data
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # 5 AM Eastern (10 UTC)
+    - cron: '0 9 * * *'  # 4 AM Eastern (9 UTC)
   workflow_dispatch:  # For manual runs
 
 # Give the workflow permission to push to the repository

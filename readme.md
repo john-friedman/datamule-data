@@ -22,9 +22,10 @@ columns: name, cik, business_city, business_stateOrCountry, business_stateOrCoun
 
 columns: cik, name, start_date, end_date
 
-Current name's end date is left blank. If entity did not have a name change recorded during the period (approximately 1994-present) start date & end date are left blank.
+Current name's end date is left blank. If entity did not have a name change recorded during the period (approximately 1994-present) start date is set to entity's first submission.
 
 Pipeline: downloads the [submissions zip](https://www.sec.gov/search-filings/edgar-application-programming-interfaces), then decompresses the first 2kb in each file within the zip, parsing the metadata, and finally uploads to github.
+
 
 ## indicators data
 

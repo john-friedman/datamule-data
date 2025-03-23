@@ -24,6 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip setuptools wheel
           pip install Cython
           pip install datamule --no-build-isolation
       

@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 from datamule.sec.infrastructure.submissions_metadata import process_submissions_metadata
-from .phrases import construct_sec_phrases
+from phrases import construct_sec_phrases
 
 def load_updates(update_file):
     if os.path.exists(update_file):

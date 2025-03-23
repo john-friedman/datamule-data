@@ -63,7 +63,7 @@ def update_data(data, key, subkey=None):
         data[key] = today
     return data
 
-def run_updates(update_file="../update.json"):
+def run_updates(update_file="update.json"):
     updates = load_updates(update_file)
     
     # Process phrases with the new ESG/DEI keywords structure
@@ -110,7 +110,7 @@ def run_updates(update_file="../update.json"):
             construct_sec_phrases(
                 start_date=start,
                 text_queries=query,
-                file_path=f"../data/phrases/10kq/{key}.csv",
+                file_path=f"data/phrases/10kq/{key}.csv",  # Changed from ../data/phrases/10kq/
                 submission_type=["10-K", "10-Q"]
             )
             updates = update_data(updates, "phrases", key)
@@ -120,10 +120,11 @@ def run_updates(update_file="../update.json"):
 
     # Process metadata
     try:
-        process_submissions_metadata(output_dir="../data/filer_metadata/")
+        process_submissions_metadata(output_dir="data/filer_metadata/")  # Changed from ../data/filer_metadata/
         updates = update_data(updates, "submissions_metadata")
         save_updates(updates, update_file)
     except Exception as e:
         print(f"Metadata error: {e}")
 
-run_updates()
+if __name__ == "__main__":
+    run_updates()

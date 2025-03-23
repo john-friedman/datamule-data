@@ -17,7 +17,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
-          fetch-depth: 0  # Get full history
       
       - uses: actions/setup-python@v4
         with:
@@ -34,8 +33,8 @@ jobs:
       
       - name: Commit changes
         run: |
-          git config --global user.name github-actions
-          git config --global user.email github-actions@github.com
-          git add -f data/phrases/10kq/*.csv.gz
-          git commit -m "Generate data update" || echo "No changes to commit"
-          git push origin HEAD:${GITHUB_REF} || echo "No changes to push"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Generate data update"
+          git push

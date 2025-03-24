@@ -64,7 +64,7 @@ def construct_sec_phrases(text_queries, file_path, start_date=None, submission_t
             
             for cik in ciks:
                 # Create a row and its key for deduplication
-                row = [text_query, filing_date, cik, accession_number]
+                row = [filing_date, cik, accession_number]
                 # Use filing_date, cik, and accession_number for uniqueness check
                 row_key = (filing_date, cik, accession_number)
                 

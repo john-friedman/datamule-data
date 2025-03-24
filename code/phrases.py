@@ -80,7 +80,7 @@ def construct_sec_phrases(text_queries, file_path, start_date=None, submission_t
     # Write the combined results to GZIP compressed CSV
     with gzip.open(file_path, 'wt', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['query', 'filing_date', 'cik', 'accession_number'])
+        writer.writerow(['filing_date', 'cik', 'accession_number'])
         writer.writerows(all_results)
     
     print(f"Wrote {len(all_results)} total results ({len(new_results)} new) to {file_path} (GZIP compressed)")

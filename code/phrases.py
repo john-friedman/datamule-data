@@ -54,7 +54,7 @@ def construct_sec_phrases(text_queries, file_path, start_date=None, submission_t
     
     for text_query in text_queries:
         print(f"Processing query: '{text_query}'")
-        results = query(f'"{text_query}"', filing_date=(start_date, end_date), 
+        results = query(f'{text_query}', filing_date=(start_date, end_date), 
                         requests_per_second=5.0, quiet=True, submission_type=submission_type)
         
         for result in results:

@@ -69,39 +69,39 @@ def run_updates(update_file="update.json"):
     # Process phrases with the new ESG/DEI keywords structure
     phrases = {
         # Diversity terms
-        "workforce_diversity": ["workforce diversity", "diverse workforce", "diversity in workplace"],
-        "gender_diversity": ["gender diversity", "gender representation", "gender balance"],
-        "racial_diversity": ["racial diversity", "ethnic diversity", "racial representation"],
-        "supplier_diversity": ["supplier diversity", "diverse suppliers", "diversity in supply chain"],
-        "diversity_targets": ["diversity goals", "representation targets", "diversity metrics"],
+        "workforce_diversity": ['"workforce diversity"', '"diverse workforce"', '"diversity in workplace"'],
+        "gender_diversity": ['"gender diversity"', '"gender representation"', '"gender balance"'],
+        "racial_diversity": ['"racial diversity"', '"ethnic diversity"', '"racial representation"'],
+        "supplier_diversity": ['"supplier diversity"', '"diverse suppliers"', '"diversity in supply chain"'],
+        "diversity_targets": ['"diversity goals"', '"representation targets"', '"diversity metrics"'],
         
         # Equity terms
-        "pay_equity": ["pay equity", "wage equity", "compensation equity", "equal pay"],
-        "opportunity_equity": ["equal opportunity", "opportunity equity", "equitable advancement"],
+        "pay_equity": ['"pay equity"', '"wage equity"', '"compensation equity"', '"equal pay"'],
+        "opportunity_equity": ['"equal opportunity"', '"opportunity equity"', '"equitable advancement"'],
         
         # Inclusion terms
-        "workplace_inclusion": ["workplace inclusion", "inclusive workplace", "inclusive environment"],
-        "belonging": ["belonging", "employee belonging", "sense of belonging"],
-        "accessibility": ["accessibility initiatives", "accessible workplace", "disability inclusion"],
+        "workplace_inclusion": ['"workplace inclusion"', '"inclusive workplace"', '"inclusive environment"'],
+        "belonging": ['"belonging"', '"employee belonging"', '"sense of belonging"'],
+        "accessibility": ['"accessibility initiatives"', '"accessible workplace"', '"disability inclusion"'],
         
         # Environmental terms
-        "emissions": ["GHG emissions", "greenhouse gas emissions", "emissions reduction", "scope 1 emissions", "scope 2 emissions", "scope 3 emissions"],
-        "climate_action": ["climate transition", "climate adaptation", "climate resilience", "climate strategy"],
-        "energy": ["renewable energy", "clean energy", "energy efficiency"],
-        "resource_management": ["water stewardship", "waste reduction", "circular economy"],
-        "climate_targets": ["net zero target", "carbon neutral", "science-based targets", "sustainability metrics", "ESG metrics"],
+        "emissions": ['"GHG emissions"', '"greenhouse gas emissions"', '"emissions reduction"', '"scope 1 emissions"', '"scope 2 emissions"', '"scope 3 emissions"'],
+        "climate_action": ['"climate transition"', '"climate adaptation"', '"climate resilience"', '"climate strategy"'],
+        "energy": ['"renewable energy"', '"clean energy"', '"energy efficiency"'],
+        "resource_management": ['"water stewardship"', '"waste reduction"', '"circular economy"'],
+        "climate_targets": ['"net zero target"', '"carbon neutral"', '"science-based targets"', '"sustainability metrics"', '"ESG metrics"'],
         
         # Social terms
-        "community_impact": ["community investment", "social impact", "community engagement"],
-        "human_rights": ["human rights", "labor rights", "fair labor practices"],
-        "health_safety": ["occupational health", "workplace safety", "employee wellbeing"],
+        "community_impact": ['"community investment"', '"social impact"', '"community engagement"'],
+        "human_rights": ['"human rights"', '"labor rights"', '"fair labor practices"'],
+        "health_safety": ['"occupational health"', '"workplace safety"', '"employee wellbeing"'],
         
         # Governance terms
-        "board_diversity": ["board diversity", "diverse board", "board composition"],
-        "ethics": ["business ethics", "ethical practices", "code of conduct"],
-        "risk_management": ["ESG risk", "sustainability risk", "climate risk management"],
-        "disclosure": ["ESG disclosure", "sustainability reporting", "TCFD disclosure", "SASB disclosure"],
-        "governance_metrics": ["governance KPIs", "board performance metrics", "governance framework"]
+        "board_diversity": ['"board diversity"', '"diverse board"', '"board composition"'],
+        "ethics": ['"business ethics"', '"ethical practices"', '"code of conduct"'],
+        "risk_management": ['"ESG risk"', '"sustainability risk"', '"climate risk management"'],
+        "disclosure": ['"ESG disclosure"', '"sustainability reporting"', '"TCFD disclosure"', '"SASB disclosure"'],
+        "governance_metrics": ['"governance KPIs"', '"board performance metrics"', '"governance framework"']
     }
     
     for key, query in phrases.items():

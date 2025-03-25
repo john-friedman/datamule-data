@@ -110,6 +110,27 @@ def run_updates(update_file="update.json"):
         except Exception as e:
             print(f"{key} error: {e}")
 
+    phrases_10k = {
+        "supplier_concentration": ['"Supplier Concentration" OR "Single-source supplier risk"'],
+        "outsourcing": ['"we rely on third party" OR "we engage third party"'],
+        "consumer_confidence": ['"consumer confidence"'],
+    }
+
+    for key, query in phrases_10k.items():
+        try:
+            start = updates["phrases"][key]
+            construct_sec_phrases_2(
+                start_date=start,
+                text_queries=query,
+                file_path=f"data/phrases/10k/{key}.csv",  
+                submission_type=["10-K"],
+                document_type="10-K"
+            )
+            updates = update_data(updates, "phrases", key)
+            save_updates(updates, update_file)
+        except Exception as e:
+            print(f"{key} error: {e}")
+
 
     
     # Process phrases with the new ESG/DEI keywords structure

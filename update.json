@@ -27,6 +27,9 @@
     "layoff": "2025-03-25",
     "tariff_canada": "2025-03-25",
     "tariff_venezuela": "2025-03-25",
-    "tariff_mexico": "2025-03-25"
+    "tariff_mexico": "2025-03-25",
+    "supplier_concentration": "2025-03-25",
+    "outsourcing": "2025-03-25",
+    "consumer_confidence": "2025-03-25"
   }
 }

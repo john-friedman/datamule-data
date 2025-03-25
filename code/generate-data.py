@@ -67,7 +67,7 @@ def run_updates(update_file="update.json"):
     updates = load_updates(update_file)
     
     # Process phrases with the new ESG/DEI keywords structure
-    phrases = {
+    dei_esg_phrases = {
         # Diversity terms
         "workforce_diversity": ['"workforce diversity"', '"diverse workforce"', '"diversity in workplace"'],
         "gender_diversity": ['"gender diversity"', '"gender representation"', '"gender balance"'],
@@ -104,7 +104,7 @@ def run_updates(update_file="update.json"):
         "governance_metrics": ['"governance KPIs"', '"board performance metrics"', '"governance framework"']
     }
     
-    for key, query in phrases.items():
+    for key, query in dei_esg_phrases.items():
         try:
             start = updates["phrases"][key]
             construct_sec_phrases(
@@ -117,6 +117,25 @@ def run_updates(update_file="update.json"):
             save_updates(updates, update_file)
         except Exception as e:
             print(f"{key} error: {e}")
+
+    phrases_8k = {
+        "layoff": ['layoff* OR "workforce reduction" OR "headcount reduction" OR "reduction in force" OR "staff reduction'],
+    }
+
+    for key, query in phrases_8k.items():
+        try:
+            start = updates["phrases"][key]
+            construct_sec_phrases(
+                start_date=start,
+                text_queries=query,
+                file_path=f"data/phrases/8k/{key}.csv",  # Changed from ../data/phrases/8k/
+                submission_type=["8-K"]
+            )
+            updates = update_data(updates, "phrases", key)
+            save_updates(updates, update_file)
+        except Exception as e:
+            print(f"{key} error: {e}")
+
 
     # Process metadata
     try:

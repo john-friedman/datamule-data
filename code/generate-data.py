@@ -4,6 +4,7 @@ from datetime import datetime
 
 from datamule.sec.infrastructure.submissions_metadata import process_submissions_metadata
 from phrases import construct_sec_phrases
+from phrases_2 import construct_sec_phrases_2
 
 def load_updates(update_file):
     if os.path.exists(update_file):
@@ -71,6 +72,7 @@ def run_updates(update_file="update.json"):
 
     phrases_8k = {
         "layoff": ['layoff* OR "workforce reduction" OR "headcount reduction" OR "reduction in force" OR "staff reduction'],
+        
     }
 
     for key, query in phrases_8k.items():
@@ -86,6 +88,28 @@ def run_updates(update_file="update.json"):
             save_updates(updates, update_file)
         except Exception as e:
             print(f"{key} error: {e}")
+
+
+    phrases_8k_2 = {
+        "tariff_canada" : ['tariff canada'],
+        "tariff_venezuela" : ['tariff venezuela'],
+        "tariff_mexico" : ['tariff mexico'],
+    }
+
+    for key, query in phrases_8k_2.items():
+        try:
+            start = updates["phrases"][key]
+            construct_sec_phrases_2(
+                start_date=start,
+                text_queries=query,
+                file_path=f"data/phrases/8k/{key}.csv", 
+                submission_type=["8-K"]
+            )
+            updates = update_data(updates, "phrases", key)
+            save_updates(updates, update_file)
+        except Exception as e:
+            print(f"{key} error: {e}")
+
 
     
     # Process phrases with the new ESG/DEI keywords structure

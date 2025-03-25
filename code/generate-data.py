@@ -47,7 +47,10 @@ def load_updates(update_file):
                 "ethics": None,
                 "risk_management": None,
                 "disclosure": None,
-                "governance_metrics": None
+                "governance_metrics": None,
+
+                # 8-K phrases
+                "layoff": None
             }
         }
 
@@ -65,6 +68,25 @@ def update_data(data, key, subkey=None):
 
 def run_updates(update_file="update.json"):
     updates = load_updates(update_file)
+
+    phrases_8k = {
+        "layoff": ['layoff* OR "workforce reduction" OR "headcount reduction" OR "reduction in force" OR "staff reduction'],
+    }
+
+    for key, query in phrases_8k.items():
+        try:
+            start = updates["phrases"][key]
+            construct_sec_phrases(
+                start_date=start,
+                text_queries=query,
+                file_path=f"data/phrases/8k/{key}.csv",  # Changed from ../data/phrases/8k/
+                submission_type=["8-K"]
+            )
+            updates = update_data(updates, "phrases", key)
+            save_updates(updates, update_file)
+        except Exception as e:
+            print(f"{key} error: {e}")
+
     
     # Process phrases with the new ESG/DEI keywords structure
     dei_esg_phrases = {
@@ -118,23 +140,7 @@ def run_updates(update_file="update.json"):
         except Exception as e:
             print(f"{key} error: {e}")
 
-    phrases_8k = {
-        "layoff": ['layoff* OR "workforce reduction" OR "headcount reduction" OR "reduction in force" OR "staff reduction'],
-    }
 
-    for key, query in phrases_8k.items():
-        try:
-            start = updates["phrases"][key]
-            construct_sec_phrases(
-                start_date=start,
-                text_queries=query,
-                file_path=f"data/phrases/8k/{key}.csv",  # Changed from ../data/phrases/8k/
-                submission_type=["8-K"]
-            )
-            updates = update_data(updates, "phrases", key)
-            save_updates(updates, update_file)
-        except Exception as e:
-            print(f"{key} error: {e}")
 
 
     # Process metadata

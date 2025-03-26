@@ -1,0 +1,62 @@
+{
+    "tariff_canada": {
+        "last_run": "2025-03-25 18:00:09",
+        "success": true
+    },
+    "tariff_china": {
+        "last_run": "2025-03-25 18:00:17",
+        "success": true
+    },
+    "tariff_mexico": {
+        "last_run": "2025-03-25 18:00:25",
+        "success": true
+    },
+    "tariff_venezuela": {
+        "last_run": "2025-03-25 18:00:27",
+        "success": true
+    },
+    "layoff": {
+        "last_run": "2025-03-25 18:01:51",
+        "success": true
+    },
+    "outsourcing": {
+        "last_run": "2025-03-25 18:02:35",
+        "success": true
+    },
+    "consumer_confidence": {
+        "last_run": "2025-03-25 18:04:01",
+        "success": true
+    },
+    "supplier_concentration": {
+        "last_run": "2025-03-25 18:04:06",
+        "success": true
+    },
+    "diversity": {
+        "last_run": "2025-03-25 18:04:30",
+        "success": true
+    },
+    "equity": {
+        "last_run": "2025-03-25 18:05:33",
+        "success": true
+    },
+    "inclusion": {
+        "last_run": "2025-03-25 18:07:11",
+        "success": true
+    },
+    "environmental": {
+        "last_run": "2025-03-25 18:09:48",
+        "success": true
+    },
+    "social": {
+        "last_run": "2025-03-25 18:11:18",
+        "success": true
+    },
+    "governance": {
+        "last_run": "2025-03-25 18:12:01",
+        "success": true
+    },
+    "submissions_metadata": {
+        "last_run": "2025-03-25 18:22:54",
+        "success": true
+    }
+}

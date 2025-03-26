@@ -3,198 +3,106 @@ import os
 from datetime import datetime
 
 from datamule.sec.infrastructure.submissions_metadata import process_submissions_metadata
-from phrases import construct_sec_phrases
-from phrases_2 import construct_sec_phrases_2
+from mentions import construct_mentions
 
-def load_updates(update_file):
-    if os.path.exists(update_file):
-        with open(update_file, 'r') as f:
-            return json.load(f)
-    else:
-        # Initialize with a flattened version of our ESG/DEI keywords
-        return {
-            "submissions_metadata": None,
-            "phrases": {
-                # Diversity terms
-                "workforce_diversity": None,
-                "gender_diversity": None,
-                "racial_diversity": None,
-                "supplier_diversity": None,
-                "diversity_targets": None,
-                
-                # Equity terms
-                "pay_equity": None,
-                "opportunity_equity": None,
-                
-                # Inclusion terms
-                "workplace_inclusion": None,
-                "belonging": None,
-                "accessibility": None,
-                
-                # Environmental terms
-                "emissions": None,
-                "climate_action": None,
-                "energy": None,
-                "resource_management": None,
-                "climate_targets": None,
-                
-                # Social terms
-                "community_impact": None,
-                "human_rights": None,
-                "health_safety": None,
-                
-                # Governance terms
-                "board_diversity": None,
-                "ethics": None,
-                "risk_management": None,
-                "disclosure": None,
-                "governance_metrics": None,
+def save_progress(key, value):
+    with open('updates.json') as f:
+        data_dict = json.load(f)
+    
+    data_dict[key]['last_run'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    data_dict[key]['success'] = value
 
-                # 8-K phrases
-                "layoff": None
+    with open('updates.json', 'w') as f:
+        json.dump(data_dict, f,indent=4)
+
+def load_progress():
+    # Default empty progress dictionary
+    progress_dict = {}
+    
+    # Load data_dict to check for keys
+    with open('data.json') as f:
+        data_dict = json.load(f)
+    
+    # Check if updates.json exists
+    if os.path.exists('updates.json'):
+        with open('updates.json', 'r') as f:
+            progress_dict = json.load(f)
+
+    
+    # Check for missing keys - iterate through all mention types
+    for category in data_dict['mentions']:
+        mentions_dict = data_dict['mentions'][category]
+        
+        # Handle nested groups (like tariffs, dei, esg)
+        if "query" not in mentions_dict:
+            for key in mentions_dict:
+                if key not in progress_dict:
+                    progress_dict[key] = {
+                        'last_run': None,
+                        'success': False
+                    }
+        else:
+            # Handle direct mention types
+            if category not in progress_dict:
+                progress_dict[category] = {
+                    'last_run': None,
+                    'success': False
+                }
+
+        if "submissions_metadata" not in progress_dict:
+            progress_dict['submissions_metadata'] = {
+                'last_run': None,
+                'success': False
             }
-        }
-
-def save_updates(data, update_file):
-    with open(update_file, 'w') as f:
-        json.dump(data, f, indent=2)
-
-def update_data(data, key, subkey=None):
-    today = datetime.now().strftime("%Y-%m-%d")
-    if subkey:
-        data[key][subkey] = today
-    else:
-        data[key] = today
-    return data
-
-def run_updates(update_file="update.json"):
-    updates = load_updates(update_file)
-
-    phrases_8k = {
-        "layoff": ['layoff* OR "workforce reduction" OR "headcount reduction" OR "reduction in force" OR "staff reduction'],
-        
-    }
-
-    for key, query in phrases_8k.items():
-        try:
-            start = updates["phrases"][key]
-            construct_sec_phrases(
-                start_date=start,
-                text_queries=query,
-                file_path=f"data/phrases/8k/{key}.csv",  # Changed from ../data/phrases/8k/
-                submission_type=["8-K"]
-            )
-            updates = update_data(updates, "phrases", key)
-            save_updates(updates, update_file)
-        except Exception as e:
-            print(f"{key} error: {e}")
-
-
-    phrases_8k_2 = {
-        "tariff_canada" : ['tariff canada'],
-        "tariff_venezuela" : ['tariff venezuela'],
-        "tariff_mexico" : ['tariff mexico'],
-    }
-
-    for key, query in phrases_8k_2.items():
-        try:
-            start = updates["phrases"][key]
-            construct_sec_phrases_2(
-                start_date=start,
-                text_queries=query,
-                file_path=f"data/phrases/8k/{key}.csv", 
-                submission_type=["8-K"]
-            )
-            updates = update_data(updates, "phrases", key)
-            save_updates(updates, update_file)
-        except Exception as e:
-            print(f"{key} error: {e}")
-
-    phrases_10k = {
-        "supplier_concentration": ['"Supplier Concentration" OR "Single-source supplier risk"'],
-        "outsourcing": ['"we rely on third party" OR "we engage third party"'],
-        "consumer_confidence": ['"consumer confidence"'],
-    }
-
-    for key, query in phrases_10k.items():
-        try:
-            start = updates["phrases"][key]
-            construct_sec_phrases_2(
-                start_date=start,
-                text_queries=query,
-                file_path=f"data/phrases/10k/{key}.csv",  
-                submission_type=["10-K"],
-                document_type="10-K"
-            )
-            updates = update_data(updates, "phrases", key)
-            save_updates(updates, update_file)
-        except Exception as e:
-            print(f"{key} error: {e}")
-
+    
+    # Write back the updated progress dictionary
+    with open('updates.json', 'w') as f:
+        json.dump(progress_dict, f, indent=4)
+    
+    return progress_dict
 
     
-    # Process phrases with the new ESG/DEI keywords structure
-    dei_esg_phrases = {
-        # Diversity terms
-        "workforce_diversity": ['"workforce diversity"', '"diverse workforce"', '"diversity in workplace"'],
-        "gender_diversity": ['"gender diversity"', '"gender representation"', '"gender balance"'],
-        "racial_diversity": ['"racial diversity"', '"ethnic diversity"', '"racial representation"'],
-        "supplier_diversity": ['"supplier diversity"', '"diverse suppliers"', '"diversity in supply chain"'],
-        "diversity_targets": ['"diversity goals"', '"representation targets"', '"diversity metrics"'],
+
+
+def process_mentions(mentions_dict,start_date,key):
+    try:
+        if start_date is not None:
+            start_date = datetime.strptime(start_date, "%Y-%m-%d")
+
+        construct_mentions(text_queries=mentions_dict['query'],\
+            file_path=f"data/mentions/{'_'.join(mentions_dict['submission_type'])}/{'_'.join(mentions_dict['document_type'])}/{key}.csv",\
+            start_date=start_date, submission_type=mentions_dict['submission_type'], document_type=mentions_dict['document_type'])
         
-        # Equity terms
-        "pay_equity": ['"pay equity"', '"wage equity"', '"compensation equity"', '"equal pay"'],
-        "opportunity_equity": ['"equal opportunity"', '"opportunity equity"', '"equitable advancement"'],
-        
-        # Inclusion terms
-        "workplace_inclusion": ['"workplace inclusion"', '"inclusive workplace"', '"inclusive environment"'],
-        "belonging": ['"belonging"', '"employee belonging"', '"sense of belonging"'],
-        "accessibility": ['"accessibility initiatives"', '"accessible workplace"', '"disability inclusion"'],
-        
-        # Environmental terms
-        "emissions": ['"GHG emissions"', '"greenhouse gas emissions"', '"emissions reduction"', '"scope 1 emissions"', '"scope 2 emissions"', '"scope 3 emissions"'],
-        "climate_action": ['"climate transition"', '"climate adaptation"', '"climate resilience"', '"climate strategy"'],
-        "energy": ['"renewable energy"', '"clean energy"', '"energy efficiency"'],
-        "resource_management": ['"water stewardship"', '"waste reduction"', '"circular economy"'],
-        "climate_targets": ['"net zero target"', '"carbon neutral"', '"science-based targets"', '"sustainability metrics"', '"ESG metrics"'],
-        
-        # Social terms
-        "community_impact": ['"community investment"', '"social impact"', '"community engagement"'],
-        "human_rights": ['"human rights"', '"labor rights"', '"fair labor practices"'],
-        "health_safety": ['"occupational health"', '"workplace safety"', '"employee wellbeing"'],
-        
-        # Governance terms
-        "board_diversity": ['"board diversity"', '"diverse board"', '"board composition"'],
-        "ethics": ['"business ethics"', '"ethical practices"', '"code of conduct"'],
-        "risk_management": ['"ESG risk"', '"sustainability risk"', '"climate risk management"'],
-        "disclosure": ['"ESG disclosure"', '"sustainability reporting"', '"TCFD disclosure"', '"SASB disclosure"'],
-        "governance_metrics": ['"governance KPIs"', '"board performance metrics"', '"governance framework"']
-    }
+        save_progress(key, True)
+    except Exception as e:
+        print(e)
+
+def run_updates():
+
+    # Load data_dict
+    with open('data.json') as f:
+        data_dict = json.load(f)
+
+    # Load updates if exist
+    updates = load_progress()
+
+    # process mentions
+    for mention in data_dict['mentions']:
+        mentions_dict = data_dict['mentions'][mention]
+        # handle groups
+        if "query" not in mentions_dict:
+            for key in mentions_dict:
+                process_mentions(mentions_dict=mentions_dict[key],start_date=updates[key]['last_run'],key=key)
+
+        else:
+            process_mentions(mentions_dict=mentions_dict, start_date=updates[key]['last_run'],key=mention)
     
-    for key, query in dei_esg_phrases.items():
-        try:
-            start = updates["phrases"][key]
-            construct_sec_phrases(
-                start_date=start,
-                text_queries=query,
-                file_path=f"data/phrases/10kq/{key}.csv",  # Changed from ../data/phrases/10kq/
-                submission_type=["10-K", "10-Q"]
-            )
-            updates = update_data(updates, "phrases", key)
-            save_updates(updates, update_file)
-        except Exception as e:
-            print(f"{key} error: {e}")
-
-
-
-
     # Process metadata
     try:
-        process_submissions_metadata(output_dir="data/filer_metadata/")  # Changed from ../data/filer_metadata/
-        updates = update_data(updates, "submissions_metadata")
-        save_updates(updates, update_file)
+        process_submissions_metadata(output_dir="data/filer_metadata/")
+        save_progress('submissions_metadata', True)
     except Exception as e:
-        print(f"Metadata error: {e}")
+        save_progress('submissions_metadata', True)
 
 if __name__ == "__main__":
     run_updates()

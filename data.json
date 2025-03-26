@@ -83,7 +83,7 @@
             ],
             "interval" : "yearly"
         },
-        "supplier_concentration": {
+        "supplier concentration": {
             "query": [
                 "\"Supplier Concentration\" OR \"Single-source supplier risk\""
             ],

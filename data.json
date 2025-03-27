@@ -754,7 +754,7 @@
                 "20-F"
             ]
         },
-        "ipo-domestic_aapl_us": {
+        "ipo_aapl_us-domestic": {
             "query": [
                 "\"Apple Inc.\""
             ],
@@ -765,7 +765,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_aapl_us": {
+        "ipo_aapl_us-international": {
             "query": [
                 "\"Apple Inc.\""
             ],
@@ -776,7 +776,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_msft_us": {
+        "ipo_msft_us-domestic": {
             "query": [
                 "\"Microsoft Corporation\""
             ],
@@ -787,7 +787,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_msft_us": {
+        "ipo_msft_us-international": {
             "query": [
                 "\"Microsoft Corporation\""
             ],
@@ -798,7 +798,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_goog_us": {
+        "ipo_goog_us-domestic": {
             "query": [
                 "\"Google Inc.\" OR \"Alphabet Inc.\""
             ],
@@ -809,7 +809,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_goog_us": {
+        "ipo_goog_us-international": {
             "query": [
                 "\"Google Inc.\" OR \"Alphabet Inc.\""
             ],
@@ -820,7 +820,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_amzn_us": {
+        "ipo_amzn_us-domestic": {
             "query": [
                 "\"Amazon.com, Inc.\""
             ],
@@ -831,7 +831,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_amzn_us": {
+        "ipo_amzn_us-international": {
             "query": [
                 "\"Amazon.com, Inc.\""
             ],
@@ -842,7 +842,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_fb_us": {
+        "ipo_fb_us-domestic": {
             "query": [
                 "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\""
             ],
@@ -853,7 +853,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_fb_us": {
+        "ipo_fb_us-international": {
             "query": [
                 "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\""
             ],
@@ -864,7 +864,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_nflx_us": {
+        "ipo_nflx_us-domestic": {
             "query": [
                 "\"Netflix, Inc.\""
             ],
@@ -875,7 +875,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_nflx_us": {
+        "ipo_nflx_us-international": {
             "query": [
                 "\"Netflix, Inc.\""
             ],
@@ -886,7 +886,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_tsla_us": {
+        "ipo_tsla_us-domestic": {
             "query": [
                 "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\""
             ],
@@ -897,7 +897,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_tsla_us": {
+        "ipo_tsla_us-international": {
             "query": [
                 "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\""
             ],
@@ -908,7 +908,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_nvda_us": {
+        "ipo_nvda_us-domestic": {
             "query": [
                 "\"NVIDIA Corporation\""
             ],
@@ -919,7 +919,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_nvda_us": {
+        "ipo_nvda_us-international": {
             "query": [
                 "\"NVIDIA Corporation\""
             ],
@@ -930,7 +930,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_intc_us": {
+        "ipo_intc_us-domestic": {
             "query": [
                 "\"Intel Corporation\""
             ],
@@ -941,7 +941,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_intc_us": {
+        "ipo_intc_us-international": {
             "query": [
                 "\"Intel Corporation\""
             ],
@@ -952,7 +952,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_crm_us": {
+        "ipo_crm_us-domestic": {
             "query": [
                 "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\""
             ],
@@ -963,7 +963,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_crm_us": {
+        "ipo_crm_us-international": {
             "query": [
                 "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\""
             ],
@@ -974,7 +974,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_jpm_us": {
+        "ipo_jpm_us-domestic": {
             "query": [
                 "\"JPMorgan Chase & Co.\""
             ],
@@ -985,7 +985,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_jpm_us": {
+        "ipo_jpm_us-international": {
             "query": [
                 "\"JPMorgan Chase & Co.\""
             ],
@@ -996,7 +996,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_gs_us": {
+        "ipo_gs_us-domestic": {
             "query": [
                 "\"The Goldman Sachs Group, Inc.\""
             ],
@@ -1007,7 +1007,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_gs_us": {
+        "ipo_gs_us-international": {
             "query": [
                 "\"The Goldman Sachs Group, Inc.\""
             ],
@@ -1018,7 +1018,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_v_us": {
+        "ipo_v_us-domestic": {
             "query": [
                 "\"Visa Inc.\""
             ],
@@ -1029,7 +1029,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_v_us": {
+        "ipo_v_us-international": {
             "query": [
                 "\"Visa Inc.\""
             ],
@@ -1040,7 +1040,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_pypl_us": {
+        "ipo_pypl_us-domestic": {
             "query": [
                 "\"PayPal Holdings, Inc.\""
             ],
@@ -1051,7 +1051,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_pypl_us": {
+        "ipo_pypl_us-international": {
             "query": [
                 "\"PayPal Holdings, Inc.\""
             ],
@@ -1062,7 +1062,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_brk_us": {
+        "ipo_brk_us-domestic": {
             "query": [
                 "\"Berkshire Hathaway Inc.\""
             ],
@@ -1073,7 +1073,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_brk_us": {
+        "ipo_brk_us-international": {
             "query": [
                 "\"Berkshire Hathaway Inc.\""
             ],
@@ -1084,7 +1084,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_wmt_us": {
+        "ipo_wmt_us-domestic": {
             "query": [
                 "\"Walmart Inc.\""
             ],
@@ -1095,7 +1095,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_wmt_us": {
+        "ipo_wmt_us-international": {
             "query": [
                 "\"Walmart Inc.\""
             ],
@@ -1106,7 +1106,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_cost_us": {
+        "ipo_cost_us-domestic": {
             "query": [
                 "\"Costco Wholesale Corporation\""
             ],
@@ -1117,7 +1117,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_cost_us": {
+        "ipo_cost_us-international": {
             "query": [
                 "\"Costco Wholesale Corporation\""
             ],
@@ -1128,7 +1128,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_sbux_us": {
+        "ipo_sbux_us-domestic": {
             "query": [
                 "\"Starbucks Corporation\""
             ],
@@ -1139,7 +1139,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_sbux_us": {
+        "ipo_sbux_us-international": {
             "query": [
                 "\"Starbucks Corporation\""
             ],
@@ -1150,7 +1150,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_mcd_us": {
+        "ipo_mcd_us-domestic": {
             "query": [
                 "\"McDonald's Corporation\""
             ],
@@ -1161,7 +1161,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_mcd_us": {
+        "ipo_mcd_us-international": {
             "query": [
                 "\"McDonald's Corporation\""
             ],
@@ -1172,7 +1172,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_nke_us": {
+        "ipo_nke_us-domestic": {
             "query": [
                 "\"NIKE, Inc.\""
             ],
@@ -1183,7 +1183,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_nke_us": {
+        "ipo_nke_us-international": {
             "query": [
                 "\"NIKE, Inc.\""
             ],
@@ -1194,7 +1194,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_sap_germany": {
+        "ipo_sap_germany-domestic": {
             "query": [
                 "\"SAP SE\""
             ],
@@ -1205,7 +1205,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_sap_germany": {
+        "ipo_sap_germany-international": {
             "query": [
                 "\"SAP SE\""
             ],
@@ -1216,7 +1216,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_asml_netherlands": {
+        "ipo_asml_netherlands-domestic": {
             "query": [
                 "\"ASML Holding N.V.\""
             ],
@@ -1227,7 +1227,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_asml_netherlands": {
+        "ipo_asml_netherlands-international": {
             "query": [
                 "\"ASML Holding N.V.\""
             ],
@@ -1238,7 +1238,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_spot_sweden": {
+        "ipo_spot_sweden-domestic": {
             "query": [
                 "\"Spotify Technology S.A.\""
             ],
@@ -1249,7 +1249,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_spot_sweden": {
+        "ipo_spot_sweden-international": {
             "query": [
                 "\"Spotify Technology S.A.\""
             ],
@@ -1260,7 +1260,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_adyen_netherlands": {
+        "ipo_adyen_netherlands-domestic": {
             "query": [
                 "\"Adyen N.V.\""
             ],
@@ -1271,7 +1271,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_adyen_netherlands": {
+        "ipo_adyen_netherlands-international": {
             "query": [
                 "\"Adyen N.V.\""
             ],
@@ -1282,7 +1282,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_shell_netherlands": {
+        "ipo_shell_netherlands-domestic": {
             "query": [
                 "\"Shell plc\" OR \"Royal Dutch Shell plc\""
             ],
@@ -1293,7 +1293,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_shell_netherlands": {
+        "ipo_shell_netherlands-international": {
             "query": [
                 "\"Shell plc\" OR \"Royal Dutch Shell plc\""
             ],
@@ -1304,7 +1304,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_tte_france": {
+        "ipo_tte_france-domestic": {
             "query": [
                 "\"TotalEnergies SE\" OR \"Total S.A.\""
             ],
@@ -1315,7 +1315,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_tte_france": {
+        "ipo_tte_france-international": {
             "query": [
                 "\"TotalEnergies SE\" OR \"Total S.A.\""
             ],
@@ -1326,7 +1326,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_orsted_denmark": {
+        "ipo_orsted_denmark-domestic": {
             "query": [
                 "\"Ørsted A/S\""
             ],
@@ -1337,7 +1337,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_orsted_denmark": {
+        "ipo_orsted_denmark-international": {
             "query": [
                 "\"Ørsted A/S\""
             ],
@@ -1348,7 +1348,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_lvmh_france": {
+        "ipo_lvmh_france-domestic": {
             "query": [
                 "\"LVMH Moët Hennessy Louis Vuitton SE\""
             ],
@@ -1359,7 +1359,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_lvmh_france": {
+        "ipo_lvmh_france-international": {
             "query": [
                 "\"LVMH Moët Hennessy Louis Vuitton SE\""
             ],
@@ -1370,7 +1370,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_itx_spain": {
+        "ipo_itx_spain-domestic": {
             "query": [
                 "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\""
             ],
@@ -1381,7 +1381,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_itx_spain": {
+        "ipo_itx_spain-international": {
             "query": [
                 "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\""
             ],
@@ -1392,7 +1392,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_or_france": {
+        "ipo_or_france-domestic": {
             "query": [
                 "\"L'Oréal S.A.\""
             ],
@@ -1403,7 +1403,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_or_france": {
+        "ipo_or_france-international": {
             "query": [
                 "\"L'Oréal S.A.\""
             ],
@@ -1414,7 +1414,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_vowg_germany": {
+        "ipo_vowg_germany-domestic": {
             "query": [
                 "\"Volkswagen AG\""
             ],
@@ -1425,7 +1425,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_vowg_germany": {
+        "ipo_vowg_germany-international": {
             "query": [
                 "\"Volkswagen AG\""
             ],
@@ -1436,7 +1436,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_mbg_germany": {
+        "ipo_mbg_germany-domestic": {
             "query": [
                 "\"Mercedes-Benz Group AG\" OR \"Daimler AG\""
             ],
@@ -1447,7 +1447,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_mbg_germany": {
+        "ipo_mbg_germany-international": {
             "query": [
                 "\"Mercedes-Benz Group AG\" OR \"Daimler AG\""
             ],
@@ -1458,7 +1458,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_bmw_germany": {
+        "ipo_bmw_germany-domestic": {
             "query": [
                 "\"Bayerische Motoren Werke AG\""
             ],
@@ -1469,7 +1469,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_bmw_germany": {
+        "ipo_bmw_germany-international": {
             "query": [
                 "\"Bayerische Motoren Werke AG\""
             ],
@@ -1480,7 +1480,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_san_spain": {
+        "ipo_san_spain-domestic": {
             "query": [
                 "\"Banco Santander, S.A.\""
             ],
@@ -1491,7 +1491,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_san_spain": {
+        "ipo_san_spain-international": {
             "query": [
                 "\"Banco Santander, S.A.\""
             ],
@@ -1502,7 +1502,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_bnp_france": {
+        "ipo_bnp_france-domestic": {
             "query": [
                 "\"BNP Paribas S.A.\""
             ],
@@ -1513,7 +1513,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_bnp_france": {
+        "ipo_bnp_france-international": {
             "query": [
                 "\"BNP Paribas S.A.\""
             ],
@@ -1524,7 +1524,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_dbk_germany": {
+        "ipo_dbk_germany-domestic": {
             "query": [
                 "\"Deutsche Bank AG\""
             ],
@@ -1535,7 +1535,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_dbk_germany": {
+        "ipo_dbk_germany-international": {
             "query": [
                 "\"Deutsche Bank AG\""
             ],
@@ -1546,7 +1546,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_baba_china": {
+        "ipo_baba_china-domestic": {
             "query": [
                 "\"Alibaba Group Holding Limited\""
             ],
@@ -1557,7 +1557,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_baba_china": {
+        "ipo_baba_china-international": {
             "query": [
                 "\"Alibaba Group Holding Limited\""
             ],
@@ -1568,7 +1568,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_tcehy_china": {
+        "ipo_tcehy_china-domestic": {
             "query": [
                 "\"Tencent Holdings Limited\""
             ],
@@ -1579,7 +1579,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_tcehy_china": {
+        "ipo_tcehy_china-international": {
             "query": [
                 "\"Tencent Holdings Limited\""
             ],
@@ -1590,7 +1590,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_bidu_china": {
+        "ipo_bidu_china-domestic": {
             "query": [
                 "\"Baidu, Inc.\""
             ],
@@ -1601,7 +1601,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_bidu_china": {
+        "ipo_bidu_china-international": {
             "query": [
                 "\"Baidu, Inc.\""
             ],
@@ -1612,7 +1612,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_jd_china": {
+        "ipo_jd_china-domestic": {
             "query": [
                 "\"JD.com, Inc.\""
             ],
@@ -1623,7 +1623,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_jd_china": {
+        "ipo_jd_china-international": {
             "query": [
                 "\"JD.com, Inc.\""
             ],
@@ -1634,7 +1634,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_bytd_china": {
+        "ipo_bytd_china-domestic": {
             "query": [
                 "\"ByteDance Ltd.\""
             ],
@@ -1645,7 +1645,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_bytd_china": {
+        "ipo_bytd_china-international": {
             "query": [
                 "\"ByteDance Ltd.\""
             ],
@@ -1656,7 +1656,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_xiacf_china": {
+        "ipo_xiacf_china-domestic": {
             "query": [
                 "\"Xiaomi Corporation\""
             ],
@@ -1667,7 +1667,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_xiacf_china": {
+        "ipo_xiacf_china-international": {
             "query": [
                 "\"Xiaomi Corporation\""
             ],
@@ -1678,7 +1678,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_icbc_china": {
+        "ipo_icbc_china-domestic": {
             "query": [
                 "\"Industrial and Commercial Bank of China Limited\""
             ],
@@ -1689,7 +1689,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_icbc_china": {
+        "ipo_icbc_china-international": {
             "query": [
                 "\"Industrial and Commercial Bank of China Limited\""
             ],
@@ -1700,7 +1700,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_cichy_china": {
+        "ipo_cichy_china-domestic": {
             "query": [
                 "\"China Construction Bank Corporation\""
             ],
@@ -1711,7 +1711,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_cichy_china": {
+        "ipo_cichy_china-international": {
             "query": [
                 "\"China Construction Bank Corporation\""
             ],
@@ -1722,7 +1722,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_pngay_china": {
+        "ipo_pngay_china-domestic": {
             "query": [
                 "\"Ping An Insurance (Group) Company of China, Ltd.\""
             ],
@@ -1733,7 +1733,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_pngay_china": {
+        "ipo_pngay_china-international": {
             "query": [
                 "\"Ping An Insurance (Group) Company of China, Ltd.\""
             ],
@@ -1744,7 +1744,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_ptr_china": {
+        "ipo_ptr_china-domestic": {
             "query": [
                 "\"PetroChina Company Limited\""
             ],
@@ -1755,7 +1755,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_ptr_china": {
+        "ipo_ptr_china-international": {
             "query": [
                 "\"PetroChina Company Limited\""
             ],
@@ -1766,7 +1766,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_chl_china": {
+        "ipo_chl_china-domestic": {
             "query": [
                 "\"China Mobile Limited\""
             ],
@@ -1777,7 +1777,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_chl_china": {
+        "ipo_chl_china-international": {
             "query": [
                 "\"China Mobile Limited\""
             ],
@@ -1788,7 +1788,7 @@
                 "F-1"
             ]
         },
-        "ipo-domestic_byddy_china": {
+        "ipo_byddy_china-domestic": {
             "query": [
                 "\"BYD Company Limited\""
             ],
@@ -1799,7 +1799,7 @@
                 "S-1"
             ]
         },
-        "ipo-international_byddy_china": {
+        "ipo_byddy_china-international": {
             "query": [
                 "\"BYD Company Limited\""
             ],

@@ -1,6 +1,6 @@
 {
     "mentions": {
-        "tariffs_canada": {
+        "tariffs_canada-domestic": {
             "query": [
                 "tariff canada"
             ],
@@ -11,7 +11,7 @@
                 "8-K"
             ]
         },
-        "tariffs_china": {
+        "tariffs_china-domestic": {
             "query": [
                 "tariff china"
             ],
@@ -22,7 +22,7 @@
                 "8-K"
             ]
         },
-        "tariffs_mexico": {
+        "tariffs_mexico-domestic": {
             "query": [
                 "tariff mexico"
             ],
@@ -33,7 +33,7 @@
                 "8-K"
             ]
         },
-        "tariffs_venezuela": {
+        "tariffs_venezuela-domestic": {
             "query": [
                 "tariff venezuela"
             ],
@@ -44,7 +44,7 @@
                 "8-K"
             ]
         },
-        "layoffs": {
+        "layoffs_domestic": {
             "query": [
                 "layoff* OR \"workforce reduction\" OR \"headcount reduction\" OR \"reduction in force\" OR \"staff reduction\""
             ],
@@ -55,9 +55,9 @@
                 "8-K"
             ]
         },
-        "outsourcing": {
+        "outsourcing_domestic": {
             "query": [
-                "\"we rely on third party\" OR \"we engage third party\""
+                "\"we rely on third-party\" OR \"we engage third-party\""
             ],
             "submission_type": [
                 "10-K"
@@ -66,7 +66,7 @@
                 "10-K"
             ]
         },
-        "consumer-confidence": {
+        "consumer-confidence_domestic": {
             "query": [
                 "\"consumer confidence\""
             ],
@@ -77,7 +77,7 @@
                 "10-K"
             ]
         },
-        "supplier-concentration": {
+        "supplier-concentration_domestic": {
             "query": [
                 "\"Supplier Concentration\" OR \"Single-source supplier risk\""
             ],
@@ -88,7 +88,7 @@
                 "10-K"
             ]
         },
-        "dei_diversity": {
+        "dei_diversity-domestic": {
             "query": [
                 "\"workforce diversity\" OR \"diverse workforce\" OR \"diversity in workplace\"",
                 "\"gender diversity\" OR \"gender representation\" OR \"gender balance\"",
@@ -102,7 +102,7 @@
                 "10-K"
             ]
         },
-        "dei_equity": {
+        "dei_equity-domestic": {
             "query": [
                 "\"pay equity\" OR \"wage equity\" OR \"compensation equity\" OR \"equal pay\"",
                 "\"equal opportunity\" OR \"opportunity equity\" OR \"equitable advancement\""
@@ -114,7 +114,7 @@
                 "10-K"
             ]
         },
-        "dei_inclusion": {
+        "dei_inclusion-domestic": {
             "query": [
                 "\"workplace inclusion\" OR \"inclusive workplace\" OR \"inclusive environment\"",
                 "\"employee belonging\" OR \"sense of belonging\"",
@@ -127,7 +127,7 @@
                 "10-K"
             ]
         },
-        "esg_environmental": {
+        "esg_environmental-domestic": {
             "query": [
                 "\"GHG emissions\" OR \"greenhouse gas emissions\" OR \"emissions reduction\" OR \"scope 1 emissions\" OR \"scope 2 emissions\" OR \"scope 3 emissions\"",
                 "\"climate transition\" OR \"climate adaptation\" OR \"climate resilience\" OR \"climate strategy\"",
@@ -142,7 +142,7 @@
                 "10-K"
             ]
         },
-        "esg_social": {
+        "esg_social-domestic": {
             "query": [
                 "\"community investment\" OR \"social impact\" OR \"community engagement\"",
                 "\"human rights\" OR \"labor rights\" OR \"fair labor practices\"",
@@ -155,7 +155,7 @@
                 "10-K"
             ]
         },
-        "esg_governance": {
+        "esg_governance-domestic": {
             "query": [
                 "\"board diversity\" OR \"diverse board\" OR \"board composition\"",
                 "\"business ethics\" OR \"ethical practices\" OR \"code of conduct\"",
@@ -170,7 +170,7 @@
                 "10-K"
             ]
         },
-        "war_russo-ukrainian": {
+        "war_russo-ukrainian-domestic": {
             "query": [
                 "\"Russia-Ukraine conflict\" OR \"Russian invasion of Ukraine\" OR \"Russo-Ukrainian War\" OR \"Ukraine war\" OR \"Ukrainian conflict\""
             ],
@@ -181,7 +181,7 @@
                 "8-K"
             ]
         },
-        "war_israel-hamas": {
+        "war_israel-hamas-domestic": {
             "query": [
                 "\"Israel-Hamas war\" OR \"Gaza conflict\" OR \"Israel-Gaza conflict\" OR \"October 7 attack\""
             ],
@@ -192,7 +192,7 @@
                 "8-K"
             ]
         },
-        "war_syrian-civil": {
+        "war_syrian-civil-domestic": {
             "query": [
                 "\"Syrian Civil War\" OR \"Syria conflict\" OR \"Syrian crisis\""
             ],
@@ -236,9 +236,9 @@
                 "6-K"
             ]
         },
-        "terrorism_al-qaeda": {
+        "terrorism_al-qaeda-domestic": {
             "query": [
-                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al Qaida\""
+                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al-Qaida\""
             ],
             "submission_type": [
                 "8-K"
@@ -249,7 +249,7 @@
         },
         "terrorism_al-qaeda-international": {
             "query": [
-                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al Qaida\""
+                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al-Qaida\""
             ],
             "submission_type": [
                 "6-K"
@@ -258,7 +258,7 @@
                 "6-K"
             ]
         },
-        "terrorism_houthis": {
+        "terrorism_houthis-domestic": {
             "query": [
                 "\"Houthi\" OR \"Houthis\" OR \"Ansar Allah\" OR \"Yemen conflict\""
             ],
@@ -280,7 +280,7 @@
                 "6-K"
             ]
         },
-        "terrorism_hezbollah": {
+        "terrorism_hezbollah-domestic": {
             "query": [
                 "\"Hezbollah\" OR \"Hizbullah\" OR \"Hizballah\" OR \"Lebanese Hezbollah\""
             ],
@@ -302,7 +302,7 @@
                 "6-K"
             ]
         },
-        "terrorism_hamas": {
+        "terrorism_hamas-domestic": {
             "query": [
                 "hamas"
             ],
@@ -324,7 +324,7 @@
                 "6-K"
             ]
         },
-        "terrorism_general-terrorism": {
+        "terrorism_general-terrorism-domestic": {
             "query": [
                 "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
             ],
@@ -346,7 +346,7 @@
                 "6-K"
             ]
         },
-        "space_launch": {
+        "space_launch-domestic": {
             "query": [
                 "\"launch vehicle\" OR \"launch services\" OR \"orbital launch\" OR \"satellite launch\" OR \"rocket launch\" OR \"spacecraft launch\" OR \"launch facility\" OR \"launch pad\"",
                 "\"reusable rocket\" OR \"vertical landing\" OR \"propulsion system\" OR \"liquid propellant\" OR \"solid rocket booster\""
@@ -358,7 +358,7 @@
                 "10-K"
             ]
         },
-        "space_satellite": {
+        "space_satellite-domestic": {
             "query": [
                 "\"satellite constellation\" OR \"satellite network\" OR \"earth observation satellite\" OR \"communication satellite\" OR \"satellite imagery\" OR \"satellite manufacturing\"",
                 "\"low earth orbit\" OR \"LEO satellite\" OR \"geostationary orbit\" OR \"GEO satellite\" OR \"medium earth orbit\" OR \"satellite deployment\""
@@ -370,7 +370,7 @@
                 "10-K"
             ]
         },
-        "space_exploration": {
+        "space_exploration-domestic": {
             "query": [
                 "\"lunar mission\" OR \"lunar lander\" OR \"moon landing\" OR \"artemis program\" OR \"mars mission\" OR \"deep space\" OR \"planetary exploration\"",
                 "\"space probe\" OR \"rover mission\" OR \"asteroid mining\" OR \"planetary science\" OR \"space telescope\" OR \"space research\""
@@ -382,7 +382,7 @@
                 "10-K"
             ]
         },
-        "space_commercial": {
+        "space_commercial-domestic": {
             "query": [
                 "\"space tourism\" OR \"commercial spaceflight\" OR \"space hotel\" OR \"orbital tourism\" OR \"suborbital flight\"",
                 "\"in-orbit servicing\" OR \"space debris removal\" OR \"in-space manufacturing\" OR \"space logistics\" OR \"space infrastructure\""
@@ -394,7 +394,7 @@
                 "10-K"
             ]
         },
-        "space_partnerships": {
+        "space_partnerships-domestic": {
             "query": [
                 "\"NASA contract\" OR \"NASA partnership\" OR \"NASA supplier\" OR \"NASA program\" OR \"NASA funding\"",
                 "\"SpaceX partnership\" OR \"Blue Origin partnership\" OR \"space agency collaboration\" OR \"ESA partnership\" OR \"JAXA partnership\" OR \"Roscosmos partnership\""
@@ -406,7 +406,7 @@
                 "10-K"
             ]
         },
-        "space_investment": {
+        "space_investment-domestic": {
             "query": [
                 "\"space investment\" OR \"space venture\" OR \"space startup\" OR \"space industry funding\" OR \"space technology acquisition\"",
                 "\"space market growth\" OR \"commercial space opportunity\" OR \"space industry revenue\" OR \"space sector forecast\""
@@ -418,7 +418,7 @@
                 "10-K"
             ]
         },
-        "space_technology": {
+        "space_technology-domestic": {
             "query": [
                 "\"space-based communication\" OR \"optical inter-satellite link\" OR \"space-based internet\" OR \"satellite broadband\" OR \"space-based remote sensing\"",
                 "\"space radiation hardening\" OR \"space-grade components\" OR \"space-qualified hardware\" OR \"spacecraft autonomy\" OR \"space robotics\""
@@ -430,7 +430,7 @@
                 "10-K"
             ]
         },
-        "space_risks": {
+        "space_risks-domestic": {
             "query": [
                 "\"space regulatory risk\" OR \"space debris risk\" OR \"launch failure risk\" OR \"space insurance\" OR \"space liability\"",
                 "\"orbital congestion\" OR \"space weather impact\" OR \"space sustainability\" OR \"space policy uncertainty\" OR \"space competitive landscape\""
@@ -442,7 +442,7 @@
                 "10-K"
             ]
         },
-        "nuclear_power": {
+        "nuclear_power-domestic": {
             "query": [
                 "\"nuclear power plant\" OR \"nuclear energy\" OR \"nuclear generation\" OR \"nuclear reactor\" OR \"nuclear facility\" OR \"nuclear capacity\"",
                 "\"small modular reactor\" OR \"SMR nuclear\" OR \"advanced nuclear\" OR \"next generation nuclear\" OR \"nuclear fleet\""
@@ -454,7 +454,7 @@
                 "10-K"
             ]
         },
-        "nuclear_fuel": {
+        "nuclear_fuel-domestic": {
             "query": [
                 "\"uranium mining\" OR \"uranium production\" OR \"uranium enrichment\" OR \"nuclear fuel\" OR \"nuclear fuel cycle\"",
                 "\"spent nuclear fuel\" OR \"nuclear waste management\" OR \"nuclear waste storage\" OR \"nuclear waste disposal\" OR \"nuclear fuel rod\""
@@ -466,7 +466,7 @@
                 "10-K"
             ]
         },
-        "nuclear_technology": {
+        "nuclear_technology-domestic": {
             "query": [
                 "\"nuclear medicine\" OR \"medical isotope\" OR \"radiopharmaceutical\" OR \"nuclear imaging\" OR \"radiation therapy\"",
                 "\"nuclear propulsion\" OR \"nuclear thermal\" OR \"radioisotope power\" OR \"radioisotope thermoelectric generator\" OR \"RTG power\""
@@ -478,7 +478,7 @@
                 "10-K"
             ]
         },
-        "nuclear_services": {
+        "nuclear_services-domestic": {
             "query": [
                 "\"nuclear maintenance\" OR \"nuclear decommissioning\" OR \"nuclear engineering\" OR \"nuclear consulting\" OR \"nuclear services\"",
                 "\"nuclear plant operation\" OR \"nuclear safety service\" OR \"nuclear compliance\" OR \"nuclear regulatory support\" OR \"nuclear outage\""
@@ -490,7 +490,7 @@
                 "10-K"
             ]
         },
-        "nuclear_regulation": {
+        "nuclear_regulation-domestic": {
             "query": [
                 "\"nuclear regulatory commission\" OR \"NRC regulation\" OR \"nuclear licensing\" OR \"nuclear permit\" OR \"nuclear compliance\"",
                 "\"IAEA requirements\" OR \"nuclear regulatory framework\" OR \"nuclear safety standard\" OR \"nuclear regulatory approval\""
@@ -502,7 +502,7 @@
                 "10-K"
             ]
         },
-        "nuclear_fusion": {
+        "nuclear_fusion-domestic": {
             "query": [
                 "\"nuclear fusion\" OR \"fusion energy\" OR \"fusion power\" OR \"fusion reactor\" OR \"tokamak\" OR \"stellarator\"",
                 "\"inertial confinement fusion\" OR \"magnetic confinement fusion\" OR \"fusion technology\" OR \"commercial fusion\""
@@ -514,7 +514,7 @@
                 "10-K"
             ]
         },
-        "nuclear_risk": {
+        "nuclear_risk-domestic": {
             "query": [
                 "\"nuclear liability\" OR \"nuclear accident\" OR \"nuclear incident\" OR \"nuclear insurance\" OR \"nuclear safety risk\"",
                 "\"nuclear security\" OR \"nuclear material protection\" OR \"nuclear proliferation\" OR \"radiological release\""
@@ -526,7 +526,7 @@
                 "10-K"
             ]
         },
-        "nuclear_research": {
+        "nuclear_research-domestic": {
             "query": [
                 "\"nuclear research\" OR \"nuclear laboratory\" OR \"nuclear science\" OR \"nuclear physics\" OR \"nuclear engineering research\"",
                 "\"nuclear technology development\" OR \"nuclear innovation\" OR \"nuclear R&D\" OR \"nuclear research facility\""
@@ -538,7 +538,7 @@
                 "10-K"
             ]
         },
-        "sovereign-crisis": {
+        "sovereign-crisis_domestic": {
             "query": [
                 "\"debt moratorium declared\" OR \"suspended convertibility of currency\" OR \"failure to make payment\" OR \"formal default declaration\" OR \"ceased honoring obligations\""
             ],
@@ -549,7 +549,7 @@
                 "18-K"
             ]
         },
-        "political-stability": {
+        "political-stability_domestic": {
             "query": [
                 "\"martial law imposed\" OR \"state of emergency declared\" OR \"government dissolution\" OR \"constitutional crisis\" OR \"forced regime change\""
             ],
@@ -604,7 +604,7 @@
                 "6-K"
             ]
         },
-        "layoffs-international": {
+        "layoffs_international": {
             "query": [
                 "layoff* OR \"workforce reduction\" OR \"headcount reduction\" OR \"reduction in force\" OR \"staff reduction\""
             ],
@@ -615,9 +615,9 @@
                 "6-K"
             ]
         },
-        "outsourcing-international": {
+        "outsourcing_international": {
             "query": [
-                "\"we rely on third party\" OR \"we engage third party\""
+                "\"we rely on third-party\" OR \"we engage third-party\""
             ],
             "submission_type": [
                 "20-F"
@@ -626,7 +626,7 @@
                 "20-F"
             ]
         },
-        "consumer-confidence-international": {
+        "consumer-confidence_international": {
             "query": [
                 "\"consumer confidence\""
             ],
@@ -637,7 +637,7 @@
                 "20-F"
             ]
         },
-        "supplier-concentration-international": {
+        "supplier-concentration_international": {
             "query": [
                 "\"Supplier Concentration\" OR \"Single-source supplier risk\""
             ],

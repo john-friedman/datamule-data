@@ -203,6 +203,39 @@
                 "8-K"
             ]
         },
+        "war_russo-ukrainian-international": {
+            "query": [
+                "\"Russia-Ukraine conflict\" OR \"Russian invasion of Ukraine\" OR \"Russo-Ukrainian War\" OR \"Ukraine war\" OR \"Ukrainian conflict\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "war_israel-hamas-international": {
+            "query": [
+                "\"Israel-Hamas war\" OR \"Gaza conflict\" OR \"Israel-Gaza conflict\" OR \"October 7 attack\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "war_syrian-civil-international": {
+            "query": [
+                "\"Syrian Civil War\" OR \"Syria conflict\" OR \"Syrian crisis\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
         "terrorism_al-qaeda": {
             "query": [
                 "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al Qaida\""
@@ -525,6 +558,200 @@
             ],
             "document_type": [
                 "18-K"
+            ]
+        },
+        "tariffs_canada-international": {
+            "query": [
+                "tariff canada"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "tariffs_china-international": {
+            "query": [
+                "tariff china"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "tariffs_mexico-international": {
+            "query": [
+                "tariff mexico"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "tariffs_venezuela-international": {
+            "query": [
+                "tariff venezuela"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "layoffs-international": {
+            "query": [
+                "layoff* OR \"workforce reduction\" OR \"headcount reduction\" OR \"reduction in force\" OR \"staff reduction\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "outsourcing-international": {
+            "query": [
+                "\"we rely on third party\" OR \"we engage third party\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "consumer-confidence-international": {
+            "query": [
+                "\"consumer confidence\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "supplier-concentration-international": {
+            "query": [
+                "\"Supplier Concentration\" OR \"Single-source supplier risk\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "dei_diversity-international": {
+            "query": [
+                "\"workforce diversity\" OR \"diverse workforce\" OR \"diversity in workplace\"",
+                "\"gender diversity\" OR \"gender representation\" OR \"gender balance\"",
+                "\"racial diversity\" OR \"ethnic diversity\" OR \"racial representation\"",
+                "\"diversity goals\" OR \"representation targets\" OR \"diversity metrics\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "dei_equity-international": {
+            "query": [
+                "\"pay equity\" OR \"wage equity\" OR \"compensation equity\" OR \"equal pay\"",
+                "\"equal opportunity\" OR \"opportunity equity\" OR \"equitable advancement\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "dei_inclusion-international": {
+            "query": [
+                "\"workplace inclusion\" OR \"inclusive workplace\" OR \"inclusive environment\"",
+                "\"employee belonging\" OR \"sense of belonging\"",
+                "\"accessibility initiatives\" OR \"accessible workplace\" OR \"disability inclusion\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "esg_environmental-international": {
+            "query": [
+                "\"GHG emissions\" OR \"greenhouse gas emissions\" OR \"emissions reduction\" OR \"scope 1 emissions\" OR \"scope 2 emissions\" OR \"scope 3 emissions\"",
+                "\"climate transition\" OR \"climate adaptation\" OR \"climate resilience\" OR \"climate strategy\"",
+                "\"renewable energy\" OR \"clean energy\" OR \"energy efficiency\"",
+                "\"water stewardship\" OR \"waste reduction\" OR \"circular economy\"",
+                "\"net zero target\" OR \"carbon neutral\" OR \"science-based targets\" OR \"sustainability metrics\" OR \"ESG metrics\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "esg_social-international": {
+            "query": [
+                "\"community investment\" OR \"social impact\" OR \"community engagement\"",
+                "\"human rights\" OR \"labor rights\" OR \"fair labor practices\"",
+                "\"occupational health\" OR \"employee wellbeing\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "esg_governance-international": {
+            "query": [
+                "\"board diversity\" OR \"diverse board\" OR \"board composition\"",
+                "\"business ethics\" OR \"ethical practices\" OR \"code of conduct\"",
+                "\"ESG risk\" OR \"sustainability risk\" OR \"climate risk management\"",
+                "\"ESG disclosure\" OR \"sustainability reporting\" OR \"TCFD disclosure\" OR \"SASB disclosure\"",
+                "\"governance KPIs\" OR \"board performance metrics\" OR \"governance framework\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "space_launch-international": {
+            "query": [
+                "\"launch vehicle\" OR \"launch services\" OR \"orbital launch\" OR \"satellite launch\" OR \"rocket launch\" OR \"spacecraft launch\" OR \"launch facility\" OR \"launch pad\"",
+                "\"reusable rocket\" OR \"vertical landing\" OR \"propulsion system\" OR \"liquid propellant\" OR \"solid rocket booster\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "space_satellite-international": {
+            "query": [
+                "\"satellite constellation\" OR \"satellite network\" OR \"earth observation satellite\" OR \"communication satellite\" OR \"satellite imagery\" OR \"satellite manufacturing\"",
+                "\"low earth orbit\" OR \"LEO satellite\" OR \"geostationary orbit\" OR \"GEO satellite\" OR \"medium earth orbit\" OR \"satellite deployment\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
             ]
         }
     },

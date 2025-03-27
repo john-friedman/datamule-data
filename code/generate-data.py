@@ -67,7 +67,7 @@ def load_progress():
 def process_mentions(mentions_dict,start_date,key):
     try:
         if start_date is not None:
-            start_date = datetime.strptime(start_date, "%Y-%m-%d")
+            start_date = datetime.strptime(start_date.split()[0], "%Y-%m-%d")
 
         construct_mentions(text_queries=mentions_dict['query'],\
             file_path=f"data/mentions/{'_'.join(mentions_dict['submission_type'])}/{'_'.join(mentions_dict['document_type'])}/{key}.csv",\

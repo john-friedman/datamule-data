@@ -89,13 +89,7 @@ def run_updates():
     # process mentions
     for mention in data_dict['mentions']:
         mentions_dict = data_dict['mentions'][mention]
-        # handle groups
-        if "query" not in mentions_dict:
-            for key in mentions_dict:
-                process_mentions(mentions_dict=mentions_dict[key],start_date=updates[key]['last_run'],key=key)
-
-        else:
-            process_mentions(mentions_dict=mentions_dict, start_date=updates[key]['last_run'],key=mention)
+        process_mentions(mentions_dict=mentions_dict, start_date=updates[mention]['last_run'],key=mention)
     
     # Process metadata
     try:

@@ -1,53 +1,50 @@
 {
     "mentions": {
-        "tariffs": {
-            "tariff_canada": {
-                "query": [
-                    "tariff canada"
-                ],
-                "submission_type": [
-                    "8-K"
-                ],
-                "document_type": [
-                    "8-K"
-                ]
-            },
-            "tariff_china": {
-                "query": [
-                    "tariff china"
-                ],
-                "submission_type": [
-                    "8-K"
-                ],
-                "document_type": [
-                    "8-K"
-                ]
-            },
-            "tariff_mexico": {
-                "query": [
-                    "tariff mexico"
-                ],
-                "submission_type": [
-                    "8-K"
-                ],
-                "document_type": [
-                    "8-K"
-                ]
-            },
-            "tariff_venezuela": {
-                "query": [
-                    "tariff venezuela"
-                ],
-                "submission_type": [
-                    "8-K"
-                ],
-                "document_type": [
-                    "8-K"
-                ]
-            },
-            "interval" : "monthly"
+        "tariffs_canada": {
+            "query": [
+                "tariff canada"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
         },
-        "layoff": {
+        "tariffs_china": {
+            "query": [
+                "tariff china"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "tariffs_mexico": {
+            "query": [
+                "tariff mexico"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "tariffs_venezuela": {
+            "query": [
+                "tariff venezuela"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "layoffs": {
             "query": [
                 "layoff* OR \"workforce reduction\" OR \"headcount reduction\" OR \"reduction in force\" OR \"staff reduction\""
             ],
@@ -56,8 +53,7 @@
             ],
             "document_type": [
                 "8-K"
-            ],
-            "interval" : "monthly"
+            ]
         },
         "outsourcing": {
             "query": [
@@ -68,10 +64,9 @@
             ],
             "document_type": [
                 "10-K"
-            ],
-            "interval" : "yearly"
+            ]
         },
-        "consumer_confidence": {
+        "consumer-confidence": {
             "query": [
                 "\"consumer confidence\""
             ],
@@ -80,10 +75,9 @@
             ],
             "document_type": [
                 "10-K"
-            ],
-            "interval" : "yearly"
+            ]
         },
-        "supplier_concentration": {
+        "supplier-concentration": {
             "query": [
                 "\"Supplier Concentration\" OR \"Single-source supplier risk\""
             ],
@@ -92,100 +86,166 @@
             ],
             "document_type": [
                 "10-K"
+            ]
+        },
+        "dei_diversity": {
+            "query": [
+                "\"workforce diversity\" OR \"diverse workforce\" OR \"diversity in workplace\"",
+                "\"gender diversity\" OR \"gender representation\" OR \"gender balance\"",
+                "\"racial diversity\" OR \"ethnic diversity\" OR \"racial representation\"",
+                "\"diversity goals\" OR \"representation targets\" OR \"diversity metrics\""
             ],
-            "interval" : "yearly"
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
         },
-        "dei": {
-            "dei_diversity": {
-                "query": [
-                    "\"workforce diversity\" OR \"diverse workforce\" OR \"diversity in workplace\"",
-                    "\"gender diversity\" OR \"gender representation\" OR \"gender balance\"",
-                    "\"racial diversity\" OR \"ethnic diversity\" OR \"racial representation\"",
-                    "\"diversity goals\" OR \"representation targets\" OR \"diversity metrics\""
-                ],
-                "submission_type": [
-                    "10-K"
-                ],
-                "document_type": [
-                    "10-K"
-                ],
-                "interval" : "yearly"
-            },
-            "dei_equity": {
-                "query": [
-                    "\"pay equity\" OR \"wage equity\" OR \"compensation equity\" OR \"equal pay\"",
-                    "\"equal opportunity\" OR \"opportunity equity\" OR \"equitable advancement\""
-                ],
-                "submission_type": [
-                    "10-K"
-                ],
-                "document_type": [
-                    "10-K"
-                ],
-                "interval" : "yearly"
-            },
-            "dei_inclusion": {
-                "query": [
-                    "\"workplace inclusion\" OR \"inclusive workplace\" OR \"inclusive environment\"",
-                    "\"belonging\" OR \"employee belonging\" OR \"sense of belonging\"",
-                    "\"accessibility initiatives\" OR \"accessible workplace\" OR \"disability inclusion\""
-                ],
-                "submission_type": [
-                    "10-K"
-                ],
-                "document_type": [
-                    "10-K"
-                ],
-                "interval" : "yearly"
-            }
+        "dei_equity": {
+            "query": [
+                "\"pay equity\" OR \"wage equity\" OR \"compensation equity\" OR \"equal pay\"",
+                "\"equal opportunity\" OR \"opportunity equity\" OR \"equitable advancement\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
         },
-        "esg": {
-            "esg_environmental": {
-                "query": [
-                    "\"GHG emissions\" OR \"greenhouse gas emissions\" OR \"emissions reduction\" OR \"scope 1 emissions\" OR \"scope 2 emissions\" OR \"scope 3 emissions\"",
-                    "\"climate transition\" OR \"climate adaptation\" OR \"climate resilience\" OR \"climate strategy\"",
-                    "\"renewable energy\" OR \"clean energy\" OR \"energy efficiency\"",
-                    "\"water stewardship\" OR \"waste reduction\" OR \"circular economy\"",
-                    "\"net zero target\" OR \"carbon neutral\" OR \"science-based targets\" OR \"sustainability metrics\" OR \"ESG metrics\""
-                ],
-                "submission_type": [
-                    "10-K"
-                ],
-                "document_type": [
-                    "10-K"
-                ],
-                "interval" : "yearly"
-            },
-            "esg_social": {
-                "query": [
-                    "\"community investment\" OR \"social impact\" OR \"community engagement\"",
-                    "\"human rights\" OR \"labor rights\" OR \"fair labor practices\"",
-                    "\"occupational health\" OR \"workplace safety\" OR \"employee wellbeing\""
-                ],
-                "submission_type": [
-                    "10-K"
-                ],
-                "document_type": [
-                    "10-K"
-                ],
-                "interval" : "yearly"
-            },
-            "esg_governance": {
-                "query": [
-                    "\"board diversity\" OR \"diverse board\" OR \"board composition\"",
-                    "\"business ethics\" OR \"ethical practices\" OR \"code of conduct\"",
-                    "\"ESG risk\" OR \"sustainability risk\" OR \"climate risk management\"",
-                    "\"ESG disclosure\" OR \"sustainability reporting\" OR \"TCFD disclosure\" OR \"SASB disclosure\"",
-                    "\"governance KPIs\" OR \"board performance metrics\" OR \"governance framework\""
-                ],
-                "submission_type": [
-                    "10-K"
-                ],
-                "document_type": [
-                    "10-K"
-                ],
-                "interval" : "yearly"
-            }
+        "dei_inclusion": {
+            "query": [
+                "\"workplace inclusion\" OR \"inclusive workplace\" OR \"inclusive environment\"",
+                "\"employee belonging\" OR \"sense of belonging\"",
+                "\"accessibility initiatives\" OR \"accessible workplace\" OR \"disability inclusion\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "esg_environmental": {
+            "query": [
+                "\"GHG emissions\" OR \"greenhouse gas emissions\" OR \"emissions reduction\" OR \"scope 1 emissions\" OR \"scope 2 emissions\" OR \"scope 3 emissions\"",
+                "\"climate transition\" OR \"climate adaptation\" OR \"climate resilience\" OR \"climate strategy\"",
+                "\"renewable energy\" OR \"clean energy\" OR \"energy efficiency\"",
+                "\"water stewardship\" OR \"waste reduction\" OR \"circular economy\"",
+                "\"net zero target\" OR \"carbon neutral\" OR \"science-based targets\" OR \"sustainability metrics\" OR \"ESG metrics\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "esg_social": {
+            "query": [
+                "\"community investment\" OR \"social impact\" OR \"community engagement\"",
+                "\"human rights\" OR \"labor rights\" OR \"fair labor practices\"",
+                "\"occupational health\" OR \"employee wellbeing\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "esg_governance": {
+            "query": [
+                "\"board diversity\" OR \"diverse board\" OR \"board composition\"",
+                "\"business ethics\" OR \"ethical practices\" OR \"code of conduct\"",
+                "\"ESG risk\" OR \"sustainability risk\" OR \"climate risk management\"",
+                "\"ESG disclosure\" OR \"sustainability reporting\" OR \"TCFD disclosure\" OR \"SASB disclosure\"",
+                "\"governance KPIs\" OR \"board performance metrics\" OR \"governance framework\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "war_russo-ukrainian": {
+            "query": [
+                "\"Russia-Ukraine conflict\" OR \"Russian invasion of Ukraine\" OR \"Russo-Ukrainian War\" OR \"Ukraine war\" OR \"Ukrainian conflict\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "war_israel-hamas": {
+            "query": [
+                "\"Israel-Hamas war\" OR \"Gaza conflict\" OR \"Israel-Gaza conflict\" OR \"October 7 attack\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "war_syrian-civil": {
+            "query": [
+                "\"Syrian Civil War\" OR \"Syria conflict\" OR \"Syrian crisis\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_al-qaeda": {
+            "query": [
+                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al Qaida\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_houthis": {
+            "query": [
+                "\"Houthi\" OR \"Houthis\" OR \"Ansar Allah\" OR \"Yemen conflict\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_hezbollah": {
+            "query": [
+                "\"Hezbollah\" OR \"Hizbullah\" OR \"Hizballah\" OR \"Lebanese Hezbollah\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_general-terrorism": {
+            "query": [
+                "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
         }
     },
     "filer_metadata": {

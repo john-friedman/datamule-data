@@ -1,62 +1,90 @@
 {
-    "tariff_canada": {
-        "last_run": "2025-03-25 18:45:17",
-        "success": true
-    },
-    "tariff_china": {
-        "last_run": "2025-03-25 18:45:25",
-        "success": true
-    },
-    "tariff_mexico": {
-        "last_run": "2025-03-25 18:45:32",
-        "success": true
-    },
-    "tariff_venezuela": {
-        "last_run": "2025-03-25 18:45:35",
+    "tariffs_canada": {
+        "last_run": "2025-03-26 19:11:57",
         "success": true
     },
     "submissions_metadata": {
-        "last_run": "2025-03-25 20:55:12",
+        "last_run": "2025-03-26 19:27:33",
         "success": true
     },
-    "layoff": {
-        "last_run": "2025-03-25 18:46:51",
+    "tariffs_china": {
+        "last_run": "2025-03-26 19:12:05",
+        "success": true
+    },
+    "tariffs_mexico": {
+        "last_run": "2025-03-26 19:12:12",
+        "success": true
+    },
+    "tariffs_venezuela": {
+        "last_run": "2025-03-26 19:12:14",
+        "success": true
+    },
+    "layoffs": {
+        "last_run": "2025-03-26 19:13:42",
         "success": true
     },
     "outsourcing": {
-        "last_run": "2025-03-25 18:47:29",
+        "last_run": "2025-03-26 19:14:30",
         "success": true
     },
-    "consumer_confidence": {
-        "last_run": "2025-03-25 20:42:54",
+    "consumer-confidence": {
+        "last_run": "2025-03-26 19:15:57",
         "success": true
     },
-    "supplier_concentration": {
-        "last_run": "2025-03-25 20:42:59",
+    "supplier-concentration": {
+        "last_run": "2025-03-26 19:16:02",
         "success": true
     },
     "dei_diversity": {
-        "last_run": "2025-03-25 20:43:27",
+        "last_run": "2025-03-26 19:16:26",
         "success": true
     },
     "dei_equity": {
-        "last_run": "2025-03-25 20:44:28",
+        "last_run": "2025-03-26 19:17:32",
         "success": true
     },
     "dei_inclusion": {
-        "last_run": "2025-03-25 20:46:04",
+        "last_run": "2025-03-26 19:17:50",
         "success": true
     },
     "esg_environmental": {
-        "last_run": "2025-03-25 20:48:35",
+        "last_run": "2025-03-26 19:20:24",
         "success": true
     },
     "esg_social": {
-        "last_run": "2025-03-25 20:50:04",
+        "last_run": "2025-03-26 19:21:38",
         "success": true
     },
     "esg_governance": {
-        "last_run": "2025-03-25 20:50:46",
+        "last_run": "2025-03-26 19:22:28",
+        "success": true
+    },
+    "war_russo-ukrainian": {
+        "last_run": "2025-03-26 19:22:38",
+        "success": true
+    },
+    "war_israel-hamas": {
+        "last_run": "2025-03-26 19:22:42",
+        "success": true
+    },
+    "war_syrian-civil": {
+        "last_run": "2025-03-26 19:22:43",
+        "success": true
+    },
+    "terrorism_al-qaeda": {
+        "last_run": "2025-03-26 19:22:46",
+        "success": true
+    },
+    "terrorism_houthis": {
+        "last_run": "2025-03-26 19:22:47",
+        "success": true
+    },
+    "terrorism_hezbollah": {
+        "last_run": "2025-03-26 19:22:48",
+        "success": true
+    },
+    "terrorism_general-terrorism": {
+        "last_run": "2025-03-26 19:23:27",
         "success": true
     }
 }

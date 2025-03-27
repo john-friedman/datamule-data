@@ -449,6 +449,28 @@
             "document_type": [
                 "10-K"
             ]
+        },
+        "sovereign-crisis": {
+            "query": [
+                "\"debt moratorium declared\" OR \"suspended convertibility of currency\" OR \"failure to make payment\" OR \"formal default declaration\" OR \"ceased honoring obligations\""
+            ],
+            "submission_type": [
+                "18-K"
+            ],
+            "document_type": [
+                "18-K"
+            ]
+        },
+        "political-stability": {
+            "query": [
+                "\"martial law imposed\" OR \"state of emergency declared\" OR \"government dissolution\" OR \"constitutional crisis\" OR \"forced regime change\""
+            ],
+            "submission_type": [
+                "18-K"
+            ],
+            "document_type": [
+                "18-K"
+            ]
         }
     },
     "filer_metadata": {

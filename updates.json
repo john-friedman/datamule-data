@@ -1,262 +1,262 @@
 {
-    "tariffs_canada-domestic": {
-        "last_run": "2025-03-27 09:04:05",
+    "tariffs_canada_domestic": {
+        "last_run": "2025-03-27 13:35:13",
         "success": true
     },
     "submissions_metadata": {
-        "last_run": "2025-03-27 09:26:17",
+        "last_run": "2025-03-27 13:58:07",
         "success": true
     },
-    "tariffs_china-domestic": {
-        "last_run": "2025-03-27 09:04:14",
+    "tariffs_china_domestic": {
+        "last_run": "2025-03-27 13:35:23",
         "success": true
     },
-    "tariffs_mexico-domestic": {
-        "last_run": "2025-03-27 09:04:21",
+    "tariffs_mexico_domestic": {
+        "last_run": "2025-03-27 13:35:31",
         "success": true
     },
-    "tariffs_venezuela-domestic": {
-        "last_run": "2025-03-27 09:04:23",
+    "tariffs_venezuela_domestic": {
+        "last_run": "2025-03-27 13:35:33",
         "success": true
     },
     "layoffs_domestic": {
-        "last_run": "2025-03-27 09:05:45",
+        "last_run": "2025-03-27 13:36:59",
         "success": true
     },
     "outsourcing_domestic": {
-        "last_run": "2025-03-27 09:06:31",
+        "last_run": "2025-03-27 13:37:47",
         "success": true
     },
     "consumer-confidence_domestic": {
-        "last_run": "2025-03-27 09:07:57",
+        "last_run": "2025-03-27 13:39:16",
         "success": true
     },
     "supplier-concentration_domestic": {
-        "last_run": "2025-03-27 09:08:01",
+        "last_run": "2025-03-27 13:39:22",
         "success": true
     },
-    "dei_diversity-domestic": {
-        "last_run": "2025-03-27 09:08:25",
+    "dei_diversity_domestic": {
+        "last_run": "2025-03-27 13:39:46",
         "success": true
     },
-    "dei_equity-domestic": {
-        "last_run": "2025-03-27 09:09:31",
+    "dei_equity_domestic": {
+        "last_run": "2025-03-27 13:40:52",
         "success": true
     },
-    "dei_inclusion-domestic": {
-        "last_run": "2025-03-27 09:09:51",
+    "dei_inclusion_domestic": {
+        "last_run": "2025-03-27 13:41:10",
         "success": true
     },
-    "esg_environmental-domestic": {
-        "last_run": "2025-03-27 09:12:26",
+    "esg_environmental_domestic": {
+        "last_run": "2025-03-27 13:43:48",
         "success": true
     },
-    "esg_social-domestic": {
-        "last_run": "2025-03-27 09:13:43",
+    "esg_social_domestic": {
+        "last_run": "2025-03-27 13:45:05",
         "success": true
     },
-    "esg_governance-domestic": {
-        "last_run": "2025-03-27 09:14:26",
+    "esg_governance_domestic": {
+        "last_run": "2025-03-27 13:45:50",
         "success": true
     },
-    "war_russo-ukrainian-domestic": {
-        "last_run": "2025-03-27 09:14:35",
+    "war_russo-ukrainian_domestic": {
+        "last_run": "2025-03-27 13:46:00",
         "success": true
     },
-    "war_israel-hamas-domestic": {
-        "last_run": "2025-03-27 09:14:39",
+    "war_israel-hamas_domestic": {
+        "last_run": "2025-03-27 13:46:05",
         "success": true
     },
-    "war_syrian-civil-domestic": {
-        "last_run": "2025-03-27 09:14:41",
+    "war_syrian-civil_domestic": {
+        "last_run": "2025-03-27 13:46:07",
         "success": true
     },
-    "war_russo-ukrainian-international": {
-        "last_run": "2025-03-27 09:14:47",
+    "war_russo-ukrainian_international": {
+        "last_run": "2025-03-27 13:46:13",
         "success": true
     },
-    "war_israel-hamas-international": {
-        "last_run": "2025-03-27 09:14:50",
+    "war_israel-hamas_international": {
+        "last_run": "2025-03-27 13:46:16",
         "success": true
     },
-    "war_syrian-civil-international": {
-        "last_run": "2025-03-27 09:14:51",
+    "war_syrian-civil_international": {
+        "last_run": "2025-03-27 13:46:17",
         "success": true
     },
-    "terrorism_al-qaeda-domestic": {
-        "last_run": "2025-03-27 09:14:53",
+    "terrorism_al-qaeda_domestic": {
+        "last_run": "2025-03-27 13:46:19",
         "success": true
     },
-    "terrorism_al-qaeda-international": {
-        "last_run": "2025-03-27 09:14:55",
+    "terrorism_al-qaeda_international": {
+        "last_run": "2025-03-27 13:46:21",
         "success": true
     },
-    "terrorism_houthis-domestic": {
-        "last_run": "2025-03-27 09:14:57",
+    "terrorism_houthis_domestic": {
+        "last_run": "2025-03-27 13:46:22",
         "success": true
     },
-    "terrorism_houthis-international": {
-        "last_run": "2025-03-27 09:14:59",
+    "terrorism_houthis_international": {
+        "last_run": "2025-03-27 13:46:24",
         "success": true
     },
-    "terrorism_hezbollah-domestic": {
-        "last_run": "2025-03-27 09:15:00",
+    "terrorism_hezbollah_domestic": {
+        "last_run": "2025-03-27 13:46:25",
         "success": true
     },
-    "terrorism_hezbollah-international": {
-        "last_run": "2025-03-27 09:15:03",
+    "terrorism_hezbollah_international": {
+        "last_run": "2025-03-27 13:46:28",
         "success": true
     },
-    "terrorism_hamas-domestic": {
-        "last_run": "2025-03-27 09:15:09",
+    "terrorism_hamas_domestic": {
+        "last_run": "2025-03-27 13:46:34",
         "success": true
     },
-    "terrorism_hamas-international": {
-        "last_run": "2025-03-27 09:15:13",
+    "terrorism_hamas_international": {
+        "last_run": "2025-03-27 13:46:39",
         "success": true
     },
-    "terrorism_general-terrorism-domestic": {
-        "last_run": "2025-03-27 09:15:52",
+    "terrorism_general-terrorism_domestic": {
+        "last_run": "2025-03-27 13:47:18",
         "success": true
     },
-    "terrorism_general-terrorism-international": {
-        "last_run": "2025-03-27 09:15:58",
+    "terrorism_general-terrorism_international": {
+        "last_run": "2025-03-27 13:47:23",
         "success": true
     },
-    "space_launch-domestic": {
-        "last_run": "2025-03-27 09:16:11",
+    "space_launch_domestic": {
+        "last_run": "2025-03-27 13:47:33",
         "success": true
     },
-    "space_satellite-domestic": {
-        "last_run": "2025-03-27 09:16:21",
+    "space_satellite_domestic": {
+        "last_run": "2025-03-27 13:47:42",
         "success": true
     },
-    "space_exploration-domestic": {
-        "last_run": "2025-03-27 09:16:29",
+    "space_exploration_domestic": {
+        "last_run": "2025-03-27 13:47:48",
         "success": true
     },
-    "space_commercial-domestic": {
-        "last_run": "2025-03-27 09:16:41",
+    "space_commercial_domestic": {
+        "last_run": "2025-03-27 13:47:57",
         "success": true
     },
-    "space_partnerships-domestic": {
-        "last_run": "2025-03-27 09:16:44",
+    "space_partnerships_domestic": {
+        "last_run": "2025-03-27 13:48:01",
         "success": true
     },
-    "space_investment-domestic": {
-        "last_run": "2025-03-27 09:16:50",
+    "space_investment_domestic": {
+        "last_run": "2025-03-27 13:48:05",
         "success": true
     },
-    "space_technology-domestic": {
-        "last_run": "2025-03-27 09:16:56",
+    "space_technology_domestic": {
+        "last_run": "2025-03-27 13:48:13",
         "success": true
     },
-    "space_risks-domestic": {
-        "last_run": "2025-03-27 09:17:02",
+    "space_risks_domestic": {
+        "last_run": "2025-03-27 13:48:19",
         "success": true
     },
-    "nuclear_power-domestic": {
-        "last_run": "2025-03-27 09:17:18",
+    "nuclear_power_domestic": {
+        "last_run": "2025-03-27 13:48:35",
         "success": true
     },
-    "nuclear_fuel-domestic": {
-        "last_run": "2025-03-27 09:17:34",
+    "nuclear_fuel_domestic": {
+        "last_run": "2025-03-27 13:48:52",
         "success": true
     },
-    "nuclear_technology-domestic": {
-        "last_run": "2025-03-27 09:17:49",
+    "nuclear_technology_domestic": {
+        "last_run": "2025-03-27 13:49:06",
         "success": true
     },
-    "nuclear_services-domestic": {
-        "last_run": "2025-03-27 09:18:00",
+    "nuclear_services_domestic": {
+        "last_run": "2025-03-27 13:49:19",
         "success": true
     },
-    "nuclear_regulation-domestic": {
-        "last_run": "2025-03-27 09:18:12",
+    "nuclear_regulation_domestic": {
+        "last_run": "2025-03-27 13:49:33",
         "success": true
     },
-    "nuclear_fusion-domestic": {
-        "last_run": "2025-03-27 09:18:16",
+    "nuclear_fusion_domestic": {
+        "last_run": "2025-03-27 13:49:38",
         "success": true
     },
-    "nuclear_risk-domestic": {
-        "last_run": "2025-03-27 09:18:29",
+    "nuclear_risk_domestic": {
+        "last_run": "2025-03-27 13:49:51",
         "success": true
     },
-    "nuclear_research-domestic": {
-        "last_run": "2025-03-27 09:18:33",
+    "nuclear_research_domestic": {
+        "last_run": "2025-03-27 13:49:55",
         "success": true
     },
     "sovereign-crisis_domestic": {
-        "last_run": "2025-03-27 09:18:34",
+        "last_run": "2025-03-27 13:49:57",
         "success": true
     },
     "political-stability_domestic": {
-        "last_run": "2025-03-27 09:18:36",
+        "last_run": "2025-03-27 13:49:59",
         "success": true
     },
-    "tariffs_canada-international": {
-        "last_run": "2025-03-27 09:18:47",
+    "tariffs_canada_international": {
+        "last_run": "2025-03-27 13:50:11",
         "success": true
     },
-    "tariffs_china-international": {
-        "last_run": "2025-03-27 09:18:59",
+    "tariffs_china_international": {
+        "last_run": "2025-03-27 13:50:22",
         "success": true
     },
-    "tariffs_mexico-international": {
-        "last_run": "2025-03-27 09:19:05",
+    "tariffs_mexico_international": {
+        "last_run": "2025-03-27 13:50:29",
         "success": true
     },
-    "tariffs_venezuela-international": {
-        "last_run": "2025-03-27 09:19:09",
+    "tariffs_venezuela_international": {
+        "last_run": "2025-03-27 13:50:33",
         "success": true
     },
     "layoffs_international": {
-        "last_run": "2025-03-27 09:19:37",
+        "last_run": "2025-03-27 13:50:51",
         "success": true
     },
     "outsourcing_international": {
-        "last_run": "2025-03-27 09:19:59",
+        "last_run": "2025-03-27 13:51:04",
         "success": true
     },
     "consumer-confidence_international": {
-        "last_run": "2025-03-27 09:20:10",
+        "last_run": "2025-03-27 13:51:15",
         "success": true
     },
     "supplier-concentration_international": {
-        "last_run": "2025-03-27 09:20:12",
+        "last_run": "2025-03-27 13:51:17",
         "success": true
     },
-    "dei_diversity-international": {
-        "last_run": "2025-03-27 09:20:23",
+    "dei_diversity_international": {
+        "last_run": "2025-03-27 13:51:29",
         "success": true
     },
-    "dei_equity-international": {
-        "last_run": "2025-03-27 09:20:43",
+    "dei_equity_international": {
+        "last_run": "2025-03-27 13:51:41",
         "success": true
     },
-    "dei_inclusion-international": {
-        "last_run": "2025-03-27 09:20:51",
+    "dei_inclusion_international": {
+        "last_run": "2025-03-27 13:51:48",
         "success": true
     },
-    "esg_environmental-international": {
-        "last_run": "2025-03-27 09:21:34",
+    "esg_environmental_international": {
+        "last_run": "2025-03-27 13:52:32",
         "success": true
     },
-    "esg_social-international": {
-        "last_run": "2025-03-27 09:22:04",
+    "esg_social_international": {
+        "last_run": "2025-03-27 13:53:02",
         "success": true
     },
-    "esg_governance-international": {
-        "last_run": "2025-03-27 09:22:36",
+    "esg_governance_international": {
+        "last_run": "2025-03-27 13:53:34",
         "success": true
     },
-    "space_launch-international": {
-        "last_run": "2025-03-27 09:22:40",
+    "space_launch_international": {
+        "last_run": "2025-03-27 13:53:39",
         "success": true
     },
-    "space_satellite-international": {
-        "last_run": "2025-03-27 09:22:44",
+    "space_satellite_international": {
+        "last_run": "2025-03-27 13:53:44",
         "success": true
     }
 }

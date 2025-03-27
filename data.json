@@ -236,6 +236,17 @@
                 "8-K"
             ]
         },
+        "terrorism_hamas": {
+            "query": [
+                "hamas"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
         "terrorism_general-terrorism": {
             "query": [
                 "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
@@ -245,6 +256,198 @@
             ],
             "document_type": [
                 "8-K"
+            ]
+        },
+        "space_launch": {
+            "query": [
+                "\"launch vehicle\" OR \"launch services\" OR \"orbital launch\" OR \"satellite launch\" OR \"rocket launch\" OR \"spacecraft launch\" OR \"launch facility\" OR \"launch pad\"",
+                "\"reusable rocket\" OR \"vertical landing\" OR \"propulsion system\" OR \"liquid propellant\" OR \"solid rocket booster\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_satellite": {
+            "query": [
+                "\"satellite constellation\" OR \"satellite network\" OR \"earth observation satellite\" OR \"communication satellite\" OR \"satellite imagery\" OR \"satellite manufacturing\"",
+                "\"low earth orbit\" OR \"LEO satellite\" OR \"geostationary orbit\" OR \"GEO satellite\" OR \"medium earth orbit\" OR \"satellite deployment\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_exploration": {
+            "query": [
+                "\"lunar mission\" OR \"lunar lander\" OR \"moon landing\" OR \"artemis program\" OR \"mars mission\" OR \"deep space\" OR \"planetary exploration\"",
+                "\"space probe\" OR \"rover mission\" OR \"asteroid mining\" OR \"planetary science\" OR \"space telescope\" OR \"space research\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_commercial": {
+            "query": [
+                "\"space tourism\" OR \"commercial spaceflight\" OR \"space hotel\" OR \"orbital tourism\" OR \"suborbital flight\"",
+                "\"in-orbit servicing\" OR \"space debris removal\" OR \"in-space manufacturing\" OR \"space logistics\" OR \"space infrastructure\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_partnerships": {
+            "query": [
+                "\"NASA contract\" OR \"NASA partnership\" OR \"NASA supplier\" OR \"NASA program\" OR \"NASA funding\"",
+                "\"SpaceX partnership\" OR \"Blue Origin partnership\" OR \"space agency collaboration\" OR \"ESA partnership\" OR \"JAXA partnership\" OR \"Roscosmos partnership\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_investment": {
+            "query": [
+                "\"space investment\" OR \"space venture\" OR \"space startup\" OR \"space industry funding\" OR \"space technology acquisition\"",
+                "\"space market growth\" OR \"commercial space opportunity\" OR \"space industry revenue\" OR \"space sector forecast\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_technology": {
+            "query": [
+                "\"space-based communication\" OR \"optical inter-satellite link\" OR \"space-based internet\" OR \"satellite broadband\" OR \"space-based remote sensing\"",
+                "\"space radiation hardening\" OR \"space-grade components\" OR \"space-qualified hardware\" OR \"spacecraft autonomy\" OR \"space robotics\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_risks": {
+            "query": [
+                "\"space regulatory risk\" OR \"space debris risk\" OR \"launch failure risk\" OR \"space insurance\" OR \"space liability\"",
+                "\"orbital congestion\" OR \"space weather impact\" OR \"space sustainability\" OR \"space policy uncertainty\" OR \"space competitive landscape\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_power": {
+            "query": [
+                "\"nuclear power plant\" OR \"nuclear energy\" OR \"nuclear generation\" OR \"nuclear reactor\" OR \"nuclear facility\" OR \"nuclear capacity\"",
+                "\"small modular reactor\" OR \"SMR nuclear\" OR \"advanced nuclear\" OR \"next generation nuclear\" OR \"nuclear fleet\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_fuel": {
+            "query": [
+                "\"uranium mining\" OR \"uranium production\" OR \"uranium enrichment\" OR \"nuclear fuel\" OR \"nuclear fuel cycle\"",
+                "\"spent nuclear fuel\" OR \"nuclear waste management\" OR \"nuclear waste storage\" OR \"nuclear waste disposal\" OR \"nuclear fuel rod\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_technology": {
+            "query": [
+                "\"nuclear medicine\" OR \"medical isotope\" OR \"radiopharmaceutical\" OR \"nuclear imaging\" OR \"radiation therapy\"",
+                "\"nuclear propulsion\" OR \"nuclear thermal\" OR \"radioisotope power\" OR \"radioisotope thermoelectric generator\" OR \"RTG power\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_services": {
+            "query": [
+                "\"nuclear maintenance\" OR \"nuclear decommissioning\" OR \"nuclear engineering\" OR \"nuclear consulting\" OR \"nuclear services\"",
+                "\"nuclear plant operation\" OR \"nuclear safety service\" OR \"nuclear compliance\" OR \"nuclear regulatory support\" OR \"nuclear outage\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_regulation": {
+            "query": [
+                "\"nuclear regulatory commission\" OR \"NRC regulation\" OR \"nuclear licensing\" OR \"nuclear permit\" OR \"nuclear compliance\"",
+                "\"IAEA requirements\" OR \"nuclear regulatory framework\" OR \"nuclear safety standard\" OR \"nuclear regulatory approval\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_fusion": {
+            "query": [
+                "\"nuclear fusion\" OR \"fusion energy\" OR \"fusion power\" OR \"fusion reactor\" OR \"tokamak\" OR \"stellarator\"",
+                "\"inertial confinement fusion\" OR \"magnetic confinement fusion\" OR \"fusion technology\" OR \"commercial fusion\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_risk": {
+            "query": [
+                "\"nuclear liability\" OR \"nuclear accident\" OR \"nuclear incident\" OR \"nuclear insurance\" OR \"nuclear safety risk\"",
+                "\"nuclear security\" OR \"nuclear material protection\" OR \"nuclear proliferation\" OR \"radiological release\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_research": {
+            "query": [
+                "\"nuclear research\" OR \"nuclear laboratory\" OR \"nuclear science\" OR \"nuclear physics\" OR \"nuclear engineering research\"",
+                "\"nuclear technology development\" OR \"nuclear innovation\" OR \"nuclear R&D\" OR \"nuclear research facility\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
             ]
         }
     },

@@ -4,7 +4,7 @@
         "success": true
     },
     "submissions_metadata": {
-        "last_run": "2025-03-26 19:27:33",
+        "last_run": "2025-03-27 06:41:07",
         "success": true
     },
     "tariffs_china": {
@@ -85,6 +85,102 @@
     },
     "terrorism_general-terrorism": {
         "last_run": "2025-03-26 19:23:27",
+        "success": true
+    },
+    "terrorism_al-qaeda-international": {
+        "last_run": "2025-03-27 06:35:45",
+        "success": true
+    },
+    "terrorism_houthis-international": {
+        "last_run": "2025-03-27 06:35:46",
+        "success": true
+    },
+    "terrorism_hezbollah-international": {
+        "last_run": "2025-03-27 06:35:49",
+        "success": true
+    },
+    "terrorism_hamas": {
+        "last_run": "2025-03-27 06:35:54",
+        "success": true
+    },
+    "terrorism_hamas-international": {
+        "last_run": "2025-03-27 06:35:59",
+        "success": true
+    },
+    "terrorism_general-terrorism-international": {
+        "last_run": "2025-03-27 06:36:06",
+        "success": true
+    },
+    "space_launch": {
+        "last_run": "2025-03-27 06:36:13",
+        "success": true
+    },
+    "space_satellite": {
+        "last_run": "2025-03-27 06:36:21",
+        "success": true
+    },
+    "space_exploration": {
+        "last_run": "2025-03-27 06:36:26",
+        "success": true
+    },
+    "space_commercial": {
+        "last_run": "2025-03-27 06:36:34",
+        "success": true
+    },
+    "space_partnerships": {
+        "last_run": "2025-03-27 06:36:36",
+        "success": true
+    },
+    "space_investment": {
+        "last_run": "2025-03-27 06:36:44",
+        "success": true
+    },
+    "space_technology": {
+        "last_run": "2025-03-27 06:36:49",
+        "success": true
+    },
+    "space_risks": {
+        "last_run": "2025-03-27 06:36:53",
+        "success": true
+    },
+    "nuclear_power": {
+        "last_run": "2025-03-27 06:37:08",
+        "success": true
+    },
+    "nuclear_fuel": {
+        "last_run": "2025-03-27 06:37:23",
+        "success": true
+    },
+    "nuclear_technology": {
+        "last_run": "2025-03-27 06:37:36",
+        "success": true
+    },
+    "nuclear_services": {
+        "last_run": "2025-03-27 06:37:45",
+        "success": true
+    },
+    "nuclear_regulation": {
+        "last_run": "2025-03-27 06:37:56",
+        "success": true
+    },
+    "nuclear_fusion": {
+        "last_run": "2025-03-27 06:38:00",
+        "success": true
+    },
+    "nuclear_risk": {
+        "last_run": "2025-03-27 06:38:09",
+        "success": true
+    },
+    "nuclear_research": {
+        "last_run": "2025-03-27 06:38:12",
+        "success": true
+    },
+    "sovereign-crisis": {
+        "last_run": "2025-03-27 06:38:14",
+        "success": true
+    },
+    "political-stability": {
+        "last_run": "2025-03-27 06:38:15",
         "success": true
     }
 }

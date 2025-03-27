@@ -214,6 +214,17 @@
                 "8-K"
             ]
         },
+        "terrorism_al-qaeda-international": {
+            "query": [
+                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al Qaida\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
         "terrorism_houthis": {
             "query": [
                 "\"Houthi\" OR \"Houthis\" OR \"Ansar Allah\" OR \"Yemen conflict\""
@@ -223,6 +234,17 @@
             ],
             "document_type": [
                 "8-K"
+            ]
+        },
+        "terrorism_houthis-international": {
+            "query": [
+                "\"Houthi\" OR \"Houthis\" OR \"Ansar Allah\" OR \"Yemen conflict\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
             ]
         },
         "terrorism_hezbollah": {
@@ -236,6 +258,17 @@
                 "8-K"
             ]
         },
+        "terrorism_hezbollah-international": {
+            "query": [
+                "\"Hezbollah\" OR \"Hizbullah\" OR \"Hizballah\" OR \"Lebanese Hezbollah\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
         "terrorism_hamas": {
             "query": [
                 "hamas"
@@ -247,6 +280,17 @@
                 "8-K"
             ]
         },
+        "terrorism_hamas-international": {
+            "query": [
+                "hamas"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
         "terrorism_general-terrorism": {
             "query": [
                 "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
@@ -256,6 +300,17 @@
             ],
             "document_type": [
                 "8-K"
+            ]
+        },
+        "terrorism_general-terrorism-international": {
+            "query": [
+                "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
             ]
         },
         "space_launch": {

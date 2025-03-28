@@ -1,646 +1,646 @@
 {
     "tariffs_canada_domestic": {
-        "last_run": "2025-03-27 16:05:57",
+        "last_run": "2025-03-27 16:54:12",
         "success": true
     },
     "submissions_metadata": {
-        "last_run": "2025-03-27 16:13:09",
+        "last_run": "2025-03-27 17:00:30",
         "success": true
     },
     "tariffs_china_domestic": {
-        "last_run": "2025-03-27 16:05:58",
+        "last_run": "2025-03-27 16:54:12",
         "success": true
     },
     "tariffs_mexico_domestic": {
-        "last_run": "2025-03-27 16:05:58",
+        "last_run": "2025-03-27 16:54:13",
         "success": true
     },
     "tariffs_venezuela_domestic": {
-        "last_run": "2025-03-27 16:05:59",
+        "last_run": "2025-03-27 16:54:14",
         "success": true
     },
     "layoffs_domestic": {
-        "last_run": "2025-03-27 16:06:00",
+        "last_run": "2025-03-27 16:54:14",
         "success": true
     },
     "outsourcing_domestic": {
-        "last_run": "2025-03-27 16:06:00",
+        "last_run": "2025-03-27 16:54:15",
         "success": true
     },
     "consumer-confidence_domestic": {
-        "last_run": "2025-03-27 16:06:01",
+        "last_run": "2025-03-27 16:54:16",
         "success": true
     },
     "supplier-concentration_domestic": {
-        "last_run": "2025-03-27 16:06:02",
+        "last_run": "2025-03-27 16:54:17",
         "success": true
     },
     "dei_diversity_domestic": {
-        "last_run": "2025-03-27 16:06:05",
+        "last_run": "2025-03-27 16:54:20",
         "success": true
     },
     "dei_equity_domestic": {
-        "last_run": "2025-03-27 16:06:06",
+        "last_run": "2025-03-27 16:54:21",
         "success": true
     },
     "dei_inclusion_domestic": {
-        "last_run": "2025-03-27 16:06:08",
+        "last_run": "2025-03-27 16:54:23",
         "success": true
     },
     "esg_environmental_domestic": {
-        "last_run": "2025-03-27 16:06:12",
+        "last_run": "2025-03-27 16:54:27",
         "success": true
     },
     "esg_social_domestic": {
-        "last_run": "2025-03-27 16:06:14",
+        "last_run": "2025-03-27 16:54:29",
         "success": true
     },
     "esg_governance_domestic": {
-        "last_run": "2025-03-27 16:06:18",
+        "last_run": "2025-03-27 16:54:32",
         "success": true
     },
     "war_russo-ukrainian_domestic": {
-        "last_run": "2025-03-27 16:06:18",
+        "last_run": "2025-03-27 16:54:33",
         "success": true
     },
     "war_israel-hamas_domestic": {
-        "last_run": "2025-03-27 16:06:19",
+        "last_run": "2025-03-27 16:54:34",
         "success": true
     },
     "war_syrian-civil_domestic": {
-        "last_run": "2025-03-27 16:06:20",
+        "last_run": "2025-03-27 16:54:34",
         "success": true
     },
     "war_russo-ukrainian_international": {
-        "last_run": "2025-03-27 16:06:20",
+        "last_run": "2025-03-27 16:54:35",
         "success": true
     },
     "war_israel-hamas_international": {
-        "last_run": "2025-03-27 16:06:21",
+        "last_run": "2025-03-27 16:54:35",
         "success": true
     },
     "war_syrian-civil_international": {
-        "last_run": "2025-03-27 16:06:22",
+        "last_run": "2025-03-27 16:54:36",
         "success": true
     },
     "terrorism_al-qaeda_domestic": {
-        "last_run": "2025-03-27 16:06:23",
+        "last_run": "2025-03-27 16:54:37",
         "success": true
     },
     "terrorism_al-qaeda_international": {
-        "last_run": "2025-03-27 16:06:24",
+        "last_run": "2025-03-27 16:54:37",
         "success": true
     },
     "terrorism_houthis_domestic": {
-        "last_run": "2025-03-27 16:06:24",
+        "last_run": "2025-03-27 16:54:38",
         "success": true
     },
     "terrorism_houthis_international": {
-        "last_run": "2025-03-27 16:06:25",
+        "last_run": "2025-03-27 16:54:39",
         "success": true
     },
     "terrorism_hezbollah_domestic": {
-        "last_run": "2025-03-27 16:06:25",
+        "last_run": "2025-03-27 16:54:39",
         "success": true
     },
     "terrorism_hezbollah_international": {
-        "last_run": "2025-03-27 16:06:26",
+        "last_run": "2025-03-27 16:54:40",
         "success": true
     },
     "terrorism_hamas_domestic": {
-        "last_run": "2025-03-27 16:06:27",
+        "last_run": "2025-03-27 16:54:41",
         "success": true
     },
     "terrorism_hamas_international": {
-        "last_run": "2025-03-27 16:06:27",
+        "last_run": "2025-03-27 16:54:41",
         "success": true
     },
     "terrorism_general-terrorism_domestic": {
-        "last_run": "2025-03-27 16:06:28",
+        "last_run": "2025-03-27 16:54:42",
         "success": true
     },
     "terrorism_general-terrorism_international": {
-        "last_run": "2025-03-27 16:06:29",
+        "last_run": "2025-03-27 16:54:43",
         "success": true
     },
     "space_launch_domestic": {
-        "last_run": "2025-03-27 16:06:30",
+        "last_run": "2025-03-27 16:54:44",
         "success": true
     },
     "space_satellite_domestic": {
-        "last_run": "2025-03-27 16:06:31",
+        "last_run": "2025-03-27 16:54:45",
         "success": true
     },
     "space_exploration_domestic": {
-        "last_run": "2025-03-27 16:06:33",
+        "last_run": "2025-03-27 16:54:46",
         "success": true
     },
     "space_commercial_domestic": {
-        "last_run": "2025-03-27 16:06:35",
+        "last_run": "2025-03-27 16:54:48",
         "success": true
     },
     "space_partnerships_domestic": {
-        "last_run": "2025-03-27 16:06:36",
+        "last_run": "2025-03-27 16:54:49",
         "success": true
     },
     "space_investment_domestic": {
-        "last_run": "2025-03-27 16:06:38",
+        "last_run": "2025-03-27 16:54:50",
         "success": true
     },
     "space_technology_domestic": {
-        "last_run": "2025-03-27 16:06:39",
+        "last_run": "2025-03-27 16:54:52",
         "success": true
     },
     "space_risks_domestic": {
-        "last_run": "2025-03-27 16:06:40",
+        "last_run": "2025-03-27 16:54:53",
         "success": true
     },
     "nuclear_power_domestic": {
-        "last_run": "2025-03-27 16:06:42",
+        "last_run": "2025-03-27 16:54:54",
         "success": true
     },
     "nuclear_fuel_domestic": {
-        "last_run": "2025-03-27 16:06:43",
+        "last_run": "2025-03-27 16:54:55",
         "success": true
     },
     "nuclear_technology_domestic": {
-        "last_run": "2025-03-27 16:06:44",
+        "last_run": "2025-03-27 16:54:57",
         "success": true
     },
     "nuclear_services_domestic": {
-        "last_run": "2025-03-27 16:06:46",
+        "last_run": "2025-03-27 16:54:58",
         "success": true
     },
     "nuclear_regulation_domestic": {
-        "last_run": "2025-03-27 16:06:47",
+        "last_run": "2025-03-27 16:54:59",
         "success": true
     },
     "nuclear_fusion_domestic": {
-        "last_run": "2025-03-27 16:06:49",
+        "last_run": "2025-03-27 16:55:00",
         "success": true
     },
     "nuclear_risk_domestic": {
-        "last_run": "2025-03-27 16:06:50",
+        "last_run": "2025-03-27 16:55:02",
         "success": true
     },
     "nuclear_research_domestic": {
-        "last_run": "2025-03-27 16:06:51",
+        "last_run": "2025-03-27 16:55:03",
         "success": true
     },
     "sovereign-crisis_domestic": {
-        "last_run": "2025-03-27 16:06:52",
+        "last_run": "2025-03-27 16:55:04",
         "success": true
     },
     "political-stability_domestic": {
-        "last_run": "2025-03-27 16:06:53",
+        "last_run": "2025-03-27 16:55:04",
         "success": true
     },
     "tariffs_canada_international": {
-        "last_run": "2025-03-27 16:06:53",
+        "last_run": "2025-03-27 16:55:05",
         "success": true
     },
     "tariffs_china_international": {
-        "last_run": "2025-03-27 16:06:54",
+        "last_run": "2025-03-27 16:55:06",
         "success": true
     },
     "tariffs_mexico_international": {
-        "last_run": "2025-03-27 16:06:55",
+        "last_run": "2025-03-27 16:55:06",
         "success": true
     },
     "tariffs_venezuela_international": {
-        "last_run": "2025-03-27 16:06:56",
+        "last_run": "2025-03-27 16:55:07",
         "success": true
     },
     "layoffs_international": {
-        "last_run": "2025-03-27 16:06:56",
+        "last_run": "2025-03-27 16:55:08",
         "success": true
     },
     "outsourcing_international": {
-        "last_run": "2025-03-27 16:06:57",
+        "last_run": "2025-03-27 16:55:08",
         "success": true
     },
     "consumer-confidence_international": {
-        "last_run": "2025-03-27 16:06:58",
+        "last_run": "2025-03-27 16:55:09",
         "success": true
     },
     "supplier-concentration_international": {
-        "last_run": "2025-03-27 16:06:58",
+        "last_run": "2025-03-27 16:55:10",
         "success": true
     },
     "dei_diversity_international": {
-        "last_run": "2025-03-27 16:07:02",
+        "last_run": "2025-03-27 16:55:12",
         "success": true
     },
     "dei_equity_international": {
-        "last_run": "2025-03-27 16:07:03",
+        "last_run": "2025-03-27 16:55:14",
         "success": true
     },
     "dei_inclusion_international": {
-        "last_run": "2025-03-27 16:07:05",
+        "last_run": "2025-03-27 16:55:15",
         "success": true
     },
     "esg_environmental_international": {
-        "last_run": "2025-03-27 16:07:08",
+        "last_run": "2025-03-27 16:55:20",
         "success": true
     },
     "esg_social_international": {
-        "last_run": "2025-03-27 16:07:10",
+        "last_run": "2025-03-27 16:55:22",
         "success": true
     },
     "esg_governance_international": {
-        "last_run": "2025-03-27 16:07:13",
+        "last_run": "2025-03-27 16:55:25",
         "success": true
     },
     "space_launch_international": {
-        "last_run": "2025-03-27 16:07:15",
+        "last_run": "2025-03-27 16:55:27",
         "success": true
     },
     "space_satellite_international": {
-        "last_run": "2025-03-27 16:07:16",
+        "last_run": "2025-03-27 16:55:28",
         "success": true
     },
-    "ipo_aapl_us-domestic": {
-        "last_run": "2025-03-27 16:07:18",
+    "ipo_us_aapl-domestic": {
+        "last_run": "2025-03-27 16:55:30",
         "success": true
     },
-    "ipo_aapl_us-international": {
-        "last_run": "2025-03-27 16:07:19",
+    "ipo_us_aapl-international": {
+        "last_run": "2025-03-27 16:55:31",
         "success": true
     },
-    "ipo_msft_us-domestic": {
-        "last_run": "2025-03-27 16:07:22",
+    "ipo_us_msft-domestic": {
+        "last_run": "2025-03-27 16:55:34",
         "success": true
     },
-    "ipo_msft_us-international": {
-        "last_run": "2025-03-27 16:07:23",
+    "ipo_us_msft-international": {
+        "last_run": "2025-03-27 16:55:35",
         "success": true
     },
-    "ipo_goog_us-domestic": {
-        "last_run": "2025-03-27 16:07:26",
+    "ipo_us_goog-domestic": {
+        "last_run": "2025-03-27 16:55:38",
         "success": true
     },
-    "ipo_goog_us-international": {
-        "last_run": "2025-03-27 16:07:27",
+    "ipo_us_goog-international": {
+        "last_run": "2025-03-27 16:55:39",
         "success": true
     },
-    "ipo_amzn_us-domestic": {
-        "last_run": "2025-03-27 16:07:29",
+    "ipo_us_amzn-domestic": {
+        "last_run": "2025-03-27 16:55:41",
         "success": true
     },
-    "ipo_amzn_us-international": {
-        "last_run": "2025-03-27 16:07:31",
+    "ipo_us_amzn-international": {
+        "last_run": "2025-03-27 16:55:42",
         "success": true
     },
-    "ipo_fb_us-domestic": {
-        "last_run": "2025-03-27 16:07:33",
+    "ipo_us_fb-domestic": {
+        "last_run": "2025-03-27 16:55:44",
         "success": true
     },
-    "ipo_fb_us-international": {
-        "last_run": "2025-03-27 16:07:34",
+    "ipo_us_fb-international": {
+        "last_run": "2025-03-27 16:55:45",
         "success": true
     },
-    "ipo_nflx_us-domestic": {
-        "last_run": "2025-03-27 16:07:35",
+    "ipo_us_nflx-domestic": {
+        "last_run": "2025-03-27 16:55:46",
         "success": true
     },
-    "ipo_nflx_us-international": {
-        "last_run": "2025-03-27 16:07:36",
+    "ipo_us_nflx-international": {
+        "last_run": "2025-03-27 16:55:46",
         "success": true
     },
-    "ipo_tsla_us-domestic": {
-        "last_run": "2025-03-27 16:07:38",
+    "ipo_us_tsla-domestic": {
+        "last_run": "2025-03-27 16:55:48",
         "success": true
     },
-    "ipo_tsla_us-international": {
-        "last_run": "2025-03-27 16:07:39",
+    "ipo_us_tsla-international": {
+        "last_run": "2025-03-27 16:55:49",
         "success": true
     },
-    "ipo_nvda_us-domestic": {
-        "last_run": "2025-03-27 16:07:40",
+    "ipo_us_nvda-domestic": {
+        "last_run": "2025-03-27 16:55:50",
         "success": true
     },
-    "ipo_nvda_us-international": {
-        "last_run": "2025-03-27 16:07:41",
+    "ipo_us_nvda-international": {
+        "last_run": "2025-03-27 16:55:51",
         "success": true
     },
-    "ipo_intc_us-domestic": {
-        "last_run": "2025-03-27 16:07:44",
+    "ipo_us_intc-domestic": {
+        "last_run": "2025-03-27 16:55:53",
         "success": true
     },
-    "ipo_intc_us-international": {
-        "last_run": "2025-03-27 16:07:45",
+    "ipo_us_intc-international": {
+        "last_run": "2025-03-27 16:55:55",
         "success": true
     },
-    "ipo_crm_us-domestic": {
-        "last_run": "2025-03-27 16:07:47",
+    "ipo_us_crm-domestic": {
+        "last_run": "2025-03-27 16:55:56",
         "success": true
     },
-    "ipo_crm_us-international": {
-        "last_run": "2025-03-27 16:07:48",
+    "ipo_us_crm-international": {
+        "last_run": "2025-03-27 16:55:58",
         "success": true
     },
-    "ipo_jpm_us-domestic": {
-        "last_run": "2025-03-27 16:07:50",
+    "ipo_us_jpm-domestic": {
+        "last_run": "2025-03-27 16:56:00",
         "success": true
     },
-    "ipo_jpm_us-international": {
-        "last_run": "2025-03-27 16:07:51",
+    "ipo_us_jpm-international": {
+        "last_run": "2025-03-27 16:56:01",
         "success": true
     },
-    "ipo_gs_us-domestic": {
-        "last_run": "2025-03-27 16:07:54",
+    "ipo_us_gs-domestic": {
+        "last_run": "2025-03-27 16:56:04",
         "success": true
     },
-    "ipo_gs_us-international": {
-        "last_run": "2025-03-27 16:07:55",
+    "ipo_us_gs-international": {
+        "last_run": "2025-03-27 16:56:05",
         "success": true
     },
-    "ipo_v_us-domestic": {
-        "last_run": "2025-03-27 16:07:56",
+    "ipo_us_v-domestic": {
+        "last_run": "2025-03-27 16:56:06",
         "success": true
     },
-    "ipo_v_us-international": {
-        "last_run": "2025-03-27 16:07:57",
+    "ipo_us_v-international": {
+        "last_run": "2025-03-27 16:56:07",
         "success": true
     },
-    "ipo_pypl_us-domestic": {
-        "last_run": "2025-03-27 16:07:58",
+    "ipo_us_pypl-domestic": {
+        "last_run": "2025-03-27 16:56:08",
         "success": true
     },
-    "ipo_pypl_us-international": {
-        "last_run": "2025-03-27 16:07:59",
+    "ipo_us_pypl-international": {
+        "last_run": "2025-03-27 16:56:09",
         "success": true
     },
-    "ipo_brk_us-domestic": {
-        "last_run": "2025-03-27 16:08:00",
+    "ipo_us_brk-domestic": {
+        "last_run": "2025-03-27 16:56:10",
         "success": true
     },
-    "ipo_brk_us-international": {
-        "last_run": "2025-03-27 16:08:01",
+    "ipo_us_brk-international": {
+        "last_run": "2025-03-27 16:56:11",
         "success": true
     },
-    "ipo_wmt_us-domestic": {
-        "last_run": "2025-03-27 16:08:02",
+    "ipo_us_wmt-domestic": {
+        "last_run": "2025-03-27 16:56:12",
         "success": true
     },
-    "ipo_wmt_us-international": {
-        "last_run": "2025-03-27 16:08:03",
+    "ipo_us_wmt-international": {
+        "last_run": "2025-03-27 16:56:13",
         "success": true
     },
-    "ipo_cost_us-domestic": {
-        "last_run": "2025-03-27 16:08:04",
+    "ipo_us_cost-domestic": {
+        "last_run": "2025-03-27 16:56:14",
         "success": true
     },
-    "ipo_cost_us-international": {
-        "last_run": "2025-03-27 16:08:05",
+    "ipo_us_cost-international": {
+        "last_run": "2025-03-27 16:56:15",
         "success": true
     },
-    "ipo_sbux_us-domestic": {
-        "last_run": "2025-03-27 16:08:06",
+    "ipo_us_sbux-domestic": {
+        "last_run": "2025-03-27 16:56:16",
         "success": true
     },
-    "ipo_sbux_us-international": {
-        "last_run": "2025-03-27 16:08:07",
+    "ipo_us_sbux-international": {
+        "last_run": "2025-03-27 16:56:16",
         "success": true
     },
-    "ipo_mcd_us-domestic": {
-        "last_run": "2025-03-27 16:08:08",
+    "ipo_us_mcd-domestic": {
+        "last_run": "2025-03-27 16:56:17",
         "success": true
     },
-    "ipo_mcd_us-international": {
-        "last_run": "2025-03-27 16:08:09",
+    "ipo_us_mcd-international": {
+        "last_run": "2025-03-27 16:56:20",
         "success": true
     },
-    "ipo_nke_us-domestic": {
-        "last_run": "2025-03-27 16:08:11",
+    "ipo_us_nke-domestic": {
+        "last_run": "2025-03-27 16:56:21",
         "success": true
     },
-    "ipo_nke_us-international": {
-        "last_run": "2025-03-27 16:08:11",
+    "ipo_us_nke-international": {
+        "last_run": "2025-03-27 16:56:22",
         "success": true
     },
-    "ipo_sap_germany-domestic": {
-        "last_run": "2025-03-27 16:08:13",
+    "ipo_eu_sap-domestic": {
+        "last_run": "2025-03-27 16:56:23",
         "success": true
     },
-    "ipo_sap_germany-international": {
-        "last_run": "2025-03-27 16:08:13",
+    "ipo_eu_sap-international": {
+        "last_run": "2025-03-27 16:56:24",
         "success": true
     },
-    "ipo_asml_netherlands-domestic": {
-        "last_run": "2025-03-27 16:08:14",
+    "ipo_eu_asml-domestic": {
+        "last_run": "2025-03-27 16:56:25",
         "success": true
     },
-    "ipo_asml_netherlands-international": {
-        "last_run": "2025-03-27 16:08:15",
+    "ipo_eu_asml-international": {
+        "last_run": "2025-03-27 16:56:26",
         "success": true
     },
-    "ipo_spot_sweden-domestic": {
-        "last_run": "2025-03-27 16:08:16",
+    "ipo_eu_spot-domestic": {
+        "last_run": "2025-03-27 16:56:27",
         "success": true
     },
-    "ipo_spot_sweden-international": {
-        "last_run": "2025-03-27 16:08:17",
+    "ipo_eu_spot-international": {
+        "last_run": "2025-03-27 16:56:28",
         "success": true
     },
-    "ipo_adyen_netherlands-domestic": {
-        "last_run": "2025-03-27 16:08:18",
+    "ipo_eu_adyen-domestic": {
+        "last_run": "2025-03-27 16:56:29",
         "success": true
     },
-    "ipo_adyen_netherlands-international": {
-        "last_run": "2025-03-27 16:08:19",
+    "ipo_eu_adyen-international": {
+        "last_run": "2025-03-27 16:56:30",
         "success": true
     },
-    "ipo_shell_netherlands-domestic": {
-        "last_run": "2025-03-27 16:08:20",
+    "ipo_eu_shell-domestic": {
+        "last_run": "2025-03-27 16:56:32",
         "success": true
     },
-    "ipo_shell_netherlands-international": {
-        "last_run": "2025-03-27 16:08:21",
+    "ipo_eu_shell-international": {
+        "last_run": "2025-03-27 16:56:33",
         "success": true
     },
-    "ipo_tte_france-domestic": {
-        "last_run": "2025-03-27 16:08:23",
+    "ipo_eu_tte-domestic": {
+        "last_run": "2025-03-27 16:56:35",
         "success": true
     },
-    "ipo_tte_france-international": {
-        "last_run": "2025-03-27 16:08:24",
+    "ipo_eu_tte-international": {
+        "last_run": "2025-03-27 16:56:36",
         "success": true
     },
-    "ipo_orsted_denmark-domestic": {
-        "last_run": "2025-03-27 16:08:25",
+    "ipo_eu_orsted-domestic": {
+        "last_run": "2025-03-27 16:56:36",
         "success": true
     },
-    "ipo_orsted_denmark-international": {
-        "last_run": "2025-03-27 16:08:25",
+    "ipo_eu_orsted-international": {
+        "last_run": "2025-03-27 16:56:37",
         "success": true
     },
-    "ipo_lvmh_france-domestic": {
-        "last_run": "2025-03-27 16:08:26",
+    "ipo_eu_lvmh-domestic": {
+        "last_run": "2025-03-27 16:56:38",
         "success": true
     },
-    "ipo_lvmh_france-international": {
-        "last_run": "2025-03-27 16:08:27",
+    "ipo_eu_lvmh-international": {
+        "last_run": "2025-03-27 16:56:38",
         "success": true
     },
-    "ipo_itx_spain-domestic": {
-        "last_run": "2025-03-27 16:08:27",
+    "ipo_eu_itx-domestic": {
+        "last_run": "2025-03-27 16:56:39",
         "success": true
     },
-    "ipo_itx_spain-international": {
-        "last_run": "2025-03-27 16:08:28",
+    "ipo_eu_itx-international": {
+        "last_run": "2025-03-27 16:56:40",
         "success": true
     },
-    "ipo_or_france-domestic": {
-        "last_run": "2025-03-27 16:08:29",
+    "ipo_eu_or-domestic": {
+        "last_run": "2025-03-27 16:56:40",
         "success": true
     },
-    "ipo_or_france-international": {
-        "last_run": "2025-03-27 16:08:29",
+    "ipo_eu_or-international": {
+        "last_run": "2025-03-27 16:56:41",
         "success": true
     },
-    "ipo_vowg_germany-domestic": {
-        "last_run": "2025-03-27 16:08:30",
+    "ipo_eu_vowg-domestic": {
+        "last_run": "2025-03-27 16:56:42",
         "success": true
     },
-    "ipo_vowg_germany-international": {
-        "last_run": "2025-03-27 16:08:31",
+    "ipo_eu_vowg-international": {
+        "last_run": "2025-03-27 16:56:43",
         "success": true
     },
-    "ipo_mbg_germany-domestic": {
-        "last_run": "2025-03-27 16:08:32",
+    "ipo_eu_mbg-domestic": {
+        "last_run": "2025-03-27 16:56:44",
         "success": true
     },
-    "ipo_mbg_germany-international": {
-        "last_run": "2025-03-27 16:08:33",
+    "ipo_eu_mbg-international": {
+        "last_run": "2025-03-27 16:56:46",
         "success": true
     },
-    "ipo_bmw_germany-domestic": {
-        "last_run": "2025-03-27 16:08:34",
+    "ipo_eu_bmw-domestic": {
+        "last_run": "2025-03-27 16:56:47",
         "success": true
     },
-    "ipo_bmw_germany-international": {
-        "last_run": "2025-03-27 16:08:35",
+    "ipo_eu_bmw-international": {
+        "last_run": "2025-03-27 16:56:48",
         "success": true
     },
-    "ipo_san_spain-domestic": {
-        "last_run": "2025-03-27 16:08:36",
+    "ipo_eu_san-domestic": {
+        "last_run": "2025-03-27 16:56:49",
         "success": true
     },
-    "ipo_san_spain-international": {
-        "last_run": "2025-03-27 16:08:37",
+    "ipo_eu_san-international": {
+        "last_run": "2025-03-27 16:56:50",
         "success": true
     },
-    "ipo_bnp_france-domestic": {
-        "last_run": "2025-03-27 16:08:38",
+    "ipo_eu_bnp-domestic": {
+        "last_run": "2025-03-27 16:56:51",
         "success": true
     },
-    "ipo_bnp_france-international": {
-        "last_run": "2025-03-27 16:08:39",
+    "ipo_eu_bnp-international": {
+        "last_run": "2025-03-27 16:56:52",
         "success": true
     },
-    "ipo_dbk_germany-domestic": {
-        "last_run": "2025-03-27 16:08:43",
+    "ipo_eu_dbk-domestic": {
+        "last_run": "2025-03-27 16:56:55",
         "success": true
     },
-    "ipo_dbk_germany-international": {
-        "last_run": "2025-03-27 16:08:45",
+    "ipo_eu_dbk-international": {
+        "last_run": "2025-03-27 16:56:57",
         "success": true
     },
-    "ipo_baba_china-domestic": {
-        "last_run": "2025-03-27 16:08:46",
+    "ipo_china_baba-domestic": {
+        "last_run": "2025-03-27 16:56:58",
         "success": true
     },
-    "ipo_baba_china-international": {
-        "last_run": "2025-03-27 16:08:47",
+    "ipo_china_baba-international": {
+        "last_run": "2025-03-27 16:56:59",
         "success": true
     },
-    "ipo_tcehy_china-domestic": {
-        "last_run": "2025-03-27 16:08:48",
+    "ipo_china_tcehy-domestic": {
+        "last_run": "2025-03-27 16:57:00",
         "success": true
     },
-    "ipo_tcehy_china-international": {
-        "last_run": "2025-03-27 16:08:49",
+    "ipo_china_tcehy-international": {
+        "last_run": "2025-03-27 16:57:02",
         "success": true
     },
-    "ipo_bidu_china-domestic": {
-        "last_run": "2025-03-27 16:08:51",
+    "ipo_china_bidu-domestic": {
+        "last_run": "2025-03-27 16:57:03",
         "success": true
     },
-    "ipo_bidu_china-international": {
-        "last_run": "2025-03-27 16:08:52",
+    "ipo_china_bidu-international": {
+        "last_run": "2025-03-27 16:57:04",
         "success": true
     },
-    "ipo_jd_china-domestic": {
-        "last_run": "2025-03-27 16:08:52",
+    "ipo_china_jd-domestic": {
+        "last_run": "2025-03-27 16:57:05",
         "success": true
     },
-    "ipo_jd_china-international": {
-        "last_run": "2025-03-27 16:08:53",
+    "ipo_china_jd-international": {
+        "last_run": "2025-03-27 16:57:06",
         "success": true
     },
-    "ipo_bytd_china-domestic": {
-        "last_run": "2025-03-27 16:08:54",
+    "ipo_china_bytd-domestic": {
+        "last_run": "2025-03-27 16:57:07",
         "success": true
     },
-    "ipo_bytd_china-international": {
-        "last_run": "2025-03-27 16:08:55",
+    "ipo_china_bytd-international": {
+        "last_run": "2025-03-27 16:57:08",
         "success": true
     },
-    "ipo_xiacf_china-domestic": {
-        "last_run": "2025-03-27 16:08:56",
+    "ipo_china_xiacf-domestic": {
+        "last_run": "2025-03-27 16:57:09",
         "success": true
     },
-    "ipo_xiacf_china-international": {
-        "last_run": "2025-03-27 16:08:57",
+    "ipo_china_xiacf-international": {
+        "last_run": "2025-03-27 16:57:10",
         "success": true
     },
-    "ipo_icbc_china-domestic": {
-        "last_run": "2025-03-27 16:09:00",
+    "ipo_china_icbc-domestic": {
+        "last_run": "2025-03-27 16:57:12",
         "success": true
     },
-    "ipo_icbc_china-international": {
-        "last_run": "2025-03-27 16:09:02",
+    "ipo_china_icbc-international": {
+        "last_run": "2025-03-27 16:57:13",
         "success": true
     },
-    "ipo_cichy_china-domestic": {
-        "last_run": "2025-03-27 16:09:03",
+    "ipo_china_cichy-domestic": {
+        "last_run": "2025-03-27 16:57:14",
         "success": true
     },
-    "ipo_cichy_china-international": {
-        "last_run": "2025-03-27 16:09:04",
+    "ipo_china_cichy-international": {
+        "last_run": "2025-03-27 16:57:15",
         "success": true
     },
-    "ipo_pngay_china-domestic": {
-        "last_run": "2025-03-27 16:09:05",
+    "ipo_china_pngay-domestic": {
+        "last_run": "2025-03-27 16:57:16",
         "success": true
     },
-    "ipo_pngay_china-international": {
-        "last_run": "2025-03-27 16:09:06",
+    "ipo_china_pngay-international": {
+        "last_run": "2025-03-27 16:57:17",
         "success": true
     },
-    "ipo_ptr_china-domestic": {
-        "last_run": "2025-03-27 16:09:07",
+    "ipo_china_ptr-domestic": {
+        "last_run": "2025-03-27 16:57:18",
         "success": true
     },
-    "ipo_ptr_china-international": {
-        "last_run": "2025-03-27 16:09:08",
+    "ipo_china_ptr-international": {
+        "last_run": "2025-03-27 16:57:19",
         "success": true
     },
-    "ipo_chl_china-domestic": {
-        "last_run": "2025-03-27 16:09:09",
+    "ipo_china_chl-domestic": {
+        "last_run": "2025-03-27 16:57:20",
         "success": true
     },
-    "ipo_chl_china-international": {
-        "last_run": "2025-03-27 16:09:10",
+    "ipo_china_chl-international": {
+        "last_run": "2025-03-27 16:57:22",
         "success": true
     },
-    "ipo_byddy_china-domestic": {
-        "last_run": "2025-03-27 16:09:11",
+    "ipo_china_byddy-domestic": {
+        "last_run": "2025-03-27 16:57:22",
         "success": true
     },
-    "ipo_byddy_china-international": {
-        "last_run": "2025-03-27 16:09:12",
+    "ipo_china_byddy-international": {
+        "last_run": "2025-03-27 16:57:23",
         "success": true
     }
 }

@@ -754,426 +754,27 @@
                 "20-F"
             ]
         },
-        "ipo_us_aapl-domestic": {
+        "ipo_domestic_us": {
             "query": [
-                "\"Apple Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_aapl-international": {
-            "query": [
-                "\"Apple Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_msft-domestic": {
-            "query": [
-                "\"Microsoft Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_msft-international": {
-            "query": [
-                "\"Microsoft Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_goog-domestic": {
-            "query": [
-                "\"Google Inc.\" OR \"Alphabet Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_goog-international": {
-            "query": [
-                "\"Google Inc.\" OR \"Alphabet Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_amzn-domestic": {
-            "query": [
-                "\"Amazon.com, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_amzn-international": {
-            "query": [
-                "\"Amazon.com, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_fb-domestic": {
-            "query": [
-                "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_fb-international": {
-            "query": [
-                "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_nflx-domestic": {
-            "query": [
-                "\"Netflix, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_nflx-international": {
-            "query": [
-                "\"Netflix, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_tsla-domestic": {
-            "query": [
-                "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_tsla-international": {
-            "query": [
-                "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_nvda-domestic": {
-            "query": [
-                "\"NVIDIA Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_nvda-international": {
-            "query": [
-                "\"NVIDIA Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_intc-domestic": {
-            "query": [
-                "\"Intel Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_intc-international": {
-            "query": [
-                "\"Intel Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_crm-domestic": {
-            "query": [
-                "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_crm-international": {
-            "query": [
-                "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_jpm-domestic": {
-            "query": [
-                "\"JPMorgan Chase & Co.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_jpm-international": {
-            "query": [
-                "\"JPMorgan Chase & Co.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_gs-domestic": {
-            "query": [
-                "\"The Goldman Sachs Group, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_gs-international": {
-            "query": [
-                "\"The Goldman Sachs Group, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_v-domestic": {
-            "query": [
-                "\"Visa Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_v-international": {
-            "query": [
-                "\"Visa Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_pypl-domestic": {
-            "query": [
-                "\"PayPal Holdings, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_pypl-international": {
-            "query": [
-                "\"PayPal Holdings, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_brk-domestic": {
-            "query": [
-                "\"Berkshire Hathaway Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_brk-international": {
-            "query": [
-                "\"Berkshire Hathaway Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_wmt-domestic": {
-            "query": [
-                "\"Walmart Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_wmt-international": {
-            "query": [
-                "\"Walmart Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_cost-domestic": {
-            "query": [
-                "\"Costco Wholesale Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_cost-international": {
-            "query": [
-                "\"Costco Wholesale Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_sbux-domestic": {
-            "query": [
-                "\"Starbucks Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_sbux-international": {
-            "query": [
-                "\"Starbucks Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_mcd-domestic": {
-            "query": [
-                "\"McDonald's Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_us_mcd-international": {
-            "query": [
-                "\"McDonald's Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_us_nke-domestic": {
-            "query": [
+                "\"Apple Inc.\"",
+                "\"Microsoft Corporation\"",
+                "\"Google Inc.\" OR \"Alphabet Inc.\"",
+                "\"Amazon.com, Inc.\"",
+                "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\"",
+                "\"Netflix, Inc.\"",
+                "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\"",
+                "\"NVIDIA Corporation\"",
+                "\"Intel Corporation\"",
+                "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\"",
+                "\"JPMorgan Chase & Co.\"",
+                "\"The Goldman Sachs Group, Inc.\"",
+                "\"Visa Inc.\"",
+                "\"PayPal Holdings, Inc.\"",
+                "\"Berkshire Hathaway Inc.\"",
+                "\"Walmart Inc.\"",
+                "\"Costco Wholesale Corporation\"",
+                "\"Starbucks Corporation\"",
+                "\"McDonald's Corporation\"",
                 "\"NIKE, Inc.\""
             ],
             "submission_type": [
@@ -1183,8 +784,27 @@
                 "S-1"
             ]
         },
-        "ipo_us_nke-international": {
+        "ipo_international_us": {
             "query": [
+                "\"Apple Inc.\"",
+                "\"Microsoft Corporation\"",
+                "\"Google Inc.\" OR \"Alphabet Inc.\"",
+                "\"Amazon.com, Inc.\"",
+                "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\"",
+                "\"Netflix, Inc.\"",
+                "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\"",
+                "\"NVIDIA Corporation\"",
+                "\"Intel Corporation\"",
+                "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\"",
+                "\"JPMorgan Chase & Co.\"",
+                "\"The Goldman Sachs Group, Inc.\"",
+                "\"Visa Inc.\"",
+                "\"PayPal Holdings, Inc.\"",
+                "\"Berkshire Hathaway Inc.\"",
+                "\"Walmart Inc.\"",
+                "\"Costco Wholesale Corporation\"",
+                "\"Starbucks Corporation\"",
+                "\"McDonald's Corporation\"",
                 "\"NIKE, Inc.\""
             ],
             "submission_type": [
@@ -1194,338 +814,23 @@
                 "F-1"
             ]
         },
-        "ipo_eu_sap-domestic": {
+        "ipo_domestic_eu": {
             "query": [
-                "\"SAP SE\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_sap-international": {
-            "query": [
-                "\"SAP SE\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_asml-domestic": {
-            "query": [
-                "\"ASML Holding N.V.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_asml-international": {
-            "query": [
-                "\"ASML Holding N.V.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_spot-domestic": {
-            "query": [
-                "\"Spotify Technology S.A.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_spot-international": {
-            "query": [
-                "\"Spotify Technology S.A.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_adyen-domestic": {
-            "query": [
-                "\"Adyen N.V.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_adyen-international": {
-            "query": [
-                "\"Adyen N.V.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_shell-domestic": {
-            "query": [
-                "\"Shell plc\" OR \"Royal Dutch Shell plc\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_shell-international": {
-            "query": [
-                "\"Shell plc\" OR \"Royal Dutch Shell plc\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_tte-domestic": {
-            "query": [
-                "\"TotalEnergies SE\" OR \"Total S.A.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_tte-international": {
-            "query": [
-                "\"TotalEnergies SE\" OR \"Total S.A.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_orsted-domestic": {
-            "query": [
-                "\"Ørsted A/S\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_orsted-international": {
-            "query": [
-                "\"Ørsted A/S\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_lvmh-domestic": {
-            "query": [
-                "\"LVMH Moët Hennessy Louis Vuitton SE\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_lvmh-international": {
-            "query": [
-                "\"LVMH Moët Hennessy Louis Vuitton SE\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_itx-domestic": {
-            "query": [
-                "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_itx-international": {
-            "query": [
-                "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_or-domestic": {
-            "query": [
-                "\"L'Oréal S.A.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_or-international": {
-            "query": [
-                "\"L'Oréal S.A.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_vowg-domestic": {
-            "query": [
-                "\"Volkswagen AG\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_vowg-international": {
-            "query": [
-                "\"Volkswagen AG\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_mbg-domestic": {
-            "query": [
-                "\"Mercedes-Benz Group AG\" OR \"Daimler AG\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_mbg-international": {
-            "query": [
-                "\"Mercedes-Benz Group AG\" OR \"Daimler AG\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_bmw-domestic": {
-            "query": [
-                "\"Bayerische Motoren Werke AG\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_bmw-international": {
-            "query": [
-                "\"Bayerische Motoren Werke AG\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_san-domestic": {
-            "query": [
-                "\"Banco Santander, S.A.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_san-international": {
-            "query": [
-                "\"Banco Santander, S.A.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_bnp-domestic": {
-            "query": [
-                "\"BNP Paribas S.A.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_eu_bnp-international": {
-            "query": [
-                "\"BNP Paribas S.A.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_eu_dbk-domestic": {
-            "query": [
+                "\"SAP SE\"",
+                "\"ASML Holding N.V.\"",
+                "\"Spotify Technology S.A.\"",
+                "\"Adyen N.V.\"",
+                "\"Shell plc\" OR \"Royal Dutch Shell plc\"",
+                "\"TotalEnergies SE\" OR \"Total S.A.\"",
+                "\"Ørsted A/S\"",
+                "\"LVMH Moët Hennessy Louis Vuitton SE\"",
+                "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\"",
+                "\"L'Oréal S.A.\"",
+                "\"Volkswagen AG\"",
+                "\"Mercedes-Benz Group AG\" OR \"Daimler AG\"",
+                "\"Bayerische Motoren Werke AG\"",
+                "\"Banco Santander, S.A.\"",
+                "\"BNP Paribas S.A.\"",
                 "\"Deutsche Bank AG\""
             ],
             "submission_type": [
@@ -1535,8 +840,23 @@
                 "S-1"
             ]
         },
-        "ipo_eu_dbk-international": {
+        "ipo_international_eu": {
             "query": [
+                "\"SAP SE\"",
+                "\"ASML Holding N.V.\"",
+                "\"Spotify Technology S.A.\"",
+                "\"Adyen N.V.\"",
+                "\"Shell plc\" OR \"Royal Dutch Shell plc\"",
+                "\"TotalEnergies SE\" OR \"Total S.A.\"",
+                "\"Ørsted A/S\"",
+                "\"LVMH Moët Hennessy Louis Vuitton SE\"",
+                "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\"",
+                "\"L'Oréal S.A.\"",
+                "\"Volkswagen AG\"",
+                "\"Mercedes-Benz Group AG\" OR \"Daimler AG\"",
+                "\"Bayerische Motoren Werke AG\"",
+                "\"Banco Santander, S.A.\"",
+                "\"BNP Paribas S.A.\"",
                 "\"Deutsche Bank AG\""
             ],
             "submission_type": [
@@ -1546,250 +866,19 @@
                 "F-1"
             ]
         },
-        "ipo_china_baba-domestic": {
+        "ipo_domestic_cn": {
             "query": [
-                "\"Alibaba Group Holding Limited\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_baba-international": {
-            "query": [
-                "\"Alibaba Group Holding Limited\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_tcehy-domestic": {
-            "query": [
-                "\"Tencent Holdings Limited\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_tcehy-international": {
-            "query": [
-                "\"Tencent Holdings Limited\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_bidu-domestic": {
-            "query": [
-                "\"Baidu, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_bidu-international": {
-            "query": [
-                "\"Baidu, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_jd-domestic": {
-            "query": [
-                "\"JD.com, Inc.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_jd-international": {
-            "query": [
-                "\"JD.com, Inc.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_bytd-domestic": {
-            "query": [
-                "\"ByteDance Ltd.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_bytd-international": {
-            "query": [
-                "\"ByteDance Ltd.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_xiacf-domestic": {
-            "query": [
-                "\"Xiaomi Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_xiacf-international": {
-            "query": [
-                "\"Xiaomi Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_icbc-domestic": {
-            "query": [
-                "\"Industrial and Commercial Bank of China Limited\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_icbc-international": {
-            "query": [
-                "\"Industrial and Commercial Bank of China Limited\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_cichy-domestic": {
-            "query": [
-                "\"China Construction Bank Corporation\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_cichy-international": {
-            "query": [
-                "\"China Construction Bank Corporation\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_pngay-domestic": {
-            "query": [
-                "\"Ping An Insurance (Group) Company of China, Ltd.\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_pngay-international": {
-            "query": [
-                "\"Ping An Insurance (Group) Company of China, Ltd.\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_ptr-domestic": {
-            "query": [
-                "\"PetroChina Company Limited\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_ptr-international": {
-            "query": [
-                "\"PetroChina Company Limited\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_chl-domestic": {
-            "query": [
-                "\"China Mobile Limited\""
-            ],
-            "submission_type": [
-                "S-1"
-            ],
-            "document_type": [
-                "S-1"
-            ]
-        },
-        "ipo_china_chl-international": {
-            "query": [
-                "\"China Mobile Limited\""
-            ],
-            "submission_type": [
-                "F-1"
-            ],
-            "document_type": [
-                "F-1"
-            ]
-        },
-        "ipo_china_byddy-domestic": {
-            "query": [
+                "\"Alibaba Group Holding Limited\"",
+                "\"Tencent Holdings Limited\"",
+                "\"Baidu, Inc.\"",
+                "\"JD.com, Inc.\"",
+                "\"ByteDance Ltd.\"",
+                "\"Xiaomi Corporation\"",
+                "\"Industrial and Commercial Bank of China Limited\"",
+                "\"China Construction Bank Corporation\"",
+                "\"Ping An Insurance (Group) Company of China, Ltd.\"",
+                "\"PetroChina Company Limited\"",
+                "\"China Mobile Limited\"",
                 "\"BYD Company Limited\""
             ],
             "submission_type": [
@@ -1799,8 +888,19 @@
                 "S-1"
             ]
         },
-        "ipo_china_byddy-international": {
+        "ipo_international_cn": {
             "query": [
+                "\"Alibaba Group Holding Limited\"",
+                "\"Tencent Holdings Limited\"",
+                "\"Baidu, Inc.\"",
+                "\"JD.com, Inc.\"",
+                "\"ByteDance Ltd.\"",
+                "\"Xiaomi Corporation\"",
+                "\"Industrial and Commercial Bank of China Limited\"",
+                "\"China Construction Bank Corporation\"",
+                "\"Ping An Insurance (Group) Company of China, Ltd.\"",
+                "\"PetroChina Company Limited\"",
+                "\"China Mobile Limited\"",
                 "\"BYD Company Limited\""
             ],
             "submission_type": [

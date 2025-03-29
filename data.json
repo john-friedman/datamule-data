@@ -909,6 +909,930 @@
             "document_type": [
                 "F-1"
             ]
+        },
+        "explosive-materials_ammonium-nitrate_domestic": {
+            "query": [
+                "\"Ammonium nitrate\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "explosive-materials_ammonium-nitrate_intl": {
+            "query": [
+                "\"Ammonium nitrate\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "explosive-materials_sodium-nitrate_domestic": {
+            "query": [
+                "\"Sodium nitrate\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "explosive-materials_sodium-nitrate_intl": {
+            "query": [
+                "\"Sodium nitrate\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "explosive-materials_potassium-nitrate_domestic": {
+            "query": [
+                "\"Potassium nitrate\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "explosive-materials_potassium-nitrate_intl": {
+            "query": [
+                "\"Potassium nitrate\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_aluminum_domestic": {
+            "query": [
+                "Aluminum"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_aluminum_intl": {
+            "query": [
+                "Aluminum"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_nickel_domestic": {
+            "query": [
+                "Nickel"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_nickel_intl": {
+            "query": [
+                "Nickel"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_titanium_domestic": {
+            "query": [
+                "Titanium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_titanium_intl": {
+            "query": [
+                "Titanium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_copper_domestic": {
+            "query": [
+                "Copper"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_copper_intl": {
+            "query": [
+                "Copper"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_silicon_domestic": {
+            "query": [
+                "Silicon"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_silicon_intl": {
+            "query": [
+                "Silicon"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_gallium_domestic": {
+            "query": [
+                "Gallium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_gallium_intl": {
+            "query": [
+                "Gallium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_germanium_domestic": {
+            "query": [
+                "Germanium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_germanium_intl": {
+            "query": [
+                "Germanium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_indium_domestic": {
+            "query": [
+                "Indium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_indium_intl": {
+            "query": [
+                "Indium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_nitric-acid_domestic": {
+            "query": [
+                "\"Nitric acid\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_nitric-acid_intl": {
+            "query": [
+                "\"Nitric acid\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_hydrogen-peroxide_domestic": {
+            "query": [
+                "\"Hydrogen peroxide\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_hydrogen-peroxide_intl": {
+            "query": [
+                "\"Hydrogen peroxide\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_hydrazine_domestic": {
+            "query": [
+                "Hydrazine"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_hydrazine_intl": {
+            "query": [
+                "Hydrazine"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_kerosene_domestic": {
+            "query": [
+                "Kerosene"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_kerosene_intl": {
+            "query": [
+                "Kerosene"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_graphite_domestic": {
+            "query": [
+                "Graphite"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_graphite_intl": {
+            "query": [
+                "Graphite"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_carbon-fiber_domestic": {
+            "query": [
+                "\"Carbon fiber\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_carbon-fiber_intl": {
+            "query": [
+                "\"Carbon fiber\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_tungsten_domestic": {
+            "query": [
+                "Tungsten"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_tungsten_intl": {
+            "query": [
+                "Tungsten"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_magnesium_domestic": {
+            "query": [
+                "Magnesium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_magnesium_intl": {
+            "query": [
+                "Magnesium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_lithium_domestic": {
+            "query": [
+                "Lithium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_lithium_intl": {
+            "query": [
+                "Lithium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_microchips_domestic": {
+            "query": [
+                "Microchips"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_microchips_intl": {
+            "query": [
+                "Microchips"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_circuit-boards_domestic": {
+            "query": [
+                "\"Circuit boards\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_circuit-boards_intl": {
+            "query": [
+                "\"Circuit boards\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_capacitors_domestic": {
+            "query": [
+                "Capacitors"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_capacitors_intl": {
+            "query": [
+                "Capacitors"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_resistors_domestic": {
+            "query": [
+                "Resistors"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_resistors_intl": {
+            "query": [
+                "Resistors"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_transistors_domestic": {
+            "query": [
+                "Transistors"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_transistors_intl": {
+            "query": [
+                "Transistors"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_industrial-solvents_domestic": {
+            "query": [
+                "\"Industrial solvents\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_industrial-solvents_intl": {
+            "query": [
+                "\"Industrial solvents\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_adhesives_domestic": {
+            "query": [
+                "Adhesives"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_adhesives_intl": {
+            "query": [
+                "Adhesives"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_specialty-lubricants_domestic": {
+            "query": [
+                "\"Specialty lubricants\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_specialty-lubricants_intl": {
+            "query": [
+                "\"Specialty lubricants\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_paint-additives_domestic": {
+            "query": [
+                "\"Paint additives\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_paint-additives_intl": {
+            "query": [
+                "\"Paint additives\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_polymer-precursors_domestic": {
+            "query": [
+                "\"Polymer precursors\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_polymer-precursors_intl": {
+            "query": [
+                "\"Polymer precursors\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "supply-chain_constraints_domestic": {
+            "query": [
+                "\"Supply chain constraints\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "supply-chain_constraints_intl": {
+            "query": [
+                "\"Supply chain constraints\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "military-equipment_main-battle-tank_domestic": {
+            "query": [
+                "\"main battle tank\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_main-battle-tank_intl": {
+            "query": [
+                "\"main battle tank\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_electronic-warfare_domestic": {
+            "query": [
+                "\"electronic warfare\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_electronic-warfare_intl": {
+            "query": [
+                "\"electronic warfare\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_uav-drone_domestic": {
+            "query": [
+                "\"UAV\" OR drone"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_uav-drone_intl": {
+            "query": [
+                "\"UAV\" OR drone"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft_domestic": {
+            "query": [
+                "Aircraft"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft_intl": {
+            "query": [
+                "Aircraft"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft-f35_domestic": {
+            "query": [
+                "\"F-35\" AND \"aircraft\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft-f35_intl": {
+            "query": [
+                "\"F-35\" AND \"aircraft\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft-f16_domestic": {
+            "query": [
+                "\"F-16\" AND \"aircraft\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft-f16_intl": {
+            "query": [
+                "\"F-16\" AND \"aircraft\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft-c130j_domestic": {
+            "query": [
+                "C-130J"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft-c130j_intl": {
+            "query": [
+                "C-130J"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_helicopter-ah64_domestic": {
+            "query": [
+                "AH-64"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_helicopter-ah64_intl": {
+            "query": [
+                "AH-64"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_helicopter-ch47_domestic": {
+            "query": [
+                "CH-47"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_helicopter-ch47_intl": {
+            "query": [
+                "CH-47"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_ammunition-40mm_domestic": {
+            "query": [
+                "\"40mm\" OR \"40 mm\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_ammunition-40mm_intl": {
+            "query": [
+                "\"40mm\" OR \"40 mm\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_ammunition-12gauge_domestic": {
+            "query": [
+                "\"12 Gauge\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_ammunition-12gauge_intl": {
+            "query": [
+                "\"12 Gauge\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
         }
     },
     "filer_metadata": {

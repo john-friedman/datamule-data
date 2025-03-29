@@ -1833,6 +1833,344 @@
             "document_type": [
                 "6-K"
             ]
+        },
+        "health_alzheimer_domestic": {
+            "query": [
+                "Alzheimer"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_obesity_domestic": {
+            "query": [
+                "Obesity"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_nash_domestic": {
+            "query": [
+                "Non-alcoholic steatohepatitis"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_ptsd_domestic": {
+            "query": [
+                "PTSD"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_alzheimer_international": {
+            "query": [
+                "Alzheimer"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "health_obesity_international": {
+            "query": [
+                "Obesity"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "health_nash_international": {
+            "query": [
+                "Non-alcoholic steatohepatitis"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "health_ptsd_international": {
+            "query": [
+                "PTSD"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "pandemic_general_domestic": {
+            "query": [
+                "pandemic"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "pandemic_covid-19_domestic": {
+            "query": [
+                "covid-19"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_h1n1-swine_domestic": {
+            "query": [
+                "h1n1 OR \"swine flu\" OR \"swine influenza\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_mpox_domestic": {
+            "query": [
+                "mpox OR monkeypox"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_zika_domestic": {
+            "query": [
+                "zika"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_h5n1-avian_domestic": {
+            "query": [
+                "H5N1 OR \"avian influenza\" OR \"avian flu\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "pandemic_general_international": {
+            "query": [
+                "pandemic"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "pandemic_covid-19_international": {
+            "query": [
+                "covid-19"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_h1n1-swine_international": {
+            "query": [
+                "h1n1 OR \"swine flu\" OR \"swine influenza\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_mpox_international": {
+            "query": [
+                "mpox OR monkeypox"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_zika_international": {
+            "query": [
+                "zika"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_h5n1-avian_international": {
+            "query": [
+                "H5N1 OR \"avian influenza\" OR \"avian flu\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_research-ai_domestic": {
+            "query": [
+                "\"Health Research\" AND \"Artificial Intelligence\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_research-ai_international": {
+            "query": [
+                "\"Health Research\" AND \"Artificial Intelligence\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_general_domestic": {
+            "query": [
+                "\"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_openai_domestic": {
+            "query": [
+                "\"OpenAI\" AND \"Large Language Models\"",
+                "\"ChatGPT\" AND \"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_anthropic_domestic": {
+            "query": [
+                "\"Claude\" AND \"Large Language Models\"",
+                "\"Anthropic\" AND \"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_google_domestic": {
+            "query": [
+                "\"Bard\" AND \"Large Language Models\"",
+                "\"Gemini\" AND \"Large Language Models\"",
+                "\"Google\" AND \"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_general_international": {
+            "query": [
+                "\"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_openai_international": {
+            "query": [
+                "\"OpenAI\" AND \"Large Language Models\"",
+                "\"ChatGPT\" AND \"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_anthropic_international": {
+            "query": [
+                "\"Claude\" AND \"Large Language Models\"",
+                "\"Anthropic\" AND \"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_google_international": {
+            "query": [
+                "\"Bard\" AND \"Large Language Models\"",
+                "\"Gemini\" AND \"Large Language Models\"",
+                "\"Google\" AND \"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
         }
     },
     "filer_metadata": {

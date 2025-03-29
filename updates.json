@@ -1,286 +1,286 @@
 {
     "tariffs_canada_domestic": {
-        "last_run": "2025-03-28 09:15:57",
+        "last_run": "2025-03-29 09:13:57",
         "success": true
     },
     "submissions_metadata": {
-        "last_run": "2025-03-28 09:20:13",
+        "last_run": "2025-03-29 09:17:57",
         "success": true
     },
     "tariffs_china_domestic": {
-        "last_run": "2025-03-28 09:15:57",
+        "last_run": "2025-03-29 09:13:57",
         "success": true
     },
     "tariffs_mexico_domestic": {
-        "last_run": "2025-03-28 09:15:57",
+        "last_run": "2025-03-29 09:13:58",
         "success": true
     },
     "tariffs_venezuela_domestic": {
-        "last_run": "2025-03-28 09:15:58",
+        "last_run": "2025-03-29 09:13:58",
         "success": true
     },
     "layoffs_domestic": {
-        "last_run": "2025-03-28 09:15:58",
+        "last_run": "2025-03-29 09:13:59",
         "success": true
     },
     "outsourcing_domestic": {
-        "last_run": "2025-03-28 09:15:59",
+        "last_run": "2025-03-29 09:13:59",
         "success": true
     },
     "consumer-confidence_domestic": {
-        "last_run": "2025-03-28 09:16:00",
+        "last_run": "2025-03-29 09:14:00",
         "success": true
     },
     "supplier-concentration_domestic": {
-        "last_run": "2025-03-28 09:16:00",
+        "last_run": "2025-03-29 09:14:01",
         "success": true
     },
     "dei_diversity_domestic": {
-        "last_run": "2025-03-28 09:16:02",
+        "last_run": "2025-03-29 09:14:02",
         "success": true
     },
     "dei_equity_domestic": {
-        "last_run": "2025-03-28 09:16:03",
+        "last_run": "2025-03-29 09:14:03",
         "success": true
     },
     "dei_inclusion_domestic": {
-        "last_run": "2025-03-28 09:16:04",
+        "last_run": "2025-03-29 09:14:05",
         "success": true
     },
     "esg_environmental_domestic": {
-        "last_run": "2025-03-28 09:16:07",
+        "last_run": "2025-03-29 09:14:07",
         "success": true
     },
     "esg_social_domestic": {
-        "last_run": "2025-03-28 09:16:08",
+        "last_run": "2025-03-29 09:14:09",
         "success": true
     },
     "esg_governance_domestic": {
-        "last_run": "2025-03-28 09:16:11",
+        "last_run": "2025-03-29 09:14:11",
         "success": true
     },
     "war_russo-ukrainian_domestic": {
-        "last_run": "2025-03-28 09:16:11",
+        "last_run": "2025-03-29 09:14:11",
         "success": true
     },
     "war_israel-hamas_domestic": {
-        "last_run": "2025-03-28 09:16:11",
+        "last_run": "2025-03-29 09:14:11",
         "success": true
     },
     "war_syrian-civil_domestic": {
-        "last_run": "2025-03-28 09:16:12",
+        "last_run": "2025-03-29 09:14:12",
         "success": true
     },
     "war_russo-ukrainian_international": {
-        "last_run": "2025-03-28 09:16:12",
+        "last_run": "2025-03-29 09:14:12",
         "success": true
     },
     "war_israel-hamas_international": {
-        "last_run": "2025-03-28 09:16:13",
+        "last_run": "2025-03-29 09:14:13",
         "success": true
     },
     "war_syrian-civil_international": {
-        "last_run": "2025-03-28 09:16:13",
+        "last_run": "2025-03-29 09:14:13",
         "success": true
     },
     "terrorism_al-qaeda_domestic": {
-        "last_run": "2025-03-28 09:16:13",
+        "last_run": "2025-03-29 09:14:13",
         "success": true
     },
     "terrorism_al-qaeda_international": {
-        "last_run": "2025-03-28 09:16:14",
+        "last_run": "2025-03-29 09:14:14",
         "success": true
     },
     "terrorism_houthis_domestic": {
-        "last_run": "2025-03-28 09:16:14",
+        "last_run": "2025-03-29 09:14:14",
         "success": true
     },
     "terrorism_houthis_international": {
-        "last_run": "2025-03-28 09:16:14",
+        "last_run": "2025-03-29 09:14:15",
         "success": true
     },
     "terrorism_hezbollah_domestic": {
-        "last_run": "2025-03-28 09:16:15",
+        "last_run": "2025-03-29 09:14:15",
         "success": true
     },
     "terrorism_hezbollah_international": {
-        "last_run": "2025-03-28 09:16:15",
+        "last_run": "2025-03-29 09:14:15",
         "success": true
     },
     "terrorism_hamas_domestic": {
-        "last_run": "2025-03-28 09:16:16",
+        "last_run": "2025-03-29 09:14:16",
         "success": true
     },
     "terrorism_hamas_international": {
-        "last_run": "2025-03-28 09:16:16",
+        "last_run": "2025-03-29 09:14:16",
         "success": true
     },
     "terrorism_general-terrorism_domestic": {
-        "last_run": "2025-03-28 09:16:17",
+        "last_run": "2025-03-29 09:14:17",
         "success": true
     },
     "terrorism_general-terrorism_international": {
-        "last_run": "2025-03-28 09:16:17",
+        "last_run": "2025-03-29 09:14:17",
         "success": true
     },
     "space_launch_domestic": {
-        "last_run": "2025-03-28 09:16:18",
+        "last_run": "2025-03-29 09:14:18",
         "success": true
     },
     "space_satellite_domestic": {
-        "last_run": "2025-03-28 09:16:19",
+        "last_run": "2025-03-29 09:14:19",
         "success": true
     },
     "space_exploration_domestic": {
-        "last_run": "2025-03-28 09:16:20",
+        "last_run": "2025-03-29 09:14:19",
         "success": true
     },
     "space_commercial_domestic": {
-        "last_run": "2025-03-28 09:16:20",
+        "last_run": "2025-03-29 09:14:20",
         "success": true
     },
     "space_partnerships_domestic": {
-        "last_run": "2025-03-28 09:16:21",
+        "last_run": "2025-03-29 09:14:21",
         "success": true
     },
     "space_investment_domestic": {
-        "last_run": "2025-03-28 09:16:22",
+        "last_run": "2025-03-29 09:14:22",
         "success": true
     },
     "space_technology_domestic": {
-        "last_run": "2025-03-28 09:16:23",
+        "last_run": "2025-03-29 09:14:22",
         "success": true
     },
     "space_risks_domestic": {
-        "last_run": "2025-03-28 09:16:24",
+        "last_run": "2025-03-29 09:14:23",
         "success": true
     },
     "nuclear_power_domestic": {
-        "last_run": "2025-03-28 09:16:25",
+        "last_run": "2025-03-29 09:14:24",
         "success": true
     },
     "nuclear_fuel_domestic": {
-        "last_run": "2025-03-28 09:16:25",
+        "last_run": "2025-03-29 09:14:25",
         "success": true
     },
     "nuclear_technology_domestic": {
-        "last_run": "2025-03-28 09:16:26",
+        "last_run": "2025-03-29 09:14:26",
         "success": true
     },
     "nuclear_services_domestic": {
-        "last_run": "2025-03-28 09:16:27",
+        "last_run": "2025-03-29 09:14:26",
         "success": true
     },
     "nuclear_regulation_domestic": {
-        "last_run": "2025-03-28 09:16:28",
+        "last_run": "2025-03-29 09:14:27",
         "success": true
     },
     "nuclear_fusion_domestic": {
-        "last_run": "2025-03-28 09:16:29",
+        "last_run": "2025-03-29 09:14:28",
         "success": true
     },
     "nuclear_risk_domestic": {
-        "last_run": "2025-03-28 09:16:30",
+        "last_run": "2025-03-29 09:14:29",
         "success": true
     },
     "nuclear_research_domestic": {
-        "last_run": "2025-03-28 09:16:31",
+        "last_run": "2025-03-29 09:14:30",
         "success": true
     },
     "sovereign-crisis_domestic": {
-        "last_run": "2025-03-28 09:16:31",
+        "last_run": "2025-03-29 09:14:30",
         "success": true
     },
     "political-stability_domestic": {
-        "last_run": "2025-03-28 09:16:31",
+        "last_run": "2025-03-29 09:14:30",
         "success": true
     },
     "tariffs_canada_international": {
-        "last_run": "2025-03-28 09:16:32",
+        "last_run": "2025-03-29 09:14:31",
         "success": true
     },
     "tariffs_china_international": {
-        "last_run": "2025-03-28 09:16:32",
+        "last_run": "2025-03-29 09:14:31",
         "success": true
     },
     "tariffs_mexico_international": {
-        "last_run": "2025-03-28 09:16:33",
+        "last_run": "2025-03-29 09:14:32",
         "success": true
     },
     "tariffs_venezuela_international": {
-        "last_run": "2025-03-28 09:16:33",
+        "last_run": "2025-03-29 09:14:32",
         "success": true
     },
     "layoffs_international": {
-        "last_run": "2025-03-28 09:16:33",
+        "last_run": "2025-03-29 09:14:33",
         "success": true
     },
     "outsourcing_international": {
-        "last_run": "2025-03-28 09:16:34",
+        "last_run": "2025-03-29 09:14:33",
         "success": true
     },
     "consumer-confidence_international": {
-        "last_run": "2025-03-28 09:16:34",
+        "last_run": "2025-03-29 09:14:33",
         "success": true
     },
     "supplier-concentration_international": {
-        "last_run": "2025-03-28 09:16:35",
+        "last_run": "2025-03-29 09:14:34",
         "success": true
     },
     "dei_diversity_international": {
-        "last_run": "2025-03-28 09:16:36",
+        "last_run": "2025-03-29 09:14:35",
         "success": true
     },
     "dei_equity_international": {
-        "last_run": "2025-03-28 09:16:37",
+        "last_run": "2025-03-29 09:14:36",
         "success": true
     },
     "dei_inclusion_international": {
-        "last_run": "2025-03-28 09:16:38",
+        "last_run": "2025-03-29 09:14:37",
         "success": true
     },
     "esg_environmental_international": {
-        "last_run": "2025-03-28 09:16:41",
+        "last_run": "2025-03-29 09:14:39",
         "success": true
     },
     "esg_social_international": {
-        "last_run": "2025-03-28 09:16:42",
+        "last_run": "2025-03-29 09:14:41",
         "success": true
     },
     "esg_governance_international": {
-        "last_run": "2025-03-28 09:16:44",
+        "last_run": "2025-03-29 09:14:43",
         "success": true
     },
     "space_launch_international": {
-        "last_run": "2025-03-28 09:16:45",
+        "last_run": "2025-03-29 09:14:43",
         "success": true
     },
     "space_satellite_international": {
-        "last_run": "2025-03-28 09:16:46",
+        "last_run": "2025-03-29 09:14:44",
         "success": true
     },
     "ipo_domestic_us": {
-        "last_run": "2025-03-28 09:16:54",
+        "last_run": "2025-03-29 09:14:52",
         "success": true
     },
     "ipo_international_us": {
-        "last_run": "2025-03-28 09:17:01",
+        "last_run": "2025-03-29 09:15:00",
         "success": true
     },
     "ipo_domestic_eu": {
-        "last_run": "2025-03-28 09:17:08",
+        "last_run": "2025-03-29 09:15:06",
         "success": true
     },
     "ipo_international_eu": {
-        "last_run": "2025-03-28 09:17:14",
+        "last_run": "2025-03-29 09:15:12",
         "success": true
     },
     "ipo_domestic_cn": {
-        "last_run": "2025-03-28 09:17:19",
+        "last_run": "2025-03-29 09:15:16",
         "success": true
     },
     "ipo_international_cn": {
-        "last_run": "2025-03-28 09:17:24",
+        "last_run": "2025-03-29 09:15:21",
         "success": true
     }
 }

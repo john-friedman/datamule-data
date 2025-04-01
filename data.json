@@ -1682,7 +1682,7 @@
         },
         "military-equipment_aircraft-f35_domestic": {
             "query": [
-                "\"F-35\" AND \"aircraft\""
+                "\"F-35\"  \"aircraft\""
             ],
             "submission_type": [
                 "8-K"
@@ -1693,7 +1693,7 @@
         },
         "military-equipment_aircraft-f35_intl": {
             "query": [
-                "\"F-35\" AND \"aircraft\""
+                "\"F-35\"  \"aircraft\""
             ],
             "submission_type": [
                 "6-K"
@@ -1704,7 +1704,7 @@
         },
         "military-equipment_aircraft-f16_domestic": {
             "query": [
-                "\"F-16\" AND \"aircraft\""
+                "\"F-16\"  \"aircraft\""
             ],
             "submission_type": [
                 "8-K"
@@ -1715,7 +1715,7 @@
         },
         "military-equipment_aircraft-f16_intl": {
             "query": [
-                "\"F-16\" AND \"aircraft\""
+                "\"F-16\"  \"aircraft\""
             ],
             "submission_type": [
                 "6-K"
@@ -2054,9 +2054,9 @@
                 "6-K"
             ]
         },
-        "health_research-ai_domestic": {
+        "health-research_ai_domestic": {
             "query": [
-                "\"Health Research\" AND \"Artificial Intelligence\""
+                "\"Health Research\" \"Artificial Intelligence\""
             ],
             "submission_type": [
                 "10-K"
@@ -2065,9 +2065,78 @@
                 "10-K"
             ]
         },
-        "health_research-ai_international": {
+        "health-research_ai_international": {
             "query": [
-                "\"Health Research\" AND \"Artificial Intelligence\""
+                "\"Health Research\"  \"Artificial Intelligence\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        
+        "health-research_orphan-drug_domestic": {
+            "query": [
+                "\"orphan drug\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_orphan-drug_international": {
+            "query": [
+                "\"orphan drug\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        
+        "health-research_genomic_domestic": {
+            "query": [
+                "\"genomic\" OR \"genomic research\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_genomic_international": {
+            "query": [
+                "\"genomic\" OR \"genomic research\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        
+        "health-research_healthcare-blockchain_domestic": {
+            "query": [
+                "\"healthcare\" \"blockchain\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_healthcare-blockchain_international": {
+            "query": [
+                "\"healthcare\" \"blockchain\""
             ],
             "submission_type": [
                 "20-F"
@@ -2089,8 +2158,8 @@
         },
         "llm_openai_domestic": {
             "query": [
-                "\"OpenAI\" AND \"Large Language Models\"",
-                "\"ChatGPT\" AND \"Large Language Models\""
+                "\"OpenAI\"  \"Large Language Models\"",
+                "\"ChatGPT\"  \"Large Language Models\""
             ],
             "submission_type": [
                 "10-K"
@@ -2101,8 +2170,8 @@
         },
         "llm_anthropic_domestic": {
             "query": [
-                "\"Claude\" AND \"Large Language Models\"",
-                "\"Anthropic\" AND \"Large Language Models\""
+                "\"Claude\"  \"Large Language Models\"",
+                "\"Anthropic\"  \"Large Language Models\""
             ],
             "submission_type": [
                 "10-K"
@@ -2113,9 +2182,9 @@
         },
         "llm_google_domestic": {
             "query": [
-                "\"Bard\" AND \"Large Language Models\"",
-                "\"Gemini\" AND \"Large Language Models\"",
-                "\"Google\" AND \"Large Language Models\""
+                "\"Bard\"  \"Large Language Models\"",
+                "\"Gemini\"  \"Large Language Models\"",
+                "\"Google\"  \"Large Language Models\""
             ],
             "submission_type": [
                 "10-K"
@@ -2137,8 +2206,8 @@
         },
         "llm_openai_international": {
             "query": [
-                "\"OpenAI\" AND \"Large Language Models\"",
-                "\"ChatGPT\" AND \"Large Language Models\""
+                "\"OpenAI\"  \"Large Language Models\"",
+                "\"ChatGPT\"  \"Large Language Models\""
             ],
             "submission_type": [
                 "20-F"
@@ -2149,8 +2218,8 @@
         },
         "llm_anthropic_international": {
             "query": [
-                "\"Claude\" AND \"Large Language Models\"",
-                "\"Anthropic\" AND \"Large Language Models\""
+                "\"Claude\"  \"Large Language Models\"",
+                "\"Anthropic\"  \"Large Language Models\""
             ],
             "submission_type": [
                 "20-F"
@@ -2161,9 +2230,9 @@
         },
         "llm_google_international": {
             "query": [
-                "\"Bard\" AND \"Large Language Models\"",
-                "\"Gemini\" AND \"Large Language Models\"",
-                "\"Google\" AND \"Large Language Models\""
+                "\"Bard\"  \"Large Language Models\"",
+                "\"Gemini\"  \"Large Language Models\"",
+                "\"Google\"  \"Large Language Models\""
             ],
             "submission_type": [
                 "20-F"

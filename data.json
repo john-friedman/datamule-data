@@ -2240,6 +2240,193 @@
             "document_type": [
                 "20-F"
             ]
+        },
+        "bitcoin_adoption_domestic": {
+            "query": [
+                "bitcoin OR BTC OR \"bitcoin adoption\" OR \"cryptocurrency adoption\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "bitcoin_holdings_domestic": {
+            "query": [
+                "\"bitcoin holdings\" OR \"BTC holdings\" OR \"cryptocurrency holdings\" OR \"digital asset holdings\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "bitcoin_mining_domestic": {
+            "query": [
+                "\"bitcoin mining\" OR \"cryptocurrency mining\" OR \"crypto mining\" OR \"mining operations\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "bitcoin_investment_domestic": {
+            "query": [
+                "\"bitcoin investment\" OR \"BTC investment\" OR \"cryptocurrency investment\" OR \"digital currency investment\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "bitcoin_risk_domestic": {
+            "query": [
+                "\"bitcoin risk\" OR \"cryptocurrency risk\" OR \"digital asset risk\" OR \"crypto volatility\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "ethereum_adoption_domestic": {
+            "query": [
+                "ethereum OR ETH OR \"smart contract\" OR \"smart contracts\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "ethereum_development_domestic": {
+            "query": [
+                "\"ethereum development\" OR \"smart contract development\" OR \"blockchain development\" OR \"web3 development\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "ethereum_risk_domestic": {
+            "query": [
+                "\"ethereum risk\" OR \"smart contract risk\" OR \"smart contract vulnerability\" OR \"gas fees\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "stablecoin_adoption_domestic": {
+            "query": [
+                "stablecoin OR USDC OR USDT OR \"USD Coin\" OR Tether OR \"stable coin\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "stablecoin_regulatory_domestic": {
+            "query": [
+                "\"stablecoin regulation\" OR \"stablecoin compliance\" OR \"stablecoin reserve\" OR \"stablecoin backing\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "stablecoin_risk_domestic": {
+            "query": [
+                "\"stablecoin risk\" OR \"stablecoin depeg\" OR \"stablecoin collapse\" OR \"algorithmic stablecoin\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "defi_adoption_domestic": {
+            "query": [
+                "\"decentralized finance\" OR DeFi OR \"liquidity pool\" OR \"yield farming\" OR \"decentralized exchange\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "defi_protocols_domestic": {
+            "query": [
+                "Uniswap OR Aave OR Compound OR MakerDAO OR \"lending protocol\" OR \"DEX\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "defi_risk_domestic": {
+            "query": [
+                "\"DeFi risk\" OR \"impermanent loss\" OR \"protocol hack\" OR \"flash loan attack\" OR \"rug pull\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nft_adoption_domestic": {
+            "query": [
+                "NFT OR \"non-fungible token\" OR \"digital collectible\" OR \"digital art\" OR metaverse"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nft_marketplace_domestic": {
+            "query": [
+                "OpenSea OR \"NFT marketplace\" OR \"NFT platform\" OR \"NFT trading\" OR \"NFT collection\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "nft_risk_domestic": {
+            "query": [
+                "\"NFT risk\" OR \"NFT fraud\" OR \"NFT volatility\" OR \"NFT liquidity\" OR \"digital asset ownership\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
         }
     },
     "filer_metadata": {

@@ -64,7 +64,7 @@ for year in range(1995, current_year + 1):
     portfolio.delete()
 
 
-output_filename = f'data/datasets/cik_cusip_mapping.csv.gz'
+output_filename = f'data/datasets/cik_cusip_crosswalk.csv.gz'
 
 with gzip.open(output_filename, 'wt', newline='') as csvfile:
     writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)

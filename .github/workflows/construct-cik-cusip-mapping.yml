@@ -1,0 +1,43 @@
+name: Generate CIK-CUSIP Mapping
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 3 AM Eastern
+  workflow_dispatch:  # For manual runs
+
+# Give the workflow permission to push to the repository
+permissions:
+  contents: write
+
+jobs:
+  generate-cusip-mapping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip setuptools wheel
+          pip install Cython
+          pip install datamule --no-build-isolation
+      
+      - name: Create datasets directory
+        run: mkdir -p data/datasets
+      
+      - name: Run CIK-CUSIP mapping script
+        run: python -u code/cik-cusips/construct-cik-cusip-mapping.py
+      
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add data/datasets/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update CIK-CUSIP mapping data - $(date)"
+          git push

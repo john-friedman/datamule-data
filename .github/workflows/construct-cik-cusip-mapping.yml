@@ -32,6 +32,8 @@ jobs:
         run: mkdir -p data/datasets
       
       - name: Run CIK-CUSIP mapping script
+        env:
+          DATAMULE_API_KEY: ${{ secrets.DATAMULE_API_KEY }}
         run: python -u code/cik-cusips/construct-cik-cusip-mapping.py
       
       - name: Commit changes

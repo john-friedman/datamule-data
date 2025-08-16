@@ -24,7 +24,8 @@ for year in range(1995, current_year + 1):
                                     document_type=['SC 13D','SC 13D/A',
                                                     'SC 13G','SC 13G/A',
                                                     'SCHEDULE 13D','SCHEDULE 13D/A',
-                                                    'SCHEDULE 13G','SCHEDULE 13G/A'])
+                                                    'SCHEDULE 13G','SCHEDULE 13G/A'],
+                                                    provider='datamule')
 
     for sub in portfolio:
         try:

@@ -26,6 +26,7 @@ jobs:
         run: |
           pip install --upgrade pip setuptools wheel
           pip install Cython
+          pip install python-dateutil
           pip install datamule --no-build-isolation
       
       - name: Create datasets directory

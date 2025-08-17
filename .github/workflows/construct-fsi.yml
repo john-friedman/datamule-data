@@ -1,0 +1,45 @@
+name: Generate FSI Mapping
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 3 AM Eastern
+  workflow_dispatch:  # For manual runs
+
+# Give the workflow permission to push to the repository
+permissions:
+  contents: write
+
+jobs:
+  generate-cusip-mapping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
+      
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip setuptools wheel
+          pip install Cython
+          pip install datamule --no-build-isolation
+      
+      - name: Create datasets directory
+        run: mkdir -p data/datasets
+      
+      - name: Run FSI mapping script
+        env:
+          DATAMULE_API_KEY: ${{ secrets.DATAMULE_API_KEY }}
+        run: python -u code/financial-security-identifiers/construct-fsi.py
+      
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add data/datasets/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update FSI mapping data - $(date)"
+          git push

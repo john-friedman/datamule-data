@@ -8,7 +8,7 @@ Updated nightly.
 
 ### Filer Metadata
 
-Information on every SEC Submissions Filer. For convenience, filers are seperated into listed & unlisted. Listed means has a ticker. Unlisted includes individuals.
+Information on every SEC Submissions Filer. For convenience, filers are separated into listed & unlisted. Listed means has a ticker. Unlisted includes individuals.
 
 Updated daily at 4:00 am ET. (2:00 AM ET is when the submissions.zip file is updated)
 

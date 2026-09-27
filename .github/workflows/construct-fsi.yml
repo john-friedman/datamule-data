@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: datamule-data-master
+  queue: max
+  cancel-in-progress: false
+
 jobs:
   generate-cusip-mapping:
     runs-on: ubuntu-latest

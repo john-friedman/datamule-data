@@ -37,3 +37,7 @@ Pipeline: downloads the [submissions zip](https://www.sec.gov/search-filings/edg
 ### indicators data
 
 Indicators for [datamule-indicators](https://datamule.xyz/indicators)
+
+### Filing detection statistics
+
+The `datamule-statistics` workflow runs at 06:00 UTC and publishes three Parquet files to `data/datamule-statistics/filing-detections-speed/`: `fastest_sec_filings_websocket.parquet`, `websocket.parquet`, and `linked_filings.parquet`. The generator code lives on the `scripts` branch.

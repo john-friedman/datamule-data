@@ -13,10 +13,17 @@ jobs:
   generate-cusip-mapping:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
+          ref: master
+
+      - uses: actions/checkout@v4
+        with:
+          ref: scripts
+          path: .scripts
+          persist-credentials: false
       
       - uses: actions/setup-python@v4
         with:
@@ -35,12 +42,14 @@ jobs:
       - name: Run FSI mapping script
         env:
           DATAMULE_API_KEY: ${{ secrets.DATAMULE_API_KEY }}
-        run: python -u code/financial-security-identifiers/construct-fsi.py
+        run: python -u .scripts/code/financial-security-identifiers/construct-fsi.py
       
       - name: Commit changes
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add data/datasets/
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update FSI mapping data - $(date)"
-          git push
+          git add -- data/datasets/financial_security_identifiers_crosswalk.csv.gz
+          if ! git diff --cached --quiet; then
+            git commit -m "Update FSI mapping data - $(date)"
+            git push origin HEAD:master
+          fi

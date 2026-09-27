@@ -13,10 +13,17 @@ jobs:
   generate-data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
+          ref: master
+
+      - uses: actions/checkout@v4
+        with:
+          ref: scripts
+          path: .scripts
+          persist-credentials: false
       
       - uses: actions/setup-python@v4
         with:
@@ -29,12 +36,14 @@ jobs:
           pip install datamule --no-build-isolation
       
       - name: Run generate-data script
-        run: python -u code/generate-data.py
+        run: python -u .scripts/code/generate-data.py
       
       - name: Commit changes
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Generate data update"
-          git push
+          git add -- data/ updates.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate data update"
+            git push origin HEAD:master
+          fi

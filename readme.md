@@ -2,6 +2,8 @@
 
 Contains data used for the [datamule](https://datamule.xyz/) project.
 
+The `master` branch publishes generated files in `data/` and tracks generation progress in `updates.json`. The Python generators and their `data.json` configuration live on the separate `scripts` branch. To work on them without downloading the data history, clone with `git clone --branch scripts --single-branch https://github.com/john-friedman/datamule-data.git`.
+
 ## data
 
 Updated nightly.

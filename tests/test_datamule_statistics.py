@@ -1,4 +1,4 @@
-"""Offline checks for the filing detection statistics publisher."""
+"""Offline checks for the Datamule statistics publisher."""
 
 import datetime as dt
 import importlib.util
@@ -16,7 +16,7 @@ SPEC.loader.exec_module(statistics)
 
 
 class StatisticsTests(unittest.TestCase):
-    def test_publishes_three_files_and_combines_query_parts(self):
+    def test_publishes_four_files_and_combines_query_parts(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)
         queries = []
 
@@ -38,6 +38,11 @@ class StatisticsTests(unittest.TestCase):
                     pl.DataFrame({"accessionnumber": ["1"], "acceptancedatetime": ["2026-09-21T12:00:00"], "filingdate": ["2026-09-21"]}),
                     pl.DataFrame({"accessionnumber": ["2"], "acceptancedatetime": ["2026-09-21T13:00:00"], "filingdate": ["2026-09-21"]}),
                 ]
+            elif "FROM sec_submission_details_table" in sql:
+                tables = [
+                    pl.DataFrame({"submissiontype": ["10-K"], "week_start": [dt.date(2026, 9, 21)], "calendar_year": [2026], "count": [3], "xbrl_count": [2]}),
+                    pl.DataFrame({"submissiontype": ["10-Q"], "week_start": [dt.date(2026, 9, 21)], "calendar_year": [2026], "count": [5], "xbrl_count": [4]}),
+                ]
             else:
                 raise AssertionError(f"Unexpected query: {sql}")
             files = []
@@ -56,9 +61,11 @@ class StatisticsTests(unittest.TestCase):
 
             statistics.generate(output_dir, query=fake_query)
 
-            self.assertEqual(len(queries), 3)
+            self.assertEqual(len(queries), 4)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
+            self.assertIn("date_trunc('week'", queries[3])
+            self.assertIn("year(CAST(filingdate AS DATE))", queries[3])
             self.assertEqual(sibling.read_text(encoding="utf-8"), "keep")
             self.assertEqual(
                 {path.name for path in output_dir.iterdir()},
@@ -67,12 +74,15 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(pl.read_parquet(output_dir / "fastest_sec_filings_websocket.parquet").height, 2)
             self.assertEqual(pl.read_parquet(output_dir / "websocket.parquet").height, 1)
             self.assertEqual(pl.read_parquet(output_dir / "linked_filings.parquet").height, 2)
+            filing_types = pl.read_parquet(output_dir.parent / "sec-filing-types" / "filing-types.parquet")
+            self.assertEqual(filing_types.height, 2)
+            self.assertEqual(filing_types["count"].sum(), 8)
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)
 
         def fake_query(sql, output_dir):
-            if "FROM submissions_metadata" in sql:
+            if "FROM sec_submission_details_table" in sql:
                 raise RuntimeError("Query failed")
             output_dir.mkdir(parents=True)
             file = output_dir / "part-00000.parquet"
@@ -88,11 +98,16 @@ class StatisticsTests(unittest.TestCase):
             output_dir.mkdir(parents=True)
             old_file = output_dir / "websocket.parquet"
             old_file.write_bytes(b"previous published file")
+            filing_types_dir = output_dir.parent / "sec-filing-types"
+            filing_types_dir.mkdir()
+            old_types = filing_types_dir / "filing-types.parquet"
+            old_types.write_bytes(b"previous filing types")
 
             with self.assertRaisesRegex(RuntimeError, "Query failed"):
                 statistics.generate(output_dir, query=fake_query)
 
             self.assertEqual(old_file.read_bytes(), b"previous published file")
+            self.assertEqual(old_types.read_bytes(), b"previous filing types")
             self.assertEqual([path.name for path in output_dir.iterdir()], ["websocket.parquet"])
 
 

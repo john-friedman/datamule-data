@@ -1,4 +1,4 @@
-"""Publish filing detection datasets from Datamule Hub as three Parquet files."""
+"""Publish Datamule statistics datasets from Datamule Hub as Parquet files."""
 
 import argparse
 import datetime as dt
@@ -34,10 +34,11 @@ def write_one_parquet(files: list[str], destination: Path) -> None:
 
 def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> None:
     output_dir = output_dir.resolve()
+    filing_types_dir = output_dir.parent / "sec-filing-types"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(
-        prefix=".filing-detections-speed-", dir=output_dir.parent
+        prefix=".datamule-statistics-", dir=output_dir.parent
     ) as temporary_dir:
         temporary = Path(temporary_dir)
 
@@ -86,6 +87,23 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         )
         linked_files = result_files(linked_result, "linked filings")
 
+        filing_types_result = query(
+            """
+            SELECT
+                submissiontype,
+                CAST(date_trunc('week', CAST(filingdate AS DATE)) AS DATE) AS week_start,
+                year(CAST(filingdate AS DATE)) AS calendar_year,
+                COUNT(*) AS count,
+                SUM(CASE WHEN containsxbrl = 1 THEN 1 ELSE 0 END) AS xbrl_count
+            FROM sec_submission_details_table
+            WHERE submissiontype IS NOT NULL AND filingdate IS NOT NULL
+            GROUP BY 1, 2, 3
+            ORDER BY calendar_year, week_start, submissiontype
+            """,
+            output_dir=temporary / "filing_types",
+        )
+        filing_types_files = result_files(filing_types_result, "filing types")
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -93,11 +111,14 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         }
         for filename, files in outputs.items():
             write_one_parquet(files, temporary / filename)
+        write_one_parquet(filing_types_files, temporary / "filing-types.parquet")
 
         output_dir.mkdir(parents=True, exist_ok=True)
+        filing_types_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
-        print(f"Published {len(outputs)} Parquet files to {output_dir}")
+        (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
+        print(f"Published {len(outputs) + 1} Parquet files under {output_dir.parent}")
 
 
 if __name__ == "__main__":

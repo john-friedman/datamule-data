@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  filing-detections-speed:
+  publish-statistics:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install "git+https://github.com/john-friedman/datamule-hub.git@master" "polars==1.41.1"
 
-      - name: Generate filing detection statistics
+      - name: Generate Datamule statistics
         env:
           DATAMULE_API_KEY: ${{ secrets.DATAMULE_API_KEY }}
         run: python -u .scripts/code/datamule_statistics.py
@@ -49,8 +49,9 @@ jobs:
           git add -- \
             data/datamule-statistics/filing-detections-speed/fastest_sec_filings_websocket.parquet \
             data/datamule-statistics/filing-detections-speed/websocket.parquet \
-            data/datamule-statistics/filing-detections-speed/linked_filings.parquet
+            data/datamule-statistics/filing-detections-speed/linked_filings.parquet \
+            data/datamule-statistics/sec-filing-types/filing-types.parquet
           if ! git diff --cached --quiet; then
-            git commit -m "Update filing detection statistics"
+            git commit -m "Update Datamule statistics"
             git push origin HEAD:master
           fi

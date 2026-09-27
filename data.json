@@ -1,0 +1,2439 @@
+{
+    "mentions": {
+        "tariffs_canada_domestic": {
+            "query": [
+                "tariff canada"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "tariffs_china_domestic": {
+            "query": [
+                "tariff china"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "tariffs_mexico_domestic": {
+            "query": [
+                "tariff mexico"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "tariffs_venezuela_domestic": {
+            "query": [
+                "tariff venezuela"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "layoffs_domestic": {
+            "query": [
+                "layoff* OR \"workforce reduction\" OR \"headcount reduction\" OR \"reduction in force\" OR \"staff reduction\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "outsourcing_domestic": {
+            "query": [
+                "\"we rely on third-party\" OR \"we engage third-party\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "consumer-confidence_domestic": {
+            "query": [
+                "\"consumer confidence\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "supplier-concentration_domestic": {
+            "query": [
+                "\"Supplier Concentration\" OR \"Single-source supplier risk\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "dei_diversity_domestic": {
+            "query": [
+                "\"workforce diversity\" OR \"diverse workforce\" OR \"diversity in workplace\"",
+                "\"gender diversity\" OR \"gender representation\" OR \"gender balance\"",
+                "\"racial diversity\" OR \"ethnic diversity\" OR \"racial representation\"",
+                "\"diversity goals\" OR \"representation targets\" OR \"diversity metrics\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "dei_equity_domestic": {
+            "query": [
+                "\"pay equity\" OR \"wage equity\" OR \"compensation equity\" OR \"equal pay\"",
+                "\"equal opportunity\" OR \"opportunity equity\" OR \"equitable advancement\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "dei_inclusion_domestic": {
+            "query": [
+                "\"workplace inclusion\" OR \"inclusive workplace\" OR \"inclusive environment\"",
+                "\"employee belonging\" OR \"sense of belonging\"",
+                "\"accessibility initiatives\" OR \"accessible workplace\" OR \"disability inclusion\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "esg_environmental_domestic": {
+            "query": [
+                "\"GHG emissions\" OR \"greenhouse gas emissions\" OR \"emissions reduction\" OR \"scope 1 emissions\" OR \"scope 2 emissions\" OR \"scope 3 emissions\"",
+                "\"climate transition\" OR \"climate adaptation\" OR \"climate resilience\" OR \"climate strategy\"",
+                "\"renewable energy\" OR \"clean energy\" OR \"energy efficiency\"",
+                "\"water stewardship\" OR \"waste reduction\" OR \"circular economy\"",
+                "\"net zero target\" OR \"carbon neutral\" OR \"science-based targets\" OR \"sustainability metrics\" OR \"ESG metrics\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "esg_social_domestic": {
+            "query": [
+                "\"community investment\" OR \"social impact\" OR \"community engagement\"",
+                "\"human rights\" OR \"labor rights\" OR \"fair labor practices\"",
+                "\"occupational health\" OR \"employee wellbeing\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "esg_governance_domestic": {
+            "query": [
+                "\"board diversity\" OR \"diverse board\" OR \"board composition\"",
+                "\"business ethics\" OR \"ethical practices\" OR \"code of conduct\"",
+                "\"ESG risk\" OR \"sustainability risk\" OR \"climate risk management\"",
+                "\"ESG disclosure\" OR \"sustainability reporting\" OR \"TCFD disclosure\" OR \"SASB disclosure\"",
+                "\"governance KPIs\" OR \"board performance metrics\" OR \"governance framework\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "war_russo-ukrainian_domestic": {
+            "query": [
+                "\"Russia-Ukraine conflict\" OR \"Russian invasion of Ukraine\" OR \"Russo-Ukrainian War\" OR \"Ukraine war\" OR \"Ukrainian conflict\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "war_israel-hamas_domestic": {
+            "query": [
+                "\"Israel-Hamas war\" OR \"Gaza conflict\" OR \"Israel-Gaza conflict\" OR \"October 7 attack\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "war_syrian-civil_domestic": {
+            "query": [
+                "\"Syrian Civil War\" OR \"Syria conflict\" OR \"Syrian crisis\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "war_russo-ukrainian_international": {
+            "query": [
+                "\"Russia-Ukraine conflict\" OR \"Russian invasion of Ukraine\" OR \"Russo-Ukrainian War\" OR \"Ukraine war\" OR \"Ukrainian conflict\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "war_israel-hamas_international": {
+            "query": [
+                "\"Israel-Hamas war\" OR \"Gaza conflict\" OR \"Israel-Gaza conflict\" OR \"October 7 attack\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "war_syrian-civil_international": {
+            "query": [
+                "\"Syrian Civil War\" OR \"Syria conflict\" OR \"Syrian crisis\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "terrorism_al-qaeda_domestic": {
+            "query": [
+                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al-Qaida\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_al-qaeda_international": {
+            "query": [
+                "\"Al Qaeda\" OR \"Al-Qaeda\" OR \"Al-Qaida\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "terrorism_houthis_domestic": {
+            "query": [
+                "\"Houthi\" OR \"Houthis\" OR \"Ansar Allah\" OR \"Yemen conflict\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_houthis_international": {
+            "query": [
+                "\"Houthi\" OR \"Houthis\" OR \"Ansar Allah\" OR \"Yemen conflict\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "terrorism_hezbollah_domestic": {
+            "query": [
+                "\"Hezbollah\" OR \"Hizbullah\" OR \"Hizballah\" OR \"Lebanese Hezbollah\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_hezbollah_international": {
+            "query": [
+                "\"Hezbollah\" OR \"Hizbullah\" OR \"Hizballah\" OR \"Lebanese Hezbollah\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "terrorism_hamas_domestic": {
+            "query": [
+                "hamas"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_hamas_international": {
+            "query": [
+                "hamas"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "terrorism_general-terrorism_domestic": {
+            "query": [
+                "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "terrorism_general-terrorism_international": {
+            "query": [
+                "\"terrorism risk\" OR \"terrorist threat\" OR \"terrorist attack\" OR \"terrorist activity\" OR \"terrorism exposure\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "space_launch_domestic": {
+            "query": [
+                "\"launch vehicle\" OR \"launch services\" OR \"orbital launch\" OR \"satellite launch\" OR \"rocket launch\" OR \"spacecraft launch\" OR \"launch facility\" OR \"launch pad\"",
+                "\"reusable rocket\" OR \"vertical landing\" OR \"propulsion system\" OR \"liquid propellant\" OR \"solid rocket booster\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_satellite_domestic": {
+            "query": [
+                "\"satellite constellation\" OR \"satellite network\" OR \"earth observation satellite\" OR \"communication satellite\" OR \"satellite imagery\" OR \"satellite manufacturing\"",
+                "\"low earth orbit\" OR \"LEO satellite\" OR \"geostationary orbit\" OR \"GEO satellite\" OR \"medium earth orbit\" OR \"satellite deployment\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_exploration_domestic": {
+            "query": [
+                "\"lunar mission\" OR \"lunar lander\" OR \"moon landing\" OR \"artemis program\" OR \"mars mission\" OR \"deep space\" OR \"planetary exploration\"",
+                "\"space probe\" OR \"rover mission\" OR \"asteroid mining\" OR \"planetary science\" OR \"space telescope\" OR \"space research\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_commercial_domestic": {
+            "query": [
+                "\"space tourism\" OR \"commercial spaceflight\" OR \"space hotel\" OR \"orbital tourism\" OR \"suborbital flight\"",
+                "\"in-orbit servicing\" OR \"space debris removal\" OR \"in-space manufacturing\" OR \"space logistics\" OR \"space infrastructure\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_partnerships_domestic": {
+            "query": [
+                "\"NASA contract\" OR \"NASA partnership\" OR \"NASA supplier\" OR \"NASA program\" OR \"NASA funding\"",
+                "\"SpaceX partnership\" OR \"Blue Origin partnership\" OR \"space agency collaboration\" OR \"ESA partnership\" OR \"JAXA partnership\" OR \"Roscosmos partnership\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_investment_domestic": {
+            "query": [
+                "\"space investment\" OR \"space venture\" OR \"space startup\" OR \"space industry funding\" OR \"space technology acquisition\"",
+                "\"space market growth\" OR \"commercial space opportunity\" OR \"space industry revenue\" OR \"space sector forecast\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_technology_domestic": {
+            "query": [
+                "\"space-based communication\" OR \"optical inter-satellite link\" OR \"space-based internet\" OR \"satellite broadband\" OR \"space-based remote sensing\"",
+                "\"space radiation hardening\" OR \"space-grade components\" OR \"space-qualified hardware\" OR \"spacecraft autonomy\" OR \"space robotics\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "space_risks_domestic": {
+            "query": [
+                "\"space regulatory risk\" OR \"space debris risk\" OR \"launch failure risk\" OR \"space insurance\" OR \"space liability\"",
+                "\"orbital congestion\" OR \"space weather impact\" OR \"space sustainability\" OR \"space policy uncertainty\" OR \"space competitive landscape\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_power_domestic": {
+            "query": [
+                "\"nuclear power plant\" OR \"nuclear energy\" OR \"nuclear generation\" OR \"nuclear reactor\" OR \"nuclear facility\" OR \"nuclear capacity\"",
+                "\"small modular reactor\" OR \"SMR nuclear\" OR \"advanced nuclear\" OR \"next generation nuclear\" OR \"nuclear fleet\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_fuel_domestic": {
+            "query": [
+                "\"uranium mining\" OR \"uranium production\" OR \"uranium enrichment\" OR \"nuclear fuel\" OR \"nuclear fuel cycle\"",
+                "\"spent nuclear fuel\" OR \"nuclear waste management\" OR \"nuclear waste storage\" OR \"nuclear waste disposal\" OR \"nuclear fuel rod\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_technology_domestic": {
+            "query": [
+                "\"nuclear medicine\" OR \"medical isotope\" OR \"radiopharmaceutical\" OR \"nuclear imaging\" OR \"radiation therapy\"",
+                "\"nuclear propulsion\" OR \"nuclear thermal\" OR \"radioisotope power\" OR \"radioisotope thermoelectric generator\" OR \"RTG power\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_services_domestic": {
+            "query": [
+                "\"nuclear maintenance\" OR \"nuclear decommissioning\" OR \"nuclear engineering\" OR \"nuclear consulting\" OR \"nuclear services\"",
+                "\"nuclear plant operation\" OR \"nuclear safety service\" OR \"nuclear compliance\" OR \"nuclear regulatory support\" OR \"nuclear outage\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_regulation_domestic": {
+            "query": [
+                "\"nuclear regulatory commission\" OR \"NRC regulation\" OR \"nuclear licensing\" OR \"nuclear permit\" OR \"nuclear compliance\"",
+                "\"IAEA requirements\" OR \"nuclear regulatory framework\" OR \"nuclear safety standard\" OR \"nuclear regulatory approval\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_fusion_domestic": {
+            "query": [
+                "\"nuclear fusion\" OR \"fusion energy\" OR \"fusion power\" OR \"fusion reactor\" OR \"tokamak\" OR \"stellarator\"",
+                "\"inertial confinement fusion\" OR \"magnetic confinement fusion\" OR \"fusion technology\" OR \"commercial fusion\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_risk_domestic": {
+            "query": [
+                "\"nuclear liability\" OR \"nuclear accident\" OR \"nuclear incident\" OR \"nuclear insurance\" OR \"nuclear safety risk\"",
+                "\"nuclear security\" OR \"nuclear material protection\" OR \"nuclear proliferation\" OR \"radiological release\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nuclear_research_domestic": {
+            "query": [
+                "\"nuclear research\" OR \"nuclear laboratory\" OR \"nuclear science\" OR \"nuclear physics\" OR \"nuclear engineering research\"",
+                "\"nuclear technology development\" OR \"nuclear innovation\" OR \"nuclear R&D\" OR \"nuclear research facility\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "sovereign-crisis_domestic": {
+            "query": [
+                "\"debt moratorium declared\" OR \"suspended convertibility of currency\" OR \"failure to make payment\" OR \"formal default declaration\" OR \"ceased honoring obligations\""
+            ],
+            "submission_type": [
+                "18-K"
+            ],
+            "document_type": [
+                "18-K"
+            ]
+        },
+        "political-stability_domestic": {
+            "query": [
+                "\"martial law imposed\" OR \"state of emergency declared\" OR \"government dissolution\" OR \"constitutional crisis\" OR \"forced regime change\""
+            ],
+            "submission_type": [
+                "18-K"
+            ],
+            "document_type": [
+                "18-K"
+            ]
+        },
+        "tariffs_canada_international": {
+            "query": [
+                "tariff canada"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "tariffs_china_international": {
+            "query": [
+                "tariff china"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "tariffs_mexico_international": {
+            "query": [
+                "tariff mexico"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "tariffs_venezuela_international": {
+            "query": [
+                "tariff venezuela"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "layoffs_international": {
+            "query": [
+                "layoff* OR \"workforce reduction\" OR \"headcount reduction\" OR \"reduction in force\" OR \"staff reduction\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "outsourcing_international": {
+            "query": [
+                "\"we rely on third-party\" OR \"we engage third-party\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "consumer-confidence_international": {
+            "query": [
+                "\"consumer confidence\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "supplier-concentration_international": {
+            "query": [
+                "\"Supplier Concentration\" OR \"Single-source supplier risk\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "dei_diversity_international": {
+            "query": [
+                "\"workforce diversity\" OR \"diverse workforce\" OR \"diversity in workplace\"",
+                "\"gender diversity\" OR \"gender representation\" OR \"gender balance\"",
+                "\"racial diversity\" OR \"ethnic diversity\" OR \"racial representation\"",
+                "\"diversity goals\" OR \"representation targets\" OR \"diversity metrics\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "dei_equity_international": {
+            "query": [
+                "\"pay equity\" OR \"wage equity\" OR \"compensation equity\" OR \"equal pay\"",
+                "\"equal opportunity\" OR \"opportunity equity\" OR \"equitable advancement\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "dei_inclusion_international": {
+            "query": [
+                "\"workplace inclusion\" OR \"inclusive workplace\" OR \"inclusive environment\"",
+                "\"employee belonging\" OR \"sense of belonging\"",
+                "\"accessibility initiatives\" OR \"accessible workplace\" OR \"disability inclusion\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "esg_environmental_international": {
+            "query": [
+                "\"GHG emissions\" OR \"greenhouse gas emissions\" OR \"emissions reduction\" OR \"scope 1 emissions\" OR \"scope 2 emissions\" OR \"scope 3 emissions\"",
+                "\"climate transition\" OR \"climate adaptation\" OR \"climate resilience\" OR \"climate strategy\"",
+                "\"renewable energy\" OR \"clean energy\" OR \"energy efficiency\"",
+                "\"water stewardship\" OR \"waste reduction\" OR \"circular economy\"",
+                "\"net zero target\" OR \"carbon neutral\" OR \"science-based targets\" OR \"sustainability metrics\" OR \"ESG metrics\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "esg_social_international": {
+            "query": [
+                "\"community investment\" OR \"social impact\" OR \"community engagement\"",
+                "\"human rights\" OR \"labor rights\" OR \"fair labor practices\"",
+                "\"occupational health\" OR \"employee wellbeing\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "esg_governance_international": {
+            "query": [
+                "\"board diversity\" OR \"diverse board\" OR \"board composition\"",
+                "\"business ethics\" OR \"ethical practices\" OR \"code of conduct\"",
+                "\"ESG risk\" OR \"sustainability risk\" OR \"climate risk management\"",
+                "\"ESG disclosure\" OR \"sustainability reporting\" OR \"TCFD disclosure\" OR \"SASB disclosure\"",
+                "\"governance KPIs\" OR \"board performance metrics\" OR \"governance framework\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "space_launch_international": {
+            "query": [
+                "\"launch vehicle\" OR \"launch services\" OR \"orbital launch\" OR \"satellite launch\" OR \"rocket launch\" OR \"spacecraft launch\" OR \"launch facility\" OR \"launch pad\"",
+                "\"reusable rocket\" OR \"vertical landing\" OR \"propulsion system\" OR \"liquid propellant\" OR \"solid rocket booster\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "space_satellite_international": {
+            "query": [
+                "\"satellite constellation\" OR \"satellite network\" OR \"earth observation satellite\" OR \"communication satellite\" OR \"satellite imagery\" OR \"satellite manufacturing\"",
+                "\"low earth orbit\" OR \"LEO satellite\" OR \"geostationary orbit\" OR \"GEO satellite\" OR \"medium earth orbit\" OR \"satellite deployment\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "ipo_domestic_us": {
+            "query": [
+                "\"Apple Inc.\"",
+                "\"Microsoft Corporation\"",
+                "\"Google Inc.\" OR \"Alphabet Inc.\"",
+                "\"Amazon.com, Inc.\"",
+                "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\"",
+                "\"Netflix, Inc.\"",
+                "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\"",
+                "\"NVIDIA Corporation\"",
+                "\"Intel Corporation\"",
+                "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\"",
+                "\"JPMorgan Chase & Co.\"",
+                "\"The Goldman Sachs Group, Inc.\"",
+                "\"Visa Inc.\"",
+                "\"PayPal Holdings, Inc.\"",
+                "\"Berkshire Hathaway Inc.\"",
+                "\"Walmart Inc.\"",
+                "\"Costco Wholesale Corporation\"",
+                "\"Starbucks Corporation\"",
+                "\"McDonald's Corporation\"",
+                "\"NIKE, Inc.\""
+            ],
+            "submission_type": [
+                "S-1"
+            ],
+            "document_type": [
+                "S-1"
+            ]
+        },
+        "ipo_international_us": {
+            "query": [
+                "\"Apple Inc.\"",
+                "\"Microsoft Corporation\"",
+                "\"Google Inc.\" OR \"Alphabet Inc.\"",
+                "\"Amazon.com, Inc.\"",
+                "\"Facebook, Inc.\" OR \"Meta Platforms, Inc.\"",
+                "\"Netflix, Inc.\"",
+                "\"Tesla, Inc.\" OR \"Tesla Motors, Inc.\"",
+                "\"NVIDIA Corporation\"",
+                "\"Intel Corporation\"",
+                "\"Salesforce.com, Inc.\" OR \"Salesforce, Inc.\"",
+                "\"JPMorgan Chase & Co.\"",
+                "\"The Goldman Sachs Group, Inc.\"",
+                "\"Visa Inc.\"",
+                "\"PayPal Holdings, Inc.\"",
+                "\"Berkshire Hathaway Inc.\"",
+                "\"Walmart Inc.\"",
+                "\"Costco Wholesale Corporation\"",
+                "\"Starbucks Corporation\"",
+                "\"McDonald's Corporation\"",
+                "\"NIKE, Inc.\""
+            ],
+            "submission_type": [
+                "F-1"
+            ],
+            "document_type": [
+                "F-1"
+            ]
+        },
+        "ipo_domestic_eu": {
+            "query": [
+                "\"SAP SE\"",
+                "\"ASML Holding N.V.\"",
+                "\"Spotify Technology S.A.\"",
+                "\"Adyen N.V.\"",
+                "\"Shell plc\" OR \"Royal Dutch Shell plc\"",
+                "\"TotalEnergies SE\" OR \"Total S.A.\"",
+                "\"Ørsted A/S\"",
+                "\"LVMH Moët Hennessy Louis Vuitton SE\"",
+                "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\"",
+                "\"L'Oréal S.A.\"",
+                "\"Volkswagen AG\"",
+                "\"Mercedes-Benz Group AG\" OR \"Daimler AG\"",
+                "\"Bayerische Motoren Werke AG\"",
+                "\"Banco Santander, S.A.\"",
+                "\"BNP Paribas S.A.\"",
+                "\"Deutsche Bank AG\""
+            ],
+            "submission_type": [
+                "S-1"
+            ],
+            "document_type": [
+                "S-1"
+            ]
+        },
+        "ipo_international_eu": {
+            "query": [
+                "\"SAP SE\"",
+                "\"ASML Holding N.V.\"",
+                "\"Spotify Technology S.A.\"",
+                "\"Adyen N.V.\"",
+                "\"Shell plc\" OR \"Royal Dutch Shell plc\"",
+                "\"TotalEnergies SE\" OR \"Total S.A.\"",
+                "\"Ørsted A/S\"",
+                "\"LVMH Moët Hennessy Louis Vuitton SE\"",
+                "\"Industria de Diseño Textil, S.A.\" OR \"Inditex S.A.\"",
+                "\"L'Oréal S.A.\"",
+                "\"Volkswagen AG\"",
+                "\"Mercedes-Benz Group AG\" OR \"Daimler AG\"",
+                "\"Bayerische Motoren Werke AG\"",
+                "\"Banco Santander, S.A.\"",
+                "\"BNP Paribas S.A.\"",
+                "\"Deutsche Bank AG\""
+            ],
+            "submission_type": [
+                "F-1"
+            ],
+            "document_type": [
+                "F-1"
+            ]
+        },
+        "ipo_domestic_cn": {
+            "query": [
+                "\"Alibaba Group Holding Limited\"",
+                "\"Tencent Holdings Limited\"",
+                "\"Baidu, Inc.\"",
+                "\"JD.com, Inc.\"",
+                "\"ByteDance Ltd.\"",
+                "\"Xiaomi Corporation\"",
+                "\"Industrial and Commercial Bank of China Limited\"",
+                "\"China Construction Bank Corporation\"",
+                "\"Ping An Insurance (Group) Company of China, Ltd.\"",
+                "\"PetroChina Company Limited\"",
+                "\"China Mobile Limited\"",
+                "\"BYD Company Limited\""
+            ],
+            "submission_type": [
+                "S-1"
+            ],
+            "document_type": [
+                "S-1"
+            ]
+        },
+        "ipo_international_cn": {
+            "query": [
+                "\"Alibaba Group Holding Limited\"",
+                "\"Tencent Holdings Limited\"",
+                "\"Baidu, Inc.\"",
+                "\"JD.com, Inc.\"",
+                "\"ByteDance Ltd.\"",
+                "\"Xiaomi Corporation\"",
+                "\"Industrial and Commercial Bank of China Limited\"",
+                "\"China Construction Bank Corporation\"",
+                "\"Ping An Insurance (Group) Company of China, Ltd.\"",
+                "\"PetroChina Company Limited\"",
+                "\"China Mobile Limited\"",
+                "\"BYD Company Limited\""
+            ],
+            "submission_type": [
+                "F-1"
+            ],
+            "document_type": [
+                "F-1"
+            ]
+        },
+        "explosive-materials_ammonium-nitrate_domestic": {
+            "query": [
+                "\"Ammonium nitrate\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "explosive-materials_ammonium-nitrate_intl": {
+            "query": [
+                "\"Ammonium nitrate\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "explosive-materials_sodium-nitrate_domestic": {
+            "query": [
+                "\"Sodium nitrate\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "explosive-materials_sodium-nitrate_intl": {
+            "query": [
+                "\"Sodium nitrate\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "explosive-materials_potassium-nitrate_domestic": {
+            "query": [
+                "\"Potassium nitrate\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "explosive-materials_potassium-nitrate_intl": {
+            "query": [
+                "\"Potassium nitrate\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_aluminum_domestic": {
+            "query": [
+                "Aluminum"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_aluminum_intl": {
+            "query": [
+                "Aluminum"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_nickel_domestic": {
+            "query": [
+                "Nickel"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_nickel_intl": {
+            "query": [
+                "Nickel"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_titanium_domestic": {
+            "query": [
+                "Titanium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_titanium_intl": {
+            "query": [
+                "Titanium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "metals_copper_domestic": {
+            "query": [
+                "Copper"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "metals_copper_intl": {
+            "query": [
+                "Copper"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_silicon_domestic": {
+            "query": [
+                "Silicon"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_silicon_intl": {
+            "query": [
+                "Silicon"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_gallium_domestic": {
+            "query": [
+                "Gallium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_gallium_intl": {
+            "query": [
+                "Gallium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_germanium_domestic": {
+            "query": [
+                "Germanium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_germanium_intl": {
+            "query": [
+                "Germanium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "semiconductor-materials_indium_domestic": {
+            "query": [
+                "Indium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "semiconductor-materials_indium_intl": {
+            "query": [
+                "Indium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_nitric-acid_domestic": {
+            "query": [
+                "\"Nitric acid\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_nitric-acid_intl": {
+            "query": [
+                "\"Nitric acid\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_hydrogen-peroxide_domestic": {
+            "query": [
+                "\"Hydrogen peroxide\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_hydrogen-peroxide_intl": {
+            "query": [
+                "\"Hydrogen peroxide\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_hydrazine_domestic": {
+            "query": [
+                "Hydrazine"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_hydrazine_intl": {
+            "query": [
+                "Hydrazine"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "propellant-components_kerosene_domestic": {
+            "query": [
+                "Kerosene"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "propellant-components_kerosene_intl": {
+            "query": [
+                "Kerosene"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_graphite_domestic": {
+            "query": [
+                "Graphite"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_graphite_intl": {
+            "query": [
+                "Graphite"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_carbon-fiber_domestic": {
+            "query": [
+                "\"Carbon fiber\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_carbon-fiber_intl": {
+            "query": [
+                "\"Carbon fiber\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_tungsten_domestic": {
+            "query": [
+                "Tungsten"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_tungsten_intl": {
+            "query": [
+                "Tungsten"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_magnesium_domestic": {
+            "query": [
+                "Magnesium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_magnesium_intl": {
+            "query": [
+                "Magnesium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "raw-materials_lithium_domestic": {
+            "query": [
+                "Lithium"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "raw-materials_lithium_intl": {
+            "query": [
+                "Lithium"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_microchips_domestic": {
+            "query": [
+                "Microchips"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_microchips_intl": {
+            "query": [
+                "Microchips"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_circuit-boards_domestic": {
+            "query": [
+                "\"Circuit boards\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_circuit-boards_intl": {
+            "query": [
+                "\"Circuit boards\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_capacitors_domestic": {
+            "query": [
+                "Capacitors"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_capacitors_intl": {
+            "query": [
+                "Capacitors"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_resistors_domestic": {
+            "query": [
+                "Resistors"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_resistors_intl": {
+            "query": [
+                "Resistors"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "electronic-components_transistors_domestic": {
+            "query": [
+                "Transistors"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "electronic-components_transistors_intl": {
+            "query": [
+                "Transistors"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_industrial-solvents_domestic": {
+            "query": [
+                "\"Industrial solvents\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_industrial-solvents_intl": {
+            "query": [
+                "\"Industrial solvents\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_adhesives_domestic": {
+            "query": [
+                "Adhesives"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_adhesives_intl": {
+            "query": [
+                "Adhesives"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_specialty-lubricants_domestic": {
+            "query": [
+                "\"Specialty lubricants\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_specialty-lubricants_intl": {
+            "query": [
+                "\"Specialty lubricants\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_paint-additives_domestic": {
+            "query": [
+                "\"Paint additives\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_paint-additives_intl": {
+            "query": [
+                "\"Paint additives\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "chemicals_polymer-precursors_domestic": {
+            "query": [
+                "\"Polymer precursors\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "chemicals_polymer-precursors_intl": {
+            "query": [
+                "\"Polymer precursors\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "supply-chain_constraints_domestic": {
+            "query": [
+                "\"Supply chain constraints\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "supply-chain_constraints_intl": {
+            "query": [
+                "\"Supply chain constraints\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "military-equipment_main-battle-tank_domestic": {
+            "query": [
+                "\"main battle tank\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_main-battle-tank_intl": {
+            "query": [
+                "\"main battle tank\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_electronic-warfare_domestic": {
+            "query": [
+                "\"electronic warfare\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_electronic-warfare_intl": {
+            "query": [
+                "\"electronic warfare\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_uav-drone_domestic": {
+            "query": [
+                "\"UAV\" OR drone"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_uav-drone_intl": {
+            "query": [
+                "\"UAV\" OR drone"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft_domestic": {
+            "query": [
+                "Aircraft"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft_intl": {
+            "query": [
+                "Aircraft"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft-f35_domestic": {
+            "query": [
+                "\"F-35\"  \"aircraft\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft-f35_intl": {
+            "query": [
+                "\"F-35\"  \"aircraft\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft-f16_domestic": {
+            "query": [
+                "\"F-16\"  \"aircraft\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft-f16_intl": {
+            "query": [
+                "\"F-16\"  \"aircraft\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_aircraft-c130j_domestic": {
+            "query": [
+                "C-130J"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_aircraft-c130j_intl": {
+            "query": [
+                "C-130J"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_helicopter-ah64_domestic": {
+            "query": [
+                "AH-64"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_helicopter-ah64_intl": {
+            "query": [
+                "AH-64"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_helicopter-ch47_domestic": {
+            "query": [
+                "CH-47"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_helicopter-ch47_intl": {
+            "query": [
+                "CH-47"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_ammunition-40mm_domestic": {
+            "query": [
+                "\"40mm\" OR \"40 mm\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_ammunition-40mm_intl": {
+            "query": [
+                "\"40mm\" OR \"40 mm\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "military-equipment_ammunition-12gauge_domestic": {
+            "query": [
+                "\"12 Gauge\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "military-equipment_ammunition-12gauge_intl": {
+            "query": [
+                "\"12 Gauge\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_alzheimer_domestic": {
+            "query": [
+                "Alzheimer"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_obesity_domestic": {
+            "query": [
+                "Obesity"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_nash_domestic": {
+            "query": [
+                "Non-alcoholic steatohepatitis"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_ptsd_domestic": {
+            "query": [
+                "PTSD"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health_alzheimer_international": {
+            "query": [
+                "Alzheimer"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "health_obesity_international": {
+            "query": [
+                "Obesity"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "health_nash_international": {
+            "query": [
+                "Non-alcoholic steatohepatitis"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "health_ptsd_international": {
+            "query": [
+                "PTSD"
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "pandemic_general_domestic": {
+            "query": [
+                "pandemic"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "pandemic_covid-19_domestic": {
+            "query": [
+                "covid-19"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_h1n1-swine_domestic": {
+            "query": [
+                "h1n1 OR \"swine flu\" OR \"swine influenza\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_mpox_domestic": {
+            "query": [
+                "mpox OR monkeypox"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_zika_domestic": {
+            "query": [
+                "zika"
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "health_h5n1-avian_domestic": {
+            "query": [
+                "H5N1 OR \"avian influenza\" OR \"avian flu\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "pandemic_general_international": {
+            "query": [
+                "pandemic"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "pandemic_covid-19_international": {
+            "query": [
+                "covid-19"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_h1n1-swine_international": {
+            "query": [
+                "h1n1 OR \"swine flu\" OR \"swine influenza\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_mpox_international": {
+            "query": [
+                "mpox OR monkeypox"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_zika_international": {
+            "query": [
+                "zika"
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health_h5n1-avian_international": {
+            "query": [
+                "H5N1 OR \"avian influenza\" OR \"avian flu\""
+            ],
+            "submission_type": [
+                "6-K"
+            ],
+            "document_type": [
+                "6-K"
+            ]
+        },
+        "health-research_ai_domestic": {
+            "query": [
+                "\"Health Research\" \"Artificial Intelligence\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_ai_international": {
+            "query": [
+                "\"Health Research\"  \"Artificial Intelligence\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        
+        "health-research_orphan-drug_domestic": {
+            "query": [
+                "\"orphan drug\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_orphan-drug_international": {
+            "query": [
+                "\"orphan drug\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        
+        "health-research_genomic_domestic": {
+            "query": [
+                "\"genomic\" OR \"genomic research\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_genomic_international": {
+            "query": [
+                "\"genomic\" OR \"genomic research\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        
+        "health-research_healthcare-blockchain_domestic": {
+            "query": [
+                "\"healthcare\" \"blockchain\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "health-research_healthcare-blockchain_international": {
+            "query": [
+                "\"healthcare\" \"blockchain\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_general_domestic": {
+            "query": [
+                "\"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_openai_domestic": {
+            "query": [
+                "\"OpenAI\"  \"Large Language Models\"",
+                "\"ChatGPT\"  \"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_anthropic_domestic": {
+            "query": [
+                "\"Claude\"  \"Large Language Models\"",
+                "\"Anthropic\"  \"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_google_domestic": {
+            "query": [
+                "\"Bard\"  \"Large Language Models\"",
+                "\"Gemini\"  \"Large Language Models\"",
+                "\"Google\"  \"Large Language Models\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "llm_general_international": {
+            "query": [
+                "\"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_openai_international": {
+            "query": [
+                "\"OpenAI\"  \"Large Language Models\"",
+                "\"ChatGPT\"  \"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_anthropic_international": {
+            "query": [
+                "\"Claude\"  \"Large Language Models\"",
+                "\"Anthropic\"  \"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "llm_google_international": {
+            "query": [
+                "\"Bard\"  \"Large Language Models\"",
+                "\"Gemini\"  \"Large Language Models\"",
+                "\"Google\"  \"Large Language Models\""
+            ],
+            "submission_type": [
+                "20-F"
+            ],
+            "document_type": [
+                "20-F"
+            ]
+        },
+        "bitcoin_adoption_domestic": {
+            "query": [
+                "bitcoin OR BTC OR \"bitcoin adoption\" OR \"cryptocurrency adoption\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "bitcoin_holdings_domestic": {
+            "query": [
+                "\"bitcoin holdings\" OR \"BTC holdings\" OR \"cryptocurrency holdings\" OR \"digital asset holdings\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "bitcoin_mining_domestic": {
+            "query": [
+                "\"bitcoin mining\" OR \"cryptocurrency mining\" OR \"crypto mining\" OR \"mining operations\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "bitcoin_investment_domestic": {
+            "query": [
+                "\"bitcoin investment\" OR \"BTC investment\" OR \"cryptocurrency investment\" OR \"digital currency investment\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "bitcoin_risk_domestic": {
+            "query": [
+                "\"bitcoin risk\" OR \"cryptocurrency risk\" OR \"digital asset risk\" OR \"crypto volatility\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "ethereum_adoption_domestic": {
+            "query": [
+                "ethereum OR ETH OR \"smart contract\" OR \"smart contracts\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "ethereum_development_domestic": {
+            "query": [
+                "\"ethereum development\" OR \"smart contract development\" OR \"blockchain development\" OR \"web3 development\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "ethereum_risk_domestic": {
+            "query": [
+                "\"ethereum risk\" OR \"smart contract risk\" OR \"smart contract vulnerability\" OR \"gas fees\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "stablecoin_adoption_domestic": {
+            "query": [
+                "stablecoin OR USDC OR USDT OR \"USD Coin\" OR Tether OR \"stable coin\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "stablecoin_regulatory_domestic": {
+            "query": [
+                "\"stablecoin regulation\" OR \"stablecoin compliance\" OR \"stablecoin reserve\" OR \"stablecoin backing\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "stablecoin_risk_domestic": {
+            "query": [
+                "\"stablecoin risk\" OR \"stablecoin depeg\" OR \"stablecoin collapse\" OR \"algorithmic stablecoin\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "defi_adoption_domestic": {
+            "query": [
+                "\"decentralized finance\" OR DeFi OR \"liquidity pool\" OR \"yield farming\" OR \"decentralized exchange\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "defi_protocols_domestic": {
+            "query": [
+                "Uniswap OR Aave OR Compound OR MakerDAO OR \"lending protocol\" OR \"DEX\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "defi_risk_domestic": {
+            "query": [
+                "\"DeFi risk\" OR \"impermanent loss\" OR \"protocol hack\" OR \"flash loan attack\" OR \"rug pull\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nft_adoption_domestic": {
+            "query": [
+                "NFT OR \"non-fungible token\" OR \"digital collectible\" OR \"digital art\" OR metaverse"
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        },
+        "nft_marketplace_domestic": {
+            "query": [
+                "OpenSea OR \"NFT marketplace\" OR \"NFT platform\" OR \"NFT trading\" OR \"NFT collection\""
+            ],
+            "submission_type": [
+                "8-K"
+            ],
+            "document_type": [
+                "8-K"
+            ]
+        },
+        "nft_risk_domestic": {
+            "query": [
+                "\"NFT risk\" OR \"NFT fraud\" OR \"NFT volatility\" OR \"NFT liquidity\" OR \"digital asset ownership\""
+            ],
+            "submission_type": [
+                "10-K"
+            ],
+            "document_type": [
+                "10-K"
+            ]
+        }
+    },
+    "filer_metadata": {
+        "output_dir": "data/filer_metadata/",
+        "listed_filer_metadata": "data/filer_metadata/listed_filer_metadata.csv.gz",
+        "unlisted_filer_metadata": "data/filer_metadata/unlisted_filer_metadata.csv.gz",
+        "listed_filer_names": "data/filer_metadata/listed_filer_names.csv.gz",
+        "unlisted_filer_names": "data/filer_metadata/unlisted_filer_names.csv.gz"
+    }
+}

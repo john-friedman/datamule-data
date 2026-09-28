@@ -13,6 +13,110 @@ from datamulehub import databases
 
 EASTERN = ZoneInfo("America/New_York")
 DEFAULT_OUTPUT_DIR = Path("data/datamule-statistics/filing-detections-speed")
+SIGNATURE_SQL = """
+SELECT accessionnumber, filingdate, name
+FROM (
+    SELECT accessionnumber, filingdate, signature AS name
+    FROM "schedule_13d_signature_person"
+    WHERE signature IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "345_owner_signature"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturereportingpersonname
+    FROM "schedule_13g_signature_information"
+    WHERE signaturereportingpersonname IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, personsignature
+    FROM "c_signature_person"
+    WHERE personsignature IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, personsignature
+    FROM "c_tr_signature_person"
+    WHERE personsignature IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "13fhr"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "d"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "25_nse"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "ncr"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signername
+    FROM "ma"
+    WHERE signername IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signername
+    FROM "ma_w"
+    WHERE signername IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signername
+    FROM "sbse_c"
+    WHERE signername IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signpersonname
+    FROM "x_17a_5"
+    WHERE signpersonname IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, nameofsigningofficer
+    FROM "n_mfp12"
+    WHERE nameofsigningofficer IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, nameofsigningofficer
+    FROM "n_mfp3"
+    WHERE nameofsigningofficer IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, registrantsignedname
+    FROM "n_cen"
+    WHERE registrantsignedname IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signername
+    FROM "nport_p"
+    WHERE signername IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "ta_1"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "ta_2"
+    WHERE signaturename IS NOT NULL
+
+    UNION ALL
+    SELECT accessionnumber, filingdate, signaturename
+    FROM "ta_w"
+    WHERE signaturename IS NOT NULL
+) signers
+WHERE filingdate >= CAST(date_add('year', -5, current_date) AS VARCHAR)
+"""
 
 
 def result_files(result: dict, name: str) -> list[str]:
@@ -32,9 +136,40 @@ def write_one_parquet(files: list[str], destination: Path) -> None:
         pl.scan_parquet(files).sink_parquet(destination)
 
 
+def write_signature_parts(files: list[str], destination: Path) -> list[Path]:
+    signatures = (
+        pl.scan_parquet(files)
+        .select(
+            pl.col("accessionnumber").cast(pl.Utf8).str.strip_chars(),
+            pl.col("filingdate").cast(pl.Utf8).str.strip_chars(),
+            pl.col("name").cast(pl.Utf8).str.strip_chars(),
+        )
+        .filter(
+            pl.col("accessionnumber").str.replace_all("-", "").str.contains(r"^\d{18}$"),
+            pl.col("filingdate").str.contains(r"^\d{4}-\d{2}-\d{2}$"),
+            pl.col("name") != "",
+        )
+        .unique()
+        .sort("name", "filingdate", "accessionnumber")
+        .collect()
+    )
+    if signatures.is_empty():
+        raise ValueError("The signature query returned no usable rows")
+    destination.mkdir()
+    parts = []
+    for index in range(4):
+        start = index * signatures.height // 4
+        end = (index + 1) * signatures.height // 4
+        part = destination / f"part-{index:05d}.parquet"
+        signatures.slice(start, end - start).write_parquet(part)
+        parts.append(part)
+    return parts
+
+
 def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> None:
     output_dir = output_dir.resolve()
     filing_types_dir = output_dir.parent / "sec-filing-types"
+    signature_dir = output_dir.parent / "sec-signature-search"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(
@@ -104,6 +239,9 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         )
         filing_types_files = result_files(filing_types_result, "filing types")
 
+        signature_result = query(SIGNATURE_SQL, output_dir=temporary / "all_signers")
+        signature_files = result_files(signature_result, "signatures")
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -112,13 +250,17 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         for filename, files in outputs.items():
             write_one_parquet(files, temporary / filename)
         write_one_parquet(filing_types_files, temporary / "filing-types.parquet")
+        signature_parts = write_signature_parts(signature_files, temporary / "signature_parts")
 
         output_dir.mkdir(parents=True, exist_ok=True)
         filing_types_dir.mkdir(parents=True, exist_ok=True)
+        signature_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
         (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
-        print(f"Published {len(outputs) + 1} Parquet files under {output_dir.parent}")
+        for part in signature_parts:
+            part.replace(signature_dir / part.name)
+        print(f"Published {len(outputs) + 1 + len(signature_parts)} Parquet files under {output_dir.parent}")
 
 
 if __name__ == "__main__":

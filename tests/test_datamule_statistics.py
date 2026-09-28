@@ -67,6 +67,29 @@ class StatisticsTests(unittest.TestCase):
                         "submission_type": ["1-K"], "findersfee": ["0.00"], "commissions": ["30703.00"],
                     }),
                 ]
+            elif 'FROM "effect_merger"' in sql:
+                merger = {
+                    "accessionnumber": 110465923015159,
+                    "filingdate": "2021-10-07",
+                    "acquiringcik": "0001352280",
+                    "acquiringentityname": "Columbia Funds Series Trust II",
+                    "acquiringseriesid": "S000074121",
+                    "acquiringseriesname": "Columbia Integrated Large Cap Value Fund",
+                    "acquiringclasscontractid": "C000231669",
+                    "acquiringclasscontractname": "Advisor Class",
+                    "targetcik": "0000889366",
+                    "targetentityname": "BMO FUNDS, INC.",
+                    "targetseriesid": "S000038425",
+                    "targetseriesname": "BMO Low Volatility Equity Fund",
+                    "targetclasscontractid": "C000118493",
+                    "targetclasscontractname": "Class I",
+                }
+                another_class = {**merger, "acquiringclasscontractid": "C000231672"}
+                incomplete = {**merger, "acquiringseriesid": None}
+                tables = [
+                    pl.DataFrame([merger, another_class]),
+                    pl.DataFrame([merger, incomplete]),
+                ]
             else:
                 raise AssertionError(f"Unexpected query: {sql}")
             files = []
@@ -85,7 +108,7 @@ class StatisticsTests(unittest.TestCase):
 
             statistics.generate(output_dir, query=fake_query)
 
-            self.assertEqual(len(queries), 6)
+            self.assertEqual(len(queries), 7)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
             self.assertIn("date_trunc('week'", queries[3])
@@ -96,6 +119,9 @@ class StatisticsTests(unittest.TestCase):
             self.assertIn("date_add('year', -5, current_date)", queries[4])
             self.assertIn("'d' AS submission_type", queries[5])
             self.assertIn('FROM "1_z"', queries[5])
+            self.assertIn('FROM "effect_merger"', queries[6])
+            self.assertIn("acquiringseriesid IS NOT NULL", queries[6])
+            self.assertIn("targetseriesname IS NOT NULL", queries[6])
             self.assertEqual(sibling.read_text(encoding="utf-8"), "keep")
             self.assertEqual(
                 {path.name for path in output_dir.iterdir()},
@@ -120,6 +146,10 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(commissions.height, 2)
             self.assertEqual(commissions.columns, ["accessionnumber", "filingdate", "submission_type", "findersfee", "commissions"])
             self.assertEqual(commissions["commissions"].to_list(), ["8193.00", "30703.00"])
+            mergers = pl.read_parquet(output_dir.parent / "sec-mergers" / "mergers.parquet")
+            self.assertEqual(mergers.height, 2)
+            self.assertEqual(set(mergers["accessionnumber"]), {"000110465923015159"})
+            self.assertEqual(set(mergers["acquiringclasscontractid"]), {"C000231669", "C000231672"})
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)
@@ -153,6 +183,10 @@ class StatisticsTests(unittest.TestCase):
             commissions_dir.mkdir()
             old_commissions = commissions_dir / "commissions.parquet"
             old_commissions.write_bytes(b"previous commissions")
+            mergers_dir = output_dir.parent / "sec-mergers"
+            mergers_dir.mkdir()
+            old_mergers = mergers_dir / "mergers.parquet"
+            old_mergers.write_bytes(b"previous mergers")
 
             with self.assertRaisesRegex(RuntimeError, "Query failed"):
                 statistics.generate(output_dir, query=fake_query)
@@ -161,6 +195,7 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(old_types.read_bytes(), b"previous filing types")
             self.assertEqual(old_signatures.read_bytes(), b"previous signatures")
             self.assertEqual(old_commissions.read_bytes(), b"previous commissions")
+            self.assertEqual(old_mergers.read_bytes(), b"previous mergers")
             self.assertEqual([path.name for path in output_dir.iterdir()], ["websocket.parquet"])
 
 

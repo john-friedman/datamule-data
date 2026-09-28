@@ -161,6 +161,28 @@ FROM "1_z"
 WHERE findersfees IS NOT NULL
    OR salescommissionsfee IS NOT NULL
 """
+MERGERS_SQL = """
+SELECT
+    accessionnumber,
+    filingdate,
+    acquiringcik,
+    acquiringentityname,
+    acquiringseriesid,
+    acquiringseriesname,
+    acquiringclasscontractid,
+    acquiringclasscontractname,
+    targetcik,
+    targetentityname,
+    targetseriesid,
+    targetseriesname,
+    targetclasscontractid,
+    targetclasscontractname
+FROM "effect_merger"
+WHERE acquiringseriesid IS NOT NULL
+  AND acquiringseriesname IS NOT NULL
+  AND targetseriesid IS NOT NULL
+  AND targetseriesname IS NOT NULL
+"""
 
 
 def result_files(result: dict, name: str) -> list[str]:
@@ -178,6 +200,32 @@ def write_one_parquet(files: list[str], destination: Path) -> None:
         shutil.copyfile(files[0], destination)
     else:
         pl.scan_parquet(files).sink_parquet(destination)
+
+
+def write_merger_parquet(files: list[str], destination: Path) -> None:
+    mergers = (
+        pl.scan_parquet(files)
+        .with_columns(
+            pl.col("accessionnumber").cast(pl.Utf8).str.strip_chars().str.replace_all("-", "").str.zfill(18),
+            pl.col("filingdate").cast(pl.Utf8).str.strip_chars().str.slice(0, 10),
+            pl.col("acquiringseriesid", "acquiringseriesname", "targetseriesid", "targetseriesname")
+            .cast(pl.Utf8).str.strip_chars(),
+        )
+        .filter(
+            pl.col("accessionnumber").str.contains(r"^\d{18}$"),
+            pl.col("accessionnumber") != "0" * 18,
+            pl.col("filingdate").str.contains(r"^\d{4}-\d{2}-\d{2}$"),
+            pl.col("acquiringseriesid") != "",
+            pl.col("acquiringseriesname") != "",
+            pl.col("targetseriesid") != "",
+            pl.col("targetseriesname") != "",
+        )
+        .unique()
+        .collect()
+    )
+    if mergers.is_empty():
+        raise ValueError("The merger query returned no usable series relationships")
+    mergers.write_parquet(destination)
 
 
 def write_signature_parts(files: list[str], destination: Path) -> list[Path]:
@@ -216,6 +264,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
     filing_types_dir = output_dir.parent / "sec-filing-types"
     signature_dir = output_dir.parent / "sec-signature-search"
     commissions_dir = output_dir.parent / "sec-commissions"
+    mergers_dir = output_dir.parent / "sec-mergers"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(
@@ -294,6 +343,9 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         )
         commissions_files = result_files(commissions_result, "commissions")
 
+        mergers_result = query(MERGERS_SQL, output_dir=temporary / "effect_merger")
+        mergers_files = result_files(mergers_result, "mergers")
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -304,18 +356,21 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         write_one_parquet(filing_types_files, temporary / "filing-types.parquet")
         signature_parts = write_signature_parts(signature_files, temporary / "signature_parts")
         write_one_parquet(commissions_files, temporary / "commissions.parquet")
+        write_merger_parquet(mergers_files, temporary / "mergers.parquet")
 
         output_dir.mkdir(parents=True, exist_ok=True)
         filing_types_dir.mkdir(parents=True, exist_ok=True)
         signature_dir.mkdir(parents=True, exist_ok=True)
         commissions_dir.mkdir(parents=True, exist_ok=True)
+        mergers_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
         (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
         for part in signature_parts:
             part.replace(signature_dir / part.name)
         (temporary / "commissions.parquet").replace(commissions_dir / "commissions.parquet")
-        print(f"Published {len(outputs) + 2 + len(signature_parts)} Parquet files under {output_dir.parent}")
+        (temporary / "mergers.parquet").replace(mergers_dir / "mergers.parquet")
+        print(f"Published {len(outputs) + 3 + len(signature_parts)} Parquet files under {output_dir.parent}")
 
 
 if __name__ == "__main__":

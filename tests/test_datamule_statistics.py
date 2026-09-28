@@ -56,6 +56,17 @@ class StatisticsTests(unittest.TestCase):
                         "name": ["Alice", "Dan", "Nobody"],
                     }),
                 ]
+            elif "findersfeedollaramount" in sql:
+                tables = [
+                    pl.DataFrame({
+                        "accessionnumber": [149315221009727], "filingdate": ["2021-04-27"],
+                        "submission_type": ["1-K"], "findersfee": ["0.00"], "commissions": ["8193.00"],
+                    }),
+                    pl.DataFrame({
+                        "accessionnumber": [149315221009728], "filingdate": ["2021-04-27"],
+                        "submission_type": ["1-K"], "findersfee": ["0.00"], "commissions": ["30703.00"],
+                    }),
+                ]
             else:
                 raise AssertionError(f"Unexpected query: {sql}")
             files = []
@@ -74,7 +85,7 @@ class StatisticsTests(unittest.TestCase):
 
             statistics.generate(output_dir, query=fake_query)
 
-            self.assertEqual(len(queries), 5)
+            self.assertEqual(len(queries), 6)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
             self.assertIn("date_trunc('week'", queries[3])
@@ -83,6 +94,8 @@ class StatisticsTests(unittest.TestCase):
             self.assertIn("year(CAST(filingdate AS DATE))", queries[3])
             self.assertIn('FROM "schedule_13d_signature_person"', queries[4])
             self.assertIn("date_add('year', -5, current_date)", queries[4])
+            self.assertIn("'d' AS submission_type", queries[5])
+            self.assertIn('FROM "1_z"', queries[5])
             self.assertEqual(sibling.read_text(encoding="utf-8"), "keep")
             self.assertEqual(
                 {path.name for path in output_dir.iterdir()},
@@ -103,6 +116,10 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(signatures.filter(pl.col("name") == "Alice").height, 1)
             self.assertEqual(signatures.filter(pl.col("name") == "Alice")["accessionnumber"][0], "000110465923015159")
             self.assertEqual(set(signatures["filingdate"]), {"2026-09-21"})
+            commissions = pl.read_parquet(output_dir.parent / "sec-commissions" / "commissions.parquet")
+            self.assertEqual(commissions.height, 2)
+            self.assertEqual(commissions.columns, ["accessionnumber", "filingdate", "submission_type", "findersfee", "commissions"])
+            self.assertEqual(commissions["commissions"].to_list(), ["8193.00", "30703.00"])
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)
@@ -132,6 +149,10 @@ class StatisticsTests(unittest.TestCase):
             signature_dir.mkdir()
             old_signatures = signature_dir / "part-00000.parquet"
             old_signatures.write_bytes(b"previous signatures")
+            commissions_dir = output_dir.parent / "sec-commissions"
+            commissions_dir.mkdir()
+            old_commissions = commissions_dir / "commissions.parquet"
+            old_commissions.write_bytes(b"previous commissions")
 
             with self.assertRaisesRegex(RuntimeError, "Query failed"):
                 statistics.generate(output_dir, query=fake_query)
@@ -139,6 +160,7 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(old_file.read_bytes(), b"previous published file")
             self.assertEqual(old_types.read_bytes(), b"previous filing types")
             self.assertEqual(old_signatures.read_bytes(), b"previous signatures")
+            self.assertEqual(old_commissions.read_bytes(), b"previous commissions")
             self.assertEqual([path.name for path in output_dir.iterdir()], ["websocket.parquet"])
 
 

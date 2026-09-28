@@ -117,6 +117,50 @@ FROM (
 ) signers
 WHERE filingdate >= CAST(date_add('year', -5, current_date) AS VARCHAR)
 """
+COMMISSIONS_SQL = """
+SELECT
+    accessionnumber,
+    filingdate,
+    'd' AS submission_type,
+    CAST(findersfeedollaramount AS varchar) AS findersfee,
+    CAST(salescommissionsdollaramount AS varchar) AS commissions
+FROM "d"
+WHERE findersfeedollaramount IS NOT NULL
+   OR salescommissionsdollaramount IS NOT NULL
+
+UNION ALL
+SELECT
+    accessionnumber,
+    filingdate,
+    '1-A',
+    CAST(finderfeesfee AS varchar),
+    CAST(salescommissionsserviceproviderfees AS varchar)
+FROM "1a"
+WHERE finderfeesfee IS NOT NULL
+   OR salescommissionsserviceproviderfees IS NOT NULL
+
+UNION ALL
+SELECT
+    accessionnumber,
+    filingdate,
+    '1-K',
+    CAST(findersfees AS varchar),
+    CAST(salescommissionsfee AS varchar)
+FROM "1k_summary_info"
+WHERE findersfees IS NOT NULL
+   OR salescommissionsfee IS NOT NULL
+
+UNION ALL
+SELECT
+    accessionnumber,
+    filingdate,
+    '1-Z',
+    CAST(findersfees AS varchar),
+    CAST(salescommissionsfee AS varchar)
+FROM "1_z"
+WHERE findersfees IS NOT NULL
+   OR salescommissionsfee IS NOT NULL
+"""
 
 
 def result_files(result: dict, name: str) -> list[str]:
@@ -171,6 +215,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
     output_dir = output_dir.resolve()
     filing_types_dir = output_dir.parent / "sec-filing-types"
     signature_dir = output_dir.parent / "sec-signature-search"
+    commissions_dir = output_dir.parent / "sec-commissions"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(
@@ -244,6 +289,11 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         signature_result = query(SIGNATURE_SQL, output_dir=temporary / "all_signers")
         signature_files = result_files(signature_result, "signatures")
 
+        commissions_result = query(
+            COMMISSIONS_SQL, output_dir=temporary / "finders_and_commissions"
+        )
+        commissions_files = result_files(commissions_result, "commissions")
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -253,16 +303,19 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
             write_one_parquet(files, temporary / filename)
         write_one_parquet(filing_types_files, temporary / "filing-types.parquet")
         signature_parts = write_signature_parts(signature_files, temporary / "signature_parts")
+        write_one_parquet(commissions_files, temporary / "commissions.parquet")
 
         output_dir.mkdir(parents=True, exist_ok=True)
         filing_types_dir.mkdir(parents=True, exist_ok=True)
         signature_dir.mkdir(parents=True, exist_ok=True)
+        commissions_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
         (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
         for part in signature_parts:
             part.replace(signature_dir / part.name)
-        print(f"Published {len(outputs) + 1 + len(signature_parts)} Parquet files under {output_dir.parent}")
+        (temporary / "commissions.parquet").replace(commissions_dir / "commissions.parquet")
+        print(f"Published {len(outputs) + 2 + len(signature_parts)} Parquet files under {output_dir.parent}")
 
 
 if __name__ == "__main__":

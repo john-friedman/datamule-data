@@ -40,18 +40,18 @@ class StatisticsTests(unittest.TestCase):
                 ]
             elif "FROM sec_submission_details_table" in sql:
                 tables = [
-                    pl.DataFrame({"submissiontype": ["10-K"], "week_start": [dt.date(2026, 9, 21)], "calendar_year": [2026], "count": [3], "xbrl_count": [2]}),
-                    pl.DataFrame({"submissiontype": ["10-Q"], "week_start": [dt.date(2026, 9, 21)], "calendar_year": [2026], "count": [5], "xbrl_count": [4]}),
+                    pl.DataFrame({"submissiontype": ["10-K"], "week_start": [dt.date(2026, 9, 21)], "month_start": [dt.date(2026, 9, 1)], "calendar_year": [2026], "count": [3], "xbrl_count": [2]}),
+                    pl.DataFrame({"submissiontype": ["10-Q"], "week_start": [dt.date(2026, 9, 21)], "month_start": [dt.date(2026, 9, 1)], "calendar_year": [2026], "count": [5], "xbrl_count": [4]}),
                 ]
             elif 'FROM "schedule_13d_signature_person"' in sql:
                 tables = [
                     pl.DataFrame({
-                        "accessionnumber": ["0001104659-23-015159", "0001104659-23-015160", "0001104659-23-015161"],
-                        "filingdate": ["2026-09-21"] * 3,
+                        "accessionnumber": [110465923015159, 110465923015160, 110465923015161],
+                        "filingdate": ["2026-09-21T08:00:00"] * 3,
                         "name": ["Alice", "Bob", "Cara"],
                     }),
                     pl.DataFrame({
-                        "accessionnumber": ["0001104659-23-015159", "0001104659-23-015162", "invalid"],
+                        "accessionnumber": [110465923015159, 110465923015162, 0],
                         "filingdate": ["2026-09-21"] * 3,
                         "name": ["Alice", "Dan", "Nobody"],
                     }),
@@ -78,6 +78,8 @@ class StatisticsTests(unittest.TestCase):
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
             self.assertIn("date_trunc('week'", queries[3])
+            self.assertIn("date_trunc('month'", queries[3])
+            self.assertIn("GROUP BY 1, 2, 3, 4", queries[3])
             self.assertIn("year(CAST(filingdate AS DATE))", queries[3])
             self.assertIn('FROM "schedule_13d_signature_person"', queries[4])
             self.assertIn("date_add('year', -5, current_date)", queries[4])
@@ -92,12 +94,15 @@ class StatisticsTests(unittest.TestCase):
             filing_types = pl.read_parquet(output_dir.parent / "sec-filing-types" / "filing-types.parquet")
             self.assertEqual(filing_types.height, 2)
             self.assertEqual(filing_types["count"].sum(), 8)
+            self.assertEqual(set(filing_types["month_start"]), {dt.date(2026, 9, 1)})
             signature_parts = sorted((output_dir.parent / "sec-signature-search").glob("part-*.parquet"))
             self.assertEqual(len(signature_parts), 4)
             self.assertEqual([pl.read_parquet(part).height for part in signature_parts], [1, 1, 1, 1])
             signatures = pl.read_parquet(signature_parts)
             self.assertEqual(set(signatures["name"]), {"Alice", "Bob", "Cara", "Dan"})
             self.assertEqual(signatures.filter(pl.col("name") == "Alice").height, 1)
+            self.assertEqual(signatures.filter(pl.col("name") == "Alice")["accessionnumber"][0], "000110465923015159")
+            self.assertEqual(set(signatures["filingdate"]), {"2026-09-21"})
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)

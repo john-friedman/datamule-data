@@ -140,12 +140,13 @@ def write_signature_parts(files: list[str], destination: Path) -> list[Path]:
     signatures = (
         pl.scan_parquet(files)
         .select(
-            pl.col("accessionnumber").cast(pl.Utf8).str.strip_chars(),
-            pl.col("filingdate").cast(pl.Utf8).str.strip_chars(),
+            pl.col("accessionnumber").cast(pl.Utf8).str.strip_chars().str.replace_all("-", "").str.zfill(18),
+            pl.col("filingdate").cast(pl.Utf8).str.strip_chars().str.slice(0, 10),
             pl.col("name").cast(pl.Utf8).str.strip_chars(),
         )
         .filter(
-            pl.col("accessionnumber").str.replace_all("-", "").str.contains(r"^\d{18}$"),
+            pl.col("accessionnumber").str.contains(r"^\d{18}$"),
+            pl.col("accessionnumber") != "0" * 18,
             pl.col("filingdate").str.contains(r"^\d{4}-\d{2}-\d{2}$"),
             pl.col("name") != "",
         )
@@ -227,13 +228,14 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
             SELECT
                 submissiontype,
                 CAST(date_trunc('week', CAST(filingdate AS DATE)) AS DATE) AS week_start,
+                CAST(date_trunc('month', CAST(filingdate AS DATE)) AS DATE) AS month_start,
                 year(CAST(filingdate AS DATE)) AS calendar_year,
                 COUNT(*) AS count,
                 SUM(CASE WHEN containsxbrl = 1 THEN 1 ELSE 0 END) AS xbrl_count
             FROM sec_submission_details_table
             WHERE submissiontype IS NOT NULL AND filingdate IS NOT NULL
-            GROUP BY 1, 2, 3
-            ORDER BY calendar_year, week_start, submissiontype
+            GROUP BY 1, 2, 3, 4
+            ORDER BY calendar_year, month_start, week_start, submissiontype
             """,
             output_dir=temporary / "filing_types",
         )

@@ -17,6 +17,7 @@ BENFORD_SQL = """
 SELECT
     acc AS accessionnumber,
     c.cik,
+    d.submissiontype,
     taxonomy,
     digit,
     n
@@ -33,7 +34,9 @@ FROM (
 )
 JOIN sec_accession_cik_table c
   ON acc = c.accessionnumber
-ORDER BY 1, 2, 3, 4
+JOIN sec_submission_details_table d
+  ON acc = d.accessionnumber
+ORDER BY 1, 2, 3, 4, 5
 """
 SIGNATURE_SQL = """
 SELECT accessionnumber, filingdate, name
@@ -370,7 +373,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         mergers_files = result_files(mergers_result, "mergers")
 
         benford_result = query(
-            BENFORD_SQL, output_dir=temporary / "benford_by_accession_cik_taxonomy"
+            BENFORD_SQL, output_dir=temporary / "benford_by_accession_cik_taxonomy_type"
         )
         benford_files = result_files(benford_result, "XBRL Benford")
 

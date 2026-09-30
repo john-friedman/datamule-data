@@ -95,6 +95,7 @@ class StatisticsTests(unittest.TestCase):
                     pl.DataFrame({
                         "accessionnumber": [6771624000017, 6771624000017, 6771624000017],
                         "cik": ['\\"67716\\"'] * 3,
+                        "submissiontype": ["10-Q"] * 3,
                         "taxonomy": ["us-gaap", "us-gaap", "dei"],
                         "digit": [1, 2, 7],
                         "n": [550, 379, 1],
@@ -102,6 +103,7 @@ class StatisticsTests(unittest.TestCase):
                     pl.DataFrame({
                         "accessionnumber": [6771624000022],
                         "cik": ['\\"67716\\"'],
+                        "submissiontype": ["10-K"],
                         "taxonomy": ["dei"],
                         "digit": [6],
                         "n": [1],
@@ -140,6 +142,8 @@ class StatisticsTests(unittest.TestCase):
             self.assertIn("acquiringseriesid IS NOT NULL", queries[6])
             self.assertIn("targetseriesname IS NOT NULL", queries[6])
             self.assertIn("regexp_extract(value, '[1-9]')", queries[7])
+            self.assertIn("JOIN sec_submission_details_table d", queries[7])
+            self.assertIn("d.submissiontype", queries[7])
             self.assertEqual(sibling.read_text(encoding="utf-8"), "keep")
             self.assertEqual(
                 {path.name for path in output_dir.iterdir()},
@@ -175,6 +179,7 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(digits.filter(pl.col("digit") == 1)["n"].item(), 550)
             self.assertEqual(set(digits["taxonomy"]), {"dei", "us-gaap"})
             self.assertEqual(set(digits["cik"]), {'\\"67716\\"'})
+            self.assertEqual(set(digits["submissiontype"]), {"10-Q", "10-K"})
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)

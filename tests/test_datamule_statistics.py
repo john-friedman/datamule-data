@@ -90,6 +90,23 @@ class StatisticsTests(unittest.TestCase):
                     pl.DataFrame([merger, another_class]),
                     pl.DataFrame([merger, incomplete]),
                 ]
+            elif "FROM simple_xbrl" in sql:
+                tables = [
+                    pl.DataFrame({
+                        "accessionnumber": [6771624000017, 6771624000017, 6771624000017],
+                        "cik": ['\\"67716\\"'] * 3,
+                        "taxonomy": ["us-gaap", "us-gaap", "dei"],
+                        "digit": [1, 2, 7],
+                        "n": [550, 379, 1],
+                    }),
+                    pl.DataFrame({
+                        "accessionnumber": [6771624000022],
+                        "cik": ['\\"67716\\"'],
+                        "taxonomy": ["dei"],
+                        "digit": [6],
+                        "n": [1],
+                    }),
+                ]
             else:
                 raise AssertionError(f"Unexpected query: {sql}")
             files = []
@@ -108,7 +125,7 @@ class StatisticsTests(unittest.TestCase):
 
             statistics.generate(output_dir, query=fake_query)
 
-            self.assertEqual(len(queries), 7)
+            self.assertEqual(len(queries), 8)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
             self.assertIn("date_trunc('week'", queries[3])
@@ -122,6 +139,7 @@ class StatisticsTests(unittest.TestCase):
             self.assertIn('FROM "effect_merger"', queries[6])
             self.assertIn("acquiringseriesid IS NOT NULL", queries[6])
             self.assertIn("targetseriesname IS NOT NULL", queries[6])
+            self.assertIn("regexp_extract(value, '[1-9]')", queries[7])
             self.assertEqual(sibling.read_text(encoding="utf-8"), "keep")
             self.assertEqual(
                 {path.name for path in output_dir.iterdir()},
@@ -150,6 +168,13 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(mergers.height, 2)
             self.assertEqual(set(mergers["accessionnumber"]), {"000110465923015159"})
             self.assertEqual(set(mergers["acquiringclasscontractid"]), {"C000231669", "C000231672"})
+            benford_dir = output_dir.parent / "xbrl-benford"
+            self.assertEqual([path.name for path in benford_dir.iterdir()], ["benford.parquet"])
+            digits = pl.read_parquet(benford_dir / "benford.parquet")
+            self.assertEqual(digits.height, 4)
+            self.assertEqual(digits.filter(pl.col("digit") == 1)["n"].item(), 550)
+            self.assertEqual(set(digits["taxonomy"]), {"dei", "us-gaap"})
+            self.assertEqual(set(digits["cik"]), {'\\"67716\\"'})
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)
@@ -187,6 +212,10 @@ class StatisticsTests(unittest.TestCase):
             mergers_dir.mkdir()
             old_mergers = mergers_dir / "mergers.parquet"
             old_mergers.write_bytes(b"previous mergers")
+            benford_dir = output_dir.parent / "xbrl-benford"
+            benford_dir.mkdir()
+            old_benford = benford_dir / "benford.parquet"
+            old_benford.write_bytes(b"previous Benford data")
 
             with self.assertRaisesRegex(RuntimeError, "Query failed"):
                 statistics.generate(output_dir, query=fake_query)
@@ -196,6 +225,7 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(old_signatures.read_bytes(), b"previous signatures")
             self.assertEqual(old_commissions.read_bytes(), b"previous commissions")
             self.assertEqual(old_mergers.read_bytes(), b"previous mergers")
+            self.assertEqual(old_benford.read_bytes(), b"previous Benford data")
             self.assertEqual([path.name for path in output_dir.iterdir()], ["websocket.parquet"])
 
 

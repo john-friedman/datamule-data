@@ -13,6 +13,28 @@ from datamulehub import databases
 
 EASTERN = ZoneInfo("America/New_York")
 DEFAULT_OUTPUT_DIR = Path("data/datamule-statistics/filing-detections-speed")
+BENFORD_SQL = """
+SELECT
+    acc AS accessionnumber,
+    c.cik,
+    taxonomy,
+    digit,
+    n
+FROM (
+    SELECT
+        accessionnumber AS acc,
+        taxonomy,
+        CAST(regexp_extract(value, '[1-9]') AS integer) AS digit,
+        count(*) AS n
+    FROM simple_xbrl
+    WHERE regexp_like(value, '^-?[0-9]+([.][0-9]+)?$')
+      AND regexp_like(value, '[1-9]')
+    GROUP BY 1, 2, 3
+)
+JOIN sec_accession_cik_table c
+  ON acc = c.accessionnumber
+ORDER BY 1, 2, 3, 4
+"""
 SIGNATURE_SQL = """
 SELECT accessionnumber, filingdate, name
 FROM (
@@ -265,6 +287,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
     signature_dir = output_dir.parent / "sec-signature-search"
     commissions_dir = output_dir.parent / "sec-commissions"
     mergers_dir = output_dir.parent / "sec-mergers"
+    benford_dir = output_dir.parent / "xbrl-benford"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(
@@ -346,6 +369,11 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         mergers_result = query(MERGERS_SQL, output_dir=temporary / "effect_merger")
         mergers_files = result_files(mergers_result, "mergers")
 
+        benford_result = query(
+            BENFORD_SQL, output_dir=temporary / "benford_by_accession_cik_taxonomy"
+        )
+        benford_files = result_files(benford_result, "XBRL Benford")
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -357,12 +385,14 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         signature_parts = write_signature_parts(signature_files, temporary / "signature_parts")
         write_one_parquet(commissions_files, temporary / "commissions.parquet")
         write_merger_parquet(mergers_files, temporary / "mergers.parquet")
+        write_one_parquet(benford_files, temporary / "benford.parquet")
 
         output_dir.mkdir(parents=True, exist_ok=True)
         filing_types_dir.mkdir(parents=True, exist_ok=True)
         signature_dir.mkdir(parents=True, exist_ok=True)
         commissions_dir.mkdir(parents=True, exist_ok=True)
         mergers_dir.mkdir(parents=True, exist_ok=True)
+        benford_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
         (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
@@ -370,7 +400,8 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
             part.replace(signature_dir / part.name)
         (temporary / "commissions.parquet").replace(commissions_dir / "commissions.parquet")
         (temporary / "mergers.parquet").replace(mergers_dir / "mergers.parquet")
-        print(f"Published {len(outputs) + 3 + len(signature_parts)} Parquet files under {output_dir.parent}")
+        (temporary / "benford.parquet").replace(benford_dir / "benford.parquet")
+        print(f"Published {len(outputs) + 4 + len(signature_parts)} Parquet files under {output_dir.parent}")
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@
 
 import importlib.util
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -12,6 +13,12 @@ from test_datamule_statistics import filer_agent_counts, statistics, write_filer
 
 
 class FilerAgentTests(unittest.TestCase):
+    def test_query_references_only_physical_tables(self):
+        # The API resolves FROM/JOIN names against its catalog, including CTE names.
+        masked = re.sub(r"'([^']|'')*'", "''", statistics.FILER_AGENT_SQL)
+        references = set(re.findall(r'\b(?:from|join)\s+([A-Za-z_][\w$]*)', masked, re.IGNORECASE))
+        self.assertEqual(references, {"sec_accession_cik_table", "sec_submission_details_table"})
+
     def test_partitions_and_missing_names(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

@@ -17,35 +17,35 @@ from datamulehub import databases
 EASTERN = ZoneInfo("America/New_York")
 DEFAULT_OUTPUT_DIR = Path("data/datamule-statistics/filing-detections-speed")
 FILER_AGENT_SQL = """
-WITH filing_dates AS (
+SELECT
+    calendar_year,
+    agent_cik,
+    CASE WHEN grouping(cik) = 1 THEN CAST(NULL AS bigint) ELSE cik END AS cik,
+    count(DISTINCT accession) AS filing_count
+FROM (
     SELECT
-        TRY_CAST(replace(CAST(accessionnumber AS varchar), '-', '') AS bigint) AS accession,
-        min(TRY_CAST(filingdate AS date)) AS filing_date
-    FROM sec_submission_details_table
-    GROUP BY 1
-), filings AS (
-    SELECT DISTINCT
         d.accession,
         year(d.filing_date) AS calendar_year,
         CAST(substr(lpad(CAST(d.accession AS varchar), 18, '0'), 1, 10) AS bigint) AS agent_cik,
         TRY_CAST(regexp_replace(CAST(c.cik AS varchar), '[^0-9]', '') AS bigint) AS cik
     FROM sec_accession_cik_table c
-    JOIN filing_dates d
+    JOIN (
+        SELECT
+            TRY_CAST(replace(CAST(accessionnumber AS varchar), '-', '') AS bigint) AS accession,
+            min(TRY_CAST(filingdate AS date)) AS filing_date
+        FROM sec_submission_details_table
+        GROUP BY 1
+    ) d
       ON TRY_CAST(replace(CAST(c.accessionnumber AS varchar), '-', '') AS bigint) = d.accession
     WHERE d.filing_date <= current_date
       AND d.accession > 0 AND d.accession < 1000000000000000000
-)
-SELECT calendar_year, agent_cik, CAST(NULL AS bigint) AS cik,
-       count(DISTINCT accession) AS filing_count
-FROM filings
+) filings
 WHERE agent_cik > 0
-GROUP BY 1, 2
-
-UNION ALL
-SELECT calendar_year, agent_cik, cik, count(DISTINCT accession) AS filing_count
-FROM filings
-WHERE agent_cik > 0 AND cik > 0 AND cik < 10000000000
-GROUP BY 1, 2, 3
+GROUP BY GROUPING SETS (
+    (calendar_year, agent_cik),
+    (calendar_year, agent_cik, cik)
+)
+HAVING grouping(cik) = 1 OR (cik > 0 AND cik < 10000000000)
 """
 BENFORD_SQL = """
 SELECT

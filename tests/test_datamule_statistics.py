@@ -46,7 +46,7 @@ class StatisticsTests(unittest.TestCase):
         def fake_query(sql, output_dir):
             queries.append(sql)
             output_dir.mkdir(parents=True)
-            if "WITH filing_dates AS" in sql:
+            if sql == statistics.FILER_AGENT_SQL:
                 tables = [filer_agent_counts()]
             elif "FROM fastest_sec_filings_metadata" in sql:
                 tables = [pl.DataFrame({

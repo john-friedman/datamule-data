@@ -1,7 +1,10 @@
 """Publish Datamule statistics datasets from Datamule Hub as Parquet files."""
 
 import argparse
+import csv
 import datetime as dt
+import gzip
+import json
 import shutil
 import tempfile
 from pathlib import Path
@@ -13,6 +16,37 @@ from datamulehub import databases
 
 EASTERN = ZoneInfo("America/New_York")
 DEFAULT_OUTPUT_DIR = Path("data/datamule-statistics/filing-detections-speed")
+FILER_AGENT_SQL = """
+WITH filing_dates AS (
+    SELECT
+        TRY_CAST(replace(CAST(accessionnumber AS varchar), '-', '') AS bigint) AS accession,
+        min(TRY_CAST(filingdate AS date)) AS filing_date
+    FROM sec_submission_details_table
+    GROUP BY 1
+), filings AS (
+    SELECT DISTINCT
+        d.accession,
+        year(d.filing_date) AS calendar_year,
+        CAST(substr(lpad(CAST(d.accession AS varchar), 18, '0'), 1, 10) AS bigint) AS agent_cik,
+        TRY_CAST(regexp_replace(CAST(c.cik AS varchar), '[^0-9]', '') AS bigint) AS cik
+    FROM sec_accession_cik_table c
+    JOIN filing_dates d
+      ON TRY_CAST(replace(CAST(c.accessionnumber AS varchar), '-', '') AS bigint) = d.accession
+    WHERE d.filing_date <= current_date
+      AND d.accession > 0 AND d.accession < 1000000000000000000
+)
+SELECT calendar_year, agent_cik, CAST(NULL AS bigint) AS cik,
+       count(DISTINCT accession) AS filing_count
+FROM filings
+WHERE agent_cik > 0
+GROUP BY 1, 2
+
+UNION ALL
+SELECT calendar_year, agent_cik, cik, count(DISTINCT accession) AS filing_count
+FROM filings
+WHERE agent_cik > 0 AND cik > 0 AND cik < 10000000000
+GROUP BY 1, 2, 3
+"""
 BENFORD_SQL = """
 SELECT
     acc AS accessionnumber,
@@ -284,13 +318,86 @@ def write_signature_parts(files: list[str], destination: Path) -> list[Path]:
     return parts
 
 
-def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> None:
+def write_filer_agent_parquets(files: list[str], destination: Path, metadata_dir: Path) -> list[Path]:
+    counts = (
+        pl.scan_parquet(files)
+        .select(
+            pl.col("calendar_year").cast(pl.Int32),
+            pl.col("agent_cik", "cik", "filing_count").cast(pl.Int64),
+        )
+        .unique()
+        .collect()
+    )
+    if counts.is_empty() or counts.filter(
+        pl.col("calendar_year").is_null() | pl.col("agent_cik").is_null()
+        | pl.col("filing_count").is_null() | (pl.col("filing_count") <= 0)
+        | (pl.col("agent_cik") <= 0) | (pl.col("agent_cik") >= 10_000_000_000)
+        | (pl.col("cik").is_not_null() & ((pl.col("cik") <= 0) | (pl.col("cik") >= 10_000_000_000)))
+    ).height:
+        raise ValueError("The filer agent query returned invalid counts")
+    if counts.select("calendar_year", "agent_cik", "cik").is_duplicated().any():
+        raise ValueError("The filer agent query returned conflicting counts")
+
+    agents = counts.filter(pl.col("cik").is_null()).drop("cik")
+    entities = counts.filter(pl.col("cik").is_not_null())
+    if agents.is_empty() or entities.is_empty():
+        raise ValueError("The filer agent query returned no agent totals or entity relationships")
+    totals = agents.select("calendar_year", "agent_cik", pl.col("filing_count").alias("agent_total"))
+    checked = entities.join(totals, on=["calendar_year", "agent_cik"], how="left")
+    if checked.filter(pl.col("agent_total").is_null() | (pl.col("filing_count") > pl.col("agent_total"))).height:
+        raise ValueError("Filer agent entity counts exceed their agent totals")
+
+    needed = set(agents["agent_cik"].to_list()) | set(entities["cik"].to_list())
+    names = {}
+    for filename in ("listed_filer_metadata.csv.gz", "unlisted_filer_metadata.csv.gz"):
+        with gzip.open(metadata_dir / filename, "rt", encoding="utf-8-sig", newline="") as source:
+            reader = csv.DictReader(source)
+            if not {"cik", "name"}.issubset(reader.fieldnames or []):
+                raise ValueError(f"Missing cik or name column in {filename}")
+            for row in reader:
+                cik = str(row["cik"]).strip()
+                if cik.isascii() and cik.isdigit() and int(cik) in needed:
+                    name = str(row["name"] or "").strip()
+                    if name:
+                        names.setdefault(int(cik), name)
+    name_table = pl.DataFrame({"cik": list(names), "name": list(names.values())}, schema={"cik": pl.Int64, "name": pl.String})
+    agents = (
+        agents.join(name_table.rename({"cik": "agent_cik", "name": "agent_name"}), on="agent_cik", how="left")
+        .with_columns(pl.col("agent_name").fill_null(""))
+        .sort(["calendar_year", "filing_count", "agent_cik"], descending=[False, True, False])
+    )
+    entities = entities.join(name_table, on="cik", how="left").with_columns(pl.col("name").fill_null(""))
+    destination.mkdir()
+    outputs = [destination / "agents.parquet"]
+    agents.write_parquet(outputs[0])
+    years = sorted(agents["calendar_year"].unique().to_list())
+    for year in years:
+        path = destination / f"entities-{year}.parquet"
+        (
+            entities.filter(pl.col("calendar_year") == year).drop("calendar_year")
+            .sort(["agent_cik", "filing_count", "cik"], descending=[False, True, False])
+            .write_parquet(path)
+        )
+        outputs.append(path)
+    outputs.append(destination / "manifest.json")
+    now = dt.datetime.now(dt.timezone.utc)
+    outputs[-1].write_text(json.dumps({
+        "generated_at": now.isoformat(),
+        "through_date": now.astimezone(EASTERN).date().isoformat(),
+        "years": years,
+    }, indent=2) + "\n", encoding="utf-8")
+    return outputs
+
+
+def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metadata_dir: Path | None = None) -> None:
     output_dir = output_dir.resolve()
     filing_types_dir = output_dir.parent / "sec-filing-types"
     signature_dir = output_dir.parent / "sec-signature-search"
     commissions_dir = output_dir.parent / "sec-commissions"
     mergers_dir = output_dir.parent / "sec-mergers"
     benford_dir = output_dir.parent / "xbrl-benford"
+    filer_agent_dir = output_dir.parent / "sec-filer-agents"
+    metadata_dir = metadata_dir or output_dir.parent.parent / "filer_metadata"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(
@@ -377,6 +484,10 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         )
         benford_files = result_files(benford_result, "XBRL Benford")
 
+        filer_agent_result = query(FILER_AGENT_SQL, output_dir=temporary / "filer_agent_counts")
+        filer_agent_files = result_files(filer_agent_result, "filer agents")
+        filer_agent_outputs = write_filer_agent_parquets(filer_agent_files, temporary / "filer_agents", metadata_dir)
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -396,6 +507,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         commissions_dir.mkdir(parents=True, exist_ok=True)
         mergers_dir.mkdir(parents=True, exist_ok=True)
         benford_dir.mkdir(parents=True, exist_ok=True)
+        filer_agent_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
         (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
@@ -404,11 +516,14 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query) -> No
         (temporary / "commissions.parquet").replace(commissions_dir / "commissions.parquet")
         (temporary / "mergers.parquet").replace(mergers_dir / "mergers.parquet")
         (temporary / "benford.parquet").replace(benford_dir / "benford.parquet")
-        print(f"Published {len(outputs) + 4 + len(signature_parts)} Parquet files under {output_dir.parent}")
+        for path in filer_agent_outputs:
+            path.replace(filer_agent_dir / path.name)
+        print(f"Published {len(outputs) + 4 + len(signature_parts) + len(filer_agent_outputs)} files under {output_dir.parent}")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--filer-metadata-dir", type=Path, help="Directory containing listed and unlisted filer metadata CSV.gz files")
     args = parser.parse_args()
-    generate(args.output_dir)
+    generate(args.output_dir, metadata_dir=args.filer_metadata_dir)

@@ -1,6 +1,8 @@
 """Offline checks for the Datamule statistics publisher."""
 
 import datetime as dt
+import csv
+import gzip
 import importlib.util
 import tempfile
 import unittest
@@ -15,6 +17,27 @@ statistics = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(statistics)
 
 
+def write_filer_metadata(destination):
+    destination.mkdir(parents=True, exist_ok=True)
+    for filename, rows in (
+        ("listed_filer_metadata.csv.gz", [(100, "Listed Company")]),
+        ("unlisted_filer_metadata.csv.gz", [(200, "Unlisted Entity"), (1104659, "Test Agent")]),
+    ):
+        with gzip.open(destination / filename, "wt", encoding="utf-8", newline="") as source:
+            writer = csv.writer(source)
+            writer.writerow(["cik", "name"])
+            writer.writerows(rows)
+
+
+def filer_agent_counts():
+    return pl.DataFrame({
+        "calendar_year": [2025, 2025, 2025, 2026, 2026],
+        "agent_cik": [1104659, 1104659, 1104659, 950170, 950170],
+        "cik": [None, 100, 200, None, 100],
+        "filing_count": [3, 2, 2, 1, 1],
+    })
+
+
 class StatisticsTests(unittest.TestCase):
     def test_publishes_statistics_and_four_signature_parts(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)
@@ -23,7 +46,9 @@ class StatisticsTests(unittest.TestCase):
         def fake_query(sql, output_dir):
             queries.append(sql)
             output_dir.mkdir(parents=True)
-            if "FROM fastest_sec_filings_metadata" in sql:
+            if "WITH filing_dates AS" in sql:
+                tables = [filer_agent_counts()]
+            elif "FROM fastest_sec_filings_metadata" in sql:
                 tables = [pl.DataFrame({
                     "accession": ["1", "2"],
                     "detected_time": [earliest_ms, earliest_ms + 1000],
@@ -124,10 +149,11 @@ class StatisticsTests(unittest.TestCase):
             sibling = root / "data" / "keep.txt"
             sibling.parent.mkdir()
             sibling.write_text("keep", encoding="utf-8")
+            write_filer_metadata(root / "data" / "filer_metadata")
 
             statistics.generate(output_dir, query=fake_query)
 
-            self.assertEqual(len(queries), 8)
+            self.assertEqual(len(queries), 9)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
             self.assertIn("date_trunc('week'", queries[3])
@@ -180,6 +206,13 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(set(digits["taxonomy"]), {"dei", "us-gaap"})
             self.assertEqual(set(digits["cik"]), {'\\"67716\\"'})
             self.assertEqual(set(digits["submissiontype"]), {"10-Q", "10-K"})
+            filer_agents_dir = output_dir.parent / "sec-filer-agents"
+            agents = pl.read_parquet(filer_agents_dir / "agents.parquet")
+            self.assertEqual(agents["filing_count"].to_list(), [3, 1])
+            self.assertEqual(agents["agent_name"].to_list(), ["Test Agent", ""])
+            entities = pl.read_parquet(filer_agents_dir / "entities-2025.parquet")
+            self.assertEqual(entities["name"].to_list(), ["Listed Company", "Unlisted Entity"])
+            self.assertEqual(entities["filing_count"].sum(), 4)
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)

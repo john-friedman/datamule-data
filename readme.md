@@ -10,6 +10,27 @@ git clone --branch scripts --single-branch https://github.com/john-friedman/data
 
 The scheduled workflows live on `master`. Each workflow checks out this branch in `.scripts/`, runs its generator from the `master` working directory, then commits the updated files to `master`. The daily generator reads `data.json` from this branch and reads or writes `data/` and `updates.json` in the working directory.
 
+## Acceptance datetime comparison
+
+`code/datamule_statistics.py` also publishes
+`data/datamule-statistics/sec-acceptance-datetime/acceptance-datetime.parquet` on
+`master`. The existing `datamule-statistics` workflow generates it nightly, or on
+manual dispatch; no workflow change is needed.
+
+The dataset compares the SEC submissions endpoint's acceptance timestamp against
+the timestamp extracted from the filing header, interpreted in
+`America/New_York` with daylight saving time. Differences are endpoint minus
+header, in seconds. Counts are grouped by submission type and filing year/month
+from January 2025. The five named buckets are -5h, -4h, exact, +4h, and +5h;
+`num_other` covers every other difference, and `total_compared` includes all six
+buckets. `num_excluded` counts submissions without a matching header or with a
+missing/unparseable timestamp; these are excluded from percentage denominators.
+
+Work only on this generator branch when publishing code. Do not pull or merge
+`master`, `data/`, or `updates.json`; the workflow handles generated data on
+`master` separately. Run offline checks with
+`python -m unittest discover -s tests -v` before pushing to `scripts`.
+
 ## Filing detection statistics
 
 `code/datamule_statistics.py` uses three Datamule Hub queries to publish `fastest_sec_filings_websocket.parquet`, `websocket.parquet`, and `linked_filings.parquet` under `master:data/datamule-statistics/filing-detections-speed/`. The last file contains the selected `submissions_metadata` columns; the generator does not join it to the detection tables. The workflow reads `DATAMULE_API_KEY` from a repository Actions secret.

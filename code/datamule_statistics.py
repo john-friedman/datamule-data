@@ -16,6 +16,36 @@ from datamulehub import databases
 
 EASTERN = ZoneInfo("America/New_York")
 DEFAULT_OUTPUT_DIR = Path("data/datamule-statistics/filing-detections-speed")
+ACCEPTANCE_DATETIME_SQL = """
+SELECT
+    submission_type,
+    year(filing_date) AS year,
+    month(filing_date) AS month,
+    COUNT_IF(diff_seconds = -18000) AS num_minus_5,
+    COUNT_IF(diff_seconds = -14400) AS num_minus_4,
+    COUNT_IF(diff_seconds = 0) AS num_exact,
+    COUNT_IF(diff_seconds = 14400) AS num_plus_4,
+    COUNT_IF(diff_seconds = 18000) AS num_plus_5,
+    COUNT_IF(diff_seconds NOT IN (-18000, -14400, 0, 14400, 18000)) AS num_other,
+    COUNT_IF(diff_seconds IS NOT NULL) AS total_compared,
+    COUNT_IF(diff_seconds IS NULL) AS num_excluded
+FROM (
+    SELECT
+        s."form" AS submission_type,
+        TRY_CAST(s.filingdate AS date) AS filing_date,
+        TRY(date_diff(
+            'second',
+            with_timezone(date_parse(f.acceptance_datetime, '%Y%m%d%H%i%s'), 'America/New_York'),
+            from_iso8601_timestamp(s.acceptancedatetime)
+        )) AS diff_seconds
+    FROM submissions_metadata s
+    LEFT JOIN filing_metadata_filings f
+      ON TRY_CAST(replace(s.accessionnumber, '-', '') AS bigint) = TRY_CAST(f.accessionnumber AS bigint)
+    WHERE TRY_CAST(s.filingdate AS date) >= DATE '2025-01-01'
+) comparisons
+GROUP BY submission_type, year(filing_date), month(filing_date)
+ORDER BY 2, 3, 1
+"""
 FILER_AGENT_SQL = """
 SELECT
     calendar_year,
@@ -397,6 +427,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
     mergers_dir = output_dir.parent / "sec-mergers"
     benford_dir = output_dir.parent / "xbrl-benford"
     filer_agent_dir = output_dir.parent / "sec-filer-agents"
+    acceptance_dir = output_dir.parent / "sec-acceptance-datetime"
     metadata_dir = metadata_dir or output_dir.parent.parent / "filer_metadata"
     output_dir.parent.mkdir(parents=True, exist_ok=True)
 
@@ -488,6 +519,11 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
         filer_agent_files = result_files(filer_agent_result, "filer agents")
         filer_agent_outputs = write_filer_agent_parquets(filer_agent_files, temporary / "filer_agents", metadata_dir)
 
+        acceptance_result = query(
+            ACCEPTANCE_DATETIME_SQL, output_dir=temporary / "acceptance_datetime_comparison"
+        )
+        acceptance_files = result_files(acceptance_result, "acceptance datetime comparison")
+
         outputs = {
             "fastest_sec_filings_websocket.parquet": fastest_files,
             "websocket.parquet": websocket_files,
@@ -500,6 +536,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
         write_one_parquet(commissions_files, temporary / "commissions.parquet")
         write_merger_parquet(mergers_files, temporary / "mergers.parquet")
         write_one_parquet(benford_files, temporary / "benford.parquet")
+        write_one_parquet(acceptance_files, temporary / "acceptance-datetime.parquet")
 
         output_dir.mkdir(parents=True, exist_ok=True)
         filing_types_dir.mkdir(parents=True, exist_ok=True)
@@ -508,6 +545,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
         mergers_dir.mkdir(parents=True, exist_ok=True)
         benford_dir.mkdir(parents=True, exist_ok=True)
         filer_agent_dir.mkdir(parents=True, exist_ok=True)
+        acceptance_dir.mkdir(parents=True, exist_ok=True)
         for filename in outputs:
             (temporary / filename).replace(output_dir / filename)
         (temporary / "filing-types.parquet").replace(filing_types_dir / "filing-types.parquet")
@@ -518,7 +556,8 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
         (temporary / "benford.parquet").replace(benford_dir / "benford.parquet")
         for path in filer_agent_outputs:
             path.replace(filer_agent_dir / path.name)
-        print(f"Published {len(outputs) + 4 + len(signature_parts) + len(filer_agent_outputs)} files under {output_dir.parent}")
+        (temporary / "acceptance-datetime.parquet").replace(acceptance_dir / "acceptance-datetime.parquet")
+        print(f"Published {len(outputs) + 5 + len(signature_parts) + len(filer_agent_outputs)} files under {output_dir.parent}")
 
 
 if __name__ == "__main__":

@@ -46,7 +46,19 @@ class StatisticsTests(unittest.TestCase):
         def fake_query(sql, output_dir):
             queries.append(sql)
             output_dir.mkdir(parents=True)
-            if sql == statistics.FILER_AGENT_SQL:
+            if sql == statistics.ACCEPTANCE_DATETIME_SQL:
+                tables = [pl.DataFrame({
+                    "submission_type": ["10-K"], "year": [2025], "month": [1],
+                    "num_minus_5": [1], "num_minus_4": [2], "num_exact": [90],
+                    "num_plus_4": [3], "num_plus_5": [1], "num_other": [3],
+                    "total_compared": [100], "num_excluded": [4],
+                }), pl.DataFrame({
+                    "submission_type": ["10-Q"], "year": [2025], "month": [2],
+                    "num_minus_5": [0], "num_minus_4": [0], "num_exact": [0],
+                    "num_plus_4": [0], "num_plus_5": [0], "num_other": [1],
+                    "total_compared": [1], "num_excluded": [2],
+                })]
+            elif sql == statistics.FILER_AGENT_SQL:
                 tables = [filer_agent_counts()]
             elif "FROM fastest_sec_filings_metadata" in sql:
                 tables = [pl.DataFrame({
@@ -153,7 +165,7 @@ class StatisticsTests(unittest.TestCase):
 
             statistics.generate(output_dir, query=fake_query)
 
-            self.assertEqual(len(queries), 9)
+            self.assertEqual(len(queries), 10)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
             self.assertIn("date_trunc('week'", queries[3])
@@ -213,6 +225,26 @@ class StatisticsTests(unittest.TestCase):
             entities = pl.read_parquet(filer_agents_dir / "entities-2025.parquet")
             self.assertEqual(entities["name"].to_list(), ["Listed Company", "Unlisted Entity"])
             self.assertEqual(entities["filing_count"].sum(), 4)
+            comparison = pl.read_parquet(output_dir.parent / "sec-acceptance-datetime" / "acceptance-datetime.parquet")
+            self.assertEqual(comparison.height, 2)
+            self.assertEqual(comparison["total_compared"].sum(), 101)
+            self.assertEqual(comparison["num_other"].sum(), 4)
+            self.assertEqual(comparison["num_excluded"].sum(), 6)
+
+            # A late comparison-query failure must preserve every previous output.
+            published = {path: path.read_bytes() for path in output_dir.parent.rglob('*') if path.is_file()}
+
+            def failing_comparison(sql, output_dir):
+                if sql == statistics.ACCEPTANCE_DATETIME_SQL:
+                    raise RuntimeError('Comparison query failed')
+                return fake_query(sql, output_dir)
+
+            with self.assertRaisesRegex(RuntimeError, 'Comparison query failed'):
+                statistics.generate(output_dir, query=failing_comparison)
+            self.assertEqual(
+                {path: path.read_bytes() for path in output_dir.parent.rglob('*') if path.is_file()},
+                published,
+            )
 
     def test_query_failure_preserves_published_files(self):
         earliest_ms = int(dt.datetime(2026, 9, 21, tzinfo=dt.timezone.utc).timestamp() * 1000)

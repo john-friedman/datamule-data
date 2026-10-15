@@ -31,17 +31,47 @@ SELECT
     COUNT_IF(diff_seconds IS NULL) AS num_excluded
 FROM (
     SELECT
-        s."form" AS submission_type,
-        TRY_CAST(s.filingdate AS date) AS filing_date,
-        TRY(date_diff(
-            'second',
-            with_timezone(date_parse(f.acceptance_datetime, '%Y%m%d%H%i%s'), 'America/New_York'),
-            from_iso8601_timestamp(s.acceptancedatetime)
-        )) AS diff_seconds
-    FROM submissions_metadata s
-    LEFT JOIN filing_metadata_filings f
-      ON TRY_CAST(replace(s.accessionnumber, '-', '') AS bigint) = TRY_CAST(f.accessionnumber AS bigint)
-    WHERE TRY_CAST(s.filingdate AS date) >= DATE '2025-01-01'
+        s.submission_type,
+        s.filing_date,
+        date_diff('second', f.acceptance_time, s.acceptance_time) AS diff_seconds
+    FROM (
+        SELECT
+            accession,
+            CASE WHEN COUNT(DISTINCT submission_type) = 1
+                THEN min(submission_type) ELSE 'Unknown' END AS submission_type,
+            min(filing_date) AS filing_date,
+            CASE WHEN COUNT(DISTINCT submission_type) = 1
+                   AND COUNT(DISTINCT filing_date) = 1
+                   AND COUNT(DISTINCT acceptance_time) = 1
+                THEN min(acceptance_time) END AS acceptance_time
+        FROM (
+            SELECT
+                TRY_CAST(replace(trim(CAST(accessionnumber AS varchar)), '-', '') AS bigint) AS accession,
+                COALESCE(NULLIF(trim("form"), ''), 'Unknown') AS submission_type,
+                TRY_CAST(filingdate AS date) AS filing_date,
+                TRY(from_iso8601_timestamp(acceptancedatetime)) AS acceptance_time
+            FROM submissions_metadata
+        ) submission_rows
+        WHERE accession > 0 AND accession < 1000000000000000000
+        GROUP BY accession
+    ) s
+    LEFT JOIN (
+        SELECT
+            accession,
+            CASE WHEN COUNT(DISTINCT acceptance_time) = 1
+                THEN min(acceptance_time) END AS acceptance_time
+        FROM (
+            SELECT
+                TRY_CAST(replace(trim(CAST(accessionnumber AS varchar)), '-', '') AS bigint) AS accession,
+                TRY(with_timezone(
+                    date_parse(acceptance_datetime, '%Y%m%d%H%i%s'), 'America/New_York'
+                )) AS acceptance_time
+            FROM filing_metadata_filings
+        ) header_rows
+        WHERE accession > 0 AND accession < 1000000000000000000
+        GROUP BY accession
+    ) f ON s.accession = f.accession
+    WHERE s.filing_date >= DATE '2025-01-01'
 ) comparisons
 GROUP BY submission_type, year(filing_date), month(filing_date)
 ORDER BY 2, 3, 1

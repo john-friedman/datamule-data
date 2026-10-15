@@ -24,7 +24,21 @@ header, in seconds. Counts are grouped by submission type and filing year/month
 from January 2025. The five named buckets are -5h, -4h, exact, +4h, and +5h;
 `num_other` covers every other difference, and `total_compared` includes all six
 buckets. `num_excluded` counts submissions without a matching header or with a
-missing/unparseable timestamp; these are excluded from percentage denominators.
+missing/unparseable timestamp or conflicting duplicate records; these are excluded
+from percentage denominators.
+
+Both sources are reduced to one row per normalized accession before joining, so
+each accession contributes once. Accession normalization strips hyphens and
+surrounding whitespace and converts to an integer. Zero, invalid, or out-of-range
+accessions are omitted, as are submissions without a usable filing date.
+
+Duplicate timestamps are compared as parsed instants: different ISO timezone
+representations of the same instant are equivalent. Missing or unparseable copies
+do not override a unique valid timestamp. If either source has more than one
+distinct valid timestamp for an accession, that accession is counted once in
+`num_excluded`, never in an offset bucket. Conflicting submission types or filing
+dates also cause exclusion. The earliest valid filing date supplies the reporting
+month (and the January 2025 cutoff); conflicting types are reported as `Unknown`.
 
 Work only on this generator branch when publishing code. Do not pull or merge
 `master`, `data/`, or `updates.json`; the workflow handles generated data on

@@ -47,7 +47,31 @@ Work only on this generator branch when publishing code. Do not pull or merge
 
 ## Filing detection statistics
 
-`code/datamule_statistics.py` uses three Datamule Hub queries to publish `fastest_sec_filings_websocket.parquet`, `websocket.parquet`, and `linked_filings.parquet` under `master:data/datamule-statistics/filing-detections-speed/`. The last file contains the selected `submissions_metadata` columns; the generator does not join it to the detection tables. The workflow reads `DATAMULE_API_KEY` from a repository Actions secret.
+`code/datamule_statistics.py` uses three Datamule Hub queries to publish
+`fastest_sec_filings_websocket.parquet`, `websocket.parquet`, and
+`linked_filings.parquet` under
+`master:data/datamule-statistics/filing-detections-speed/`. The workflow reads
+`DATAMULE_API_KEY` from a repository Actions secret.
+
+`linked_filings.parquet` now uses `filing_metadata_filings.acceptance_datetime`,
+extracted from filing headers, instead of the SEC submissions endpoint's
+acceptance time. Compact header timestamps are interpreted in `America/New_York`
+(including daylight saving time), then converted to explicit UTC ISO strings.
+There is no additional fixed-hour correction.
+
+The published columns remain `accessionnumber`, `acceptancedatetime`, and
+`filingdate`, so the website's existing loader can read the new data. Accessions
+are normalized to 18 digits and deduplicated across query parts. Missing or invalid
+duplicate copies do not override a unique valid time. Accessions with multiple
+distinct valid times or filing dates are omitted; missing timestamps and invalid
+accession/date rows are also omitted. The workflow logs these exclusion counts.
+If no usable timestamps remain, generation fails before replacing published
+files. No fallback to endpoint timestamps is used.
+
+The query keeps the existing filing-date window, from the earliest Fastest
+detection's Eastern date through the generation date. Detection datasets and
+detection-minus-detection totals are unchanged. The separate acceptance datetime
+comparison still queries both sources to measure their disagreement.
 
 ## Filer Agent
 

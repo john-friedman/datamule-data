@@ -70,10 +70,10 @@ class StatisticsTests(unittest.TestCase):
                 tables = [pl.DataFrame({
                     "accession": ["1"], "source": ["rss"], "detected_time": [1_790_000_000],
                 })]
-            elif "FROM submissions_metadata" in sql:
+            elif "FROM filing_metadata_filings" in sql:
                 tables = [
-                    pl.DataFrame({"accessionnumber": ["1"], "acceptancedatetime": ["2026-09-21T12:00:00"], "filingdate": ["2026-09-21"]}),
-                    pl.DataFrame({"accessionnumber": ["2"], "acceptancedatetime": ["2026-09-21T13:00:00"], "filingdate": ["2026-09-21"]}),
+                    pl.DataFrame({"accessionnumber": ["1"], "acceptancedatetime": ["2026-09-21T16:00:00.000Z"], "filingdate": ["2026-09-21"]}),
+                    pl.DataFrame({"accessionnumber": ["2"], "acceptancedatetime": ["2026-09-21T17:00:00.000Z"], "filingdate": ["2026-09-21"]}),
                 ]
             elif "FROM sec_submission_details_table" in sql:
                 tables = [
@@ -168,6 +168,10 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(len(queries), 10)
             self.assertIn("detected_time >=", queries[1])
             self.assertIn("lower(source) IN ('rss', 'efts', 'anticipate')", queries[1])
+            self.assertIn("FROM filing_metadata_filings", queries[2])
+            self.assertNotIn("submissions_metadata", queries[2])
+            self.assertIn("'America/New_York'", queries[2])
+            self.assertIn("AS acceptancedatetime", queries[2])
             self.assertIn("date_trunc('week'", queries[3])
             self.assertIn("date_trunc('month'", queries[3])
             self.assertIn("GROUP BY 1, 2, 3, 4", queries[3])
@@ -190,6 +194,9 @@ class StatisticsTests(unittest.TestCase):
             self.assertEqual(pl.read_parquet(output_dir / "fastest_sec_filings_websocket.parquet").height, 2)
             self.assertEqual(pl.read_parquet(output_dir / "websocket.parquet").height, 1)
             self.assertEqual(pl.read_parquet(output_dir / "linked_filings.parquet").height, 2)
+            linked = pl.read_parquet(output_dir / "linked_filings.parquet")
+            self.assertEqual(linked.columns, ["accessionnumber", "acceptancedatetime", "filingdate"])
+            self.assertEqual(linked["acceptancedatetime"].to_list(), ["2026-09-21T16:00:00.000Z", "2026-09-21T17:00:00.000Z"])
             filing_types = pl.read_parquet(output_dir.parent / "sec-filing-types" / "filing-types.parquet")
             self.assertEqual(filing_types.height, 2)
             self.assertEqual(filing_types["count"].sum(), 8)
@@ -241,6 +248,21 @@ class StatisticsTests(unittest.TestCase):
 
             with self.assertRaisesRegex(RuntimeError, 'Comparison query failed'):
                 statistics.generate(output_dir, query=failing_comparison)
+            self.assertEqual(
+                {path: path.read_bytes() for path in output_dir.parent.rglob('*') if path.is_file()},
+                published,
+            )
+
+            def unusable_headers(sql, output_dir):
+                if 'FROM filing_metadata_filings' in sql and sql != statistics.ACCEPTANCE_DATETIME_SQL:
+                    output_dir.mkdir(parents=True)
+                    file = output_dir / 'part-00000.parquet'
+                    pl.DataFrame({'accessionnumber': ['1'], 'filingdate': ['2026-09-21'], 'acceptancedatetime': [None]}).write_parquet(file)
+                    return {'files': [str(file)]}
+                return fake_query(sql, output_dir)
+
+            with self.assertRaisesRegex(ValueError, 'no usable acceptance timestamps'):
+                statistics.generate(output_dir, query=unusable_headers)
             self.assertEqual(
                 {path: path.read_bytes() for path in output_dir.parent.rglob('*') if path.is_file()},
                 published,

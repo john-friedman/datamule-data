@@ -16,6 +16,20 @@ from datamulehub import databases
 
 EASTERN = ZoneInfo("America/New_York")
 DEFAULT_OUTPUT_DIR = Path("data/datamule-statistics/filing-detections-speed")
+LINKED_FILINGS_SQL = """
+SELECT
+    accessionnumber,
+    filingdate,
+    acceptance_datetime,
+    TRY(to_iso8601(at_timezone(
+        with_timezone(date_parse(acceptance_datetime, '%Y%m%d%H%i%s'), 'America/New_York'),
+        'UTC'
+    ))) AS acceptancedatetime
+FROM filing_metadata_filings
+WHERE filingdate >= '{start_date}'
+  AND filingdate <= '{end_date}'
+ORDER BY filingdate, accessionnumber
+"""
 ACCEPTANCE_DATETIME_SQL = """
 SELECT
     submission_type,
@@ -321,6 +335,53 @@ def write_one_parquet(files: list[str], destination: Path) -> None:
         pl.scan_parquet(files).sink_parquet(destination)
 
 
+def write_linked_filings_parquet(files: list[str], destination: Path) -> None:
+    headers = (
+        pl.scan_parquet(files)
+        .select(
+            pl.col("accessionnumber").cast(pl.Utf8).str.strip_chars(),
+            pl.col("acceptancedatetime").cast(pl.Utf8).str.to_datetime(format="%+", time_zone="UTC", strict=False),
+            pl.col("filingdate").cast(pl.Utf8).str.to_date("%Y-%m-%d", strict=False),
+        )
+        .collect()
+    )
+    usable = (
+        headers.filter(
+            pl.col("accessionnumber").str.contains(r"^(?:\d{1,18}|\d{10}-\d{2}-\d{6})$"),
+            pl.col("filingdate").is_not_null(),
+        )
+        .with_columns(pl.col("accessionnumber").str.replace_all("-", "").str.zfill(18))
+        .filter(pl.col("accessionnumber") != "0" * 18)
+    )
+    grouped = usable.group_by("accessionnumber").agg(
+        pl.col("acceptancedatetime").drop_nulls().n_unique().alias("time_count"),
+        pl.col("acceptancedatetime").min(),
+        pl.col("filingdate").n_unique().alias("date_count"),
+        pl.col("filingdate").min(),
+    )
+    linked = (
+        grouped.filter((pl.col("time_count") == 1) & (pl.col("date_count") == 1))
+        .select(
+            "accessionnumber",
+            pl.col("acceptancedatetime").dt.strftime("%Y-%m-%dT%H:%M:%S%.3fZ"),
+            pl.col("filingdate").dt.strftime("%Y-%m-%d"),
+        )
+        .sort("filingdate", "accessionnumber")
+    )
+    missing = grouped.filter(pl.col("time_count") == 0).height
+    conflicts = grouped.filter(
+        (pl.col("time_count") > 0) & ((pl.col("time_count") > 1) | (pl.col("date_count") > 1))
+    ).height
+    print(
+        f"Filing-header acceptance times: {linked.height} usable accessions; "
+        f"{missing} without a valid timestamp; {conflicts} with conflicting timestamps or dates; "
+        f"{headers.height - usable.height} rows with invalid accessions or dates"
+    )
+    if linked.is_empty():
+        raise ValueError("The filing header query returned no usable acceptance timestamps")
+    linked.write_parquet(destination)
+
+
 def write_merger_parquet(files: list[str], destination: Path) -> None:
     mergers = (
         pl.scan_parquet(files)
@@ -501,12 +562,7 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
         websocket_files = result_files(websocket_result, "websocket")
 
         linked_result = query(
-            f"""
-            SELECT accessionnumber, acceptancedatetime, filingdate
-            FROM submissions_metadata
-            WHERE filingdate >= '{start_date}'
-              AND filingdate <= '{end_date}'
-            """,
+            LINKED_FILINGS_SQL.format(start_date=start_date, end_date=end_date),
             output_dir=temporary / "linked_filings",
         )
         linked_files = result_files(linked_result, "linked filings")
@@ -560,7 +616,8 @@ def generate(output_dir: Path = DEFAULT_OUTPUT_DIR, query=databases.query, metad
             "linked_filings.parquet": linked_files,
         }
         for filename, files in outputs.items():
-            write_one_parquet(files, temporary / filename)
+            writer = write_linked_filings_parquet if filename == "linked_filings.parquet" else write_one_parquet
+            writer(files, temporary / filename)
         write_one_parquet(filing_types_files, temporary / "filing-types.parquet")
         signature_parts = write_signature_parts(signature_files, temporary / "signature_parts")
         write_one_parquet(commissions_files, temporary / "commissions.parquet")

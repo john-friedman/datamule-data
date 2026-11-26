@@ -1,262 +1,262 @@
 {
     "tariffs_canada_domestic": {
-        "last_run": "2026-11-25 18:56:35",
+        "last_run": "2026-11-26 18:46:34",
         "success": true
     },
     "submissions_metadata": {
-        "last_run": "2026-11-25 19:02:26",
+        "last_run": "2026-11-26 18:52:17",
         "success": true
     },
     "tariffs_china_domestic": {
-        "last_run": "2026-11-25 18:56:36",
+        "last_run": "2026-11-26 18:46:34",
         "success": true
     },
     "tariffs_mexico_domestic": {
-        "last_run": "2026-11-25 18:56:36",
+        "last_run": "2026-11-26 18:46:35",
         "success": true
     },
     "tariffs_venezuela_domestic": {
-        "last_run": "2026-11-25 18:56:37",
+        "last_run": "2026-11-26 18:46:35",
         "success": true
     },
     "layoffs_domestic": {
-        "last_run": "2026-11-25 18:56:38",
+        "last_run": "2026-11-26 18:46:36",
         "success": true
     },
     "outsourcing_domestic": {
-        "last_run": "2026-11-25 18:56:39",
+        "last_run": "2026-11-26 18:46:37",
         "success": true
     },
     "consumer-confidence_domestic": {
-        "last_run": "2026-11-25 18:56:40",
+        "last_run": "2026-11-26 18:46:38",
         "success": true
     },
     "supplier-concentration_domestic": {
-        "last_run": "2026-11-25 18:56:40",
+        "last_run": "2026-11-26 18:46:39",
         "success": true
     },
     "dei_diversity_domestic": {
-        "last_run": "2026-11-25 18:56:44",
+        "last_run": "2026-11-26 18:46:41",
         "success": true
     },
     "dei_equity_domestic": {
-        "last_run": "2026-11-25 18:56:45",
+        "last_run": "2026-11-26 18:46:43",
         "success": true
     },
     "dei_inclusion_domestic": {
-        "last_run": "2026-11-25 18:56:47",
+        "last_run": "2026-11-26 18:46:44",
         "success": true
     },
     "esg_environmental_domestic": {
-        "last_run": "2026-11-25 18:56:50",
+        "last_run": "2026-11-26 18:46:47",
         "success": true
     },
     "esg_social_domestic": {
-        "last_run": "2026-11-25 18:56:52",
+        "last_run": "2026-11-26 18:46:49",
         "success": true
     },
     "esg_governance_domestic": {
-        "last_run": "2026-11-25 18:56:54",
+        "last_run": "2026-11-26 18:46:52",
         "success": true
     },
     "war_russo-ukrainian_domestic": {
-        "last_run": "2026-11-25 18:56:55",
+        "last_run": "2026-11-26 18:46:54",
         "success": true
     },
     "war_israel-hamas_domestic": {
-        "last_run": "2026-11-25 18:56:56",
+        "last_run": "2026-11-26 18:46:55",
         "success": true
     },
     "war_syrian-civil_domestic": {
-        "last_run": "2026-11-25 18:56:56",
+        "last_run": "2026-11-26 18:46:55",
         "success": true
     },
     "war_russo-ukrainian_international": {
-        "last_run": "2026-11-25 18:56:57",
+        "last_run": "2026-11-26 18:46:56",
         "success": true
     },
     "war_israel-hamas_international": {
-        "last_run": "2026-11-25 18:56:57",
+        "last_run": "2026-11-26 18:46:57",
         "success": true
     },
     "war_syrian-civil_international": {
-        "last_run": "2026-11-25 18:56:58",
+        "last_run": "2026-11-26 18:46:59",
         "success": true
     },
     "terrorism_al-qaeda_domestic": {
-        "last_run": "2026-11-25 18:56:59",
+        "last_run": "2026-11-26 18:47:00",
         "success": true
     },
     "terrorism_al-qaeda_international": {
-        "last_run": "2026-11-25 18:57:00",
+        "last_run": "2026-11-26 18:47:01",
         "success": true
     },
     "terrorism_houthis_domestic": {
-        "last_run": "2026-11-25 18:57:01",
+        "last_run": "2026-11-26 18:47:02",
         "success": true
     },
     "terrorism_houthis_international": {
-        "last_run": "2026-11-25 18:57:03",
+        "last_run": "2026-11-26 18:47:02",
         "success": true
     },
     "terrorism_hezbollah_domestic": {
-        "last_run": "2026-11-25 18:57:04",
+        "last_run": "2026-11-26 18:47:03",
         "success": true
     },
     "terrorism_hezbollah_international": {
-        "last_run": "2026-11-25 18:57:05",
+        "last_run": "2026-11-26 18:47:04",
         "success": true
     },
     "terrorism_hamas_domestic": {
-        "last_run": "2026-11-25 18:57:06",
+        "last_run": "2026-11-26 18:47:04",
         "success": true
     },
     "terrorism_hamas_international": {
-        "last_run": "2026-11-25 18:57:06",
+        "last_run": "2026-11-26 18:47:05",
         "success": true
     },
     "terrorism_general-terrorism_domestic": {
-        "last_run": "2026-11-25 18:57:07",
+        "last_run": "2026-11-26 18:47:05",
         "success": true
     },
     "terrorism_general-terrorism_international": {
-        "last_run": "2026-11-25 18:57:08",
+        "last_run": "2026-11-26 18:47:06",
         "success": true
     },
     "space_launch_domestic": {
-        "last_run": "2026-11-25 18:57:09",
+        "last_run": "2026-11-26 18:47:07",
         "success": true
     },
     "space_satellite_domestic": {
-        "last_run": "2026-11-25 18:57:10",
+        "last_run": "2026-11-26 18:47:08",
         "success": true
     },
     "space_exploration_domestic": {
-        "last_run": "2026-11-25 18:57:11",
+        "last_run": "2026-11-26 18:47:09",
         "success": true
     },
     "space_commercial_domestic": {
-        "last_run": "2026-11-25 18:57:12",
+        "last_run": "2026-11-26 18:47:10",
         "success": true
     },
     "space_partnerships_domestic": {
-        "last_run": "2026-11-25 18:57:13",
+        "last_run": "2026-11-26 18:47:12",
         "success": true
     },
     "space_investment_domestic": {
-        "last_run": "2026-11-25 18:57:15",
+        "last_run": "2026-11-26 18:47:13",
         "success": true
     },
     "space_technology_domestic": {
-        "last_run": "2026-11-25 18:57:16",
+        "last_run": "2026-11-26 18:47:14",
         "success": true
     },
     "space_risks_domestic": {
-        "last_run": "2026-11-25 18:57:17",
+        "last_run": "2026-11-26 18:47:15",
         "success": true
     },
     "nuclear_power_domestic": {
-        "last_run": "2026-11-25 18:57:18",
+        "last_run": "2026-11-26 18:47:16",
         "success": true
     },
     "nuclear_fuel_domestic": {
-        "last_run": "2026-11-25 18:57:19",
+        "last_run": "2026-11-26 18:47:17",
         "success": true
     },
     "nuclear_technology_domestic": {
-        "last_run": "2026-11-25 18:57:21",
+        "last_run": "2026-11-26 18:47:18",
         "success": true
     },
     "nuclear_services_domestic": {
-        "last_run": "2026-11-25 18:57:22",
+        "last_run": "2026-11-26 18:47:20",
         "success": true
     },
     "nuclear_regulation_domestic": {
-        "last_run": "2026-11-25 18:57:23",
+        "last_run": "2026-11-26 18:47:21",
         "success": true
     },
     "nuclear_fusion_domestic": {
-        "last_run": "2026-11-25 18:57:24",
+        "last_run": "2026-11-26 18:47:22",
         "success": true
     },
     "nuclear_risk_domestic": {
-        "last_run": "2026-11-25 18:57:25",
+        "last_run": "2026-11-26 18:47:23",
         "success": true
     },
     "nuclear_research_domestic": {
-        "last_run": "2026-11-25 18:57:26",
+        "last_run": "2026-11-26 18:47:24",
         "success": true
     },
     "sovereign-crisis_domestic": {
-        "last_run": "2026-11-25 18:57:26",
+        "last_run": "2026-11-26 18:47:24",
         "success": true
     },
     "political-stability_domestic": {
-        "last_run": "2026-11-25 18:57:27",
+        "last_run": "2026-11-26 18:47:25",
         "success": true
     },
     "tariffs_canada_international": {
-        "last_run": "2026-11-25 18:57:27",
+        "last_run": "2026-11-26 18:47:26",
         "success": true
     },
     "tariffs_china_international": {
-        "last_run": "2026-11-25 18:57:28",
+        "last_run": "2026-11-26 18:47:26",
         "success": true
     },
     "tariffs_mexico_international": {
-        "last_run": "2026-11-25 18:57:28",
+        "last_run": "2026-11-26 18:47:27",
         "success": true
     },
     "tariffs_venezuela_international": {
-        "last_run": "2026-11-25 18:57:29",
+        "last_run": "2026-11-26 18:47:27",
         "success": true
     },
     "layoffs_international": {
-        "last_run": "2026-11-25 18:57:30",
+        "last_run": "2026-11-26 18:47:28",
         "success": true
     },
     "outsourcing_international": {
-        "last_run": "2026-11-25 18:57:30",
+        "last_run": "2026-11-26 18:47:28",
         "success": true
     },
     "consumer-confidence_international": {
-        "last_run": "2026-11-25 18:57:31",
+        "last_run": "2026-11-26 18:47:29",
         "success": true
     },
     "supplier-concentration_international": {
-        "last_run": "2026-11-25 18:57:32",
+        "last_run": "2026-11-26 18:47:29",
         "success": true
     },
     "dei_diversity_international": {
-        "last_run": "2026-11-25 18:57:34",
+        "last_run": "2026-11-26 18:47:32",
         "success": true
     },
     "dei_equity_international": {
-        "last_run": "2026-11-25 18:57:35",
+        "last_run": "2026-11-26 18:47:33",
         "success": true
     },
     "dei_inclusion_international": {
-        "last_run": "2026-11-25 18:57:37",
+        "last_run": "2026-11-26 18:47:35",
         "success": true
     },
     "esg_environmental_international": {
-        "last_run": "2026-11-25 18:57:40",
+        "last_run": "2026-11-26 18:47:37",
         "success": true
     },
     "esg_social_international": {
-        "last_run": "2026-11-25 18:57:41",
+        "last_run": "2026-11-26 18:47:39",
         "success": true
     },
     "esg_governance_international": {
-        "last_run": "2026-11-25 18:57:43",
+        "last_run": "2026-11-26 18:47:42",
         "success": true
     },
     "space_launch_international": {
-        "last_run": "2026-11-25 18:57:44",
+        "last_run": "2026-11-26 18:47:43",
         "success": true
     },
     "space_satellite_international": {
-        "last_run": "2026-11-25 18:57:45",
+        "last_run": "2026-11-26 18:47:45",
         "success": true
     },
     "ipo_domestic_us": {
@@ -264,27 +264,27 @@
         "success": true
     },
     "ipo_international_us": {
-        "last_run": "2026-11-25 18:58:12",
+        "last_run": "2026-11-26 18:48:09",
         "success": true
     },
     "ipo_domestic_eu": {
-        "last_run": "2026-11-25 18:58:20",
+        "last_run": "2026-11-26 18:48:21",
         "success": true
     },
     "ipo_international_eu": {
-        "last_run": "2026-11-25 18:58:29",
+        "last_run": "2026-11-26 18:48:29",
         "success": true
     },
     "ipo_domestic_cn": {
-        "last_run": "2026-11-22 16:52:22",
+        "last_run": "2026-11-26 18:48:35",
         "success": true
     },
     "ipo_international_cn": {
-        "last_run": "2026-11-23 20:50:36",
+        "last_run": "2026-11-26 18:48:45",
         "success": true
     },
     "explosive-materials_ammonium-nitrate_domestic": {
-        "last_run": "2026-11-23 20:50:37",
+        "last_run": "2026-11-26 18:48:46",
         "success": true
     },
     "explosive-materials_ammonium-nitrate_intl": {
@@ -292,15 +292,15 @@
         "success": true
     },
     "explosive-materials_sodium-nitrate_domestic": {
-        "last_run": "2026-11-25 18:58:36",
+        "last_run": "2026-11-26 18:48:48",
         "success": true
     },
     "explosive-materials_sodium-nitrate_intl": {
-        "last_run": "2026-11-25 18:58:37",
+        "last_run": "2026-11-26 18:48:48",
         "success": true
     },
     "explosive-materials_potassium-nitrate_domestic": {
-        "last_run": "2026-11-25 18:58:39",
+        "last_run": "2026-11-26 18:48:50",
         "success": true
     },
     "explosive-materials_potassium-nitrate_intl": {
@@ -308,303 +308,303 @@
         "success": true
     },
     "metals_aluminum_domestic": {
-        "last_run": "2026-11-25 18:58:41",
+        "last_run": "2026-11-26 18:48:52",
         "success": true
     },
     "metals_aluminum_intl": {
-        "last_run": "2026-11-25 18:58:42",
+        "last_run": "2026-11-26 18:48:53",
         "success": true
     },
     "metals_nickel_domestic": {
-        "last_run": "2026-11-25 18:58:43",
+        "last_run": "2026-11-26 18:48:54",
         "success": true
     },
     "metals_nickel_intl": {
-        "last_run": "2026-11-25 18:58:44",
+        "last_run": "2026-11-26 18:48:55",
         "success": true
     },
     "metals_titanium_domestic": {
-        "last_run": "2026-11-25 18:58:44",
+        "last_run": "2026-11-26 18:48:56",
         "success": true
     },
     "metals_titanium_intl": {
-        "last_run": "2026-11-25 18:58:45",
+        "last_run": "2026-11-26 18:48:56",
         "success": true
     },
     "metals_copper_domestic": {
-        "last_run": "2026-11-25 18:58:47",
+        "last_run": "2026-11-26 18:48:57",
         "success": true
     },
     "metals_copper_intl": {
-        "last_run": "2026-11-25 18:58:47",
+        "last_run": "2026-11-26 18:48:57",
         "success": true
     },
     "semiconductor-materials_silicon_domestic": {
-        "last_run": "2026-11-25 18:58:49",
+        "last_run": "2026-11-26 18:48:58",
         "success": true
     },
     "semiconductor-materials_silicon_intl": {
-        "last_run": "2026-11-25 18:58:50",
+        "last_run": "2026-11-26 18:48:59",
         "success": true
     },
     "semiconductor-materials_gallium_domestic": {
-        "last_run": "2026-11-25 18:58:51",
+        "last_run": "2026-11-26 18:48:59",
         "success": true
     },
     "semiconductor-materials_gallium_intl": {
-        "last_run": "2026-11-25 18:58:53",
+        "last_run": "2026-11-26 18:49:00",
         "success": true
     },
     "semiconductor-materials_germanium_domestic": {
-        "last_run": "2026-11-25 18:58:54",
+        "last_run": "2026-11-26 18:49:00",
         "success": true
     },
     "semiconductor-materials_germanium_intl": {
-        "last_run": "2026-11-25 18:58:54",
+        "last_run": "2026-11-26 18:49:01",
         "success": true
     },
     "semiconductor-materials_indium_domestic": {
-        "last_run": "2026-11-25 18:58:55",
+        "last_run": "2026-11-26 18:49:02",
         "success": true
     },
     "semiconductor-materials_indium_intl": {
-        "last_run": "2026-11-25 18:58:56",
+        "last_run": "2026-11-26 18:49:02",
         "success": true
     },
     "propellant-components_nitric-acid_domestic": {
-        "last_run": "2026-11-25 18:58:56",
+        "last_run": "2026-11-26 18:49:03",
         "success": true
     },
     "propellant-components_nitric-acid_intl": {
-        "last_run": "2026-11-25 18:58:57",
+        "last_run": "2026-11-26 18:49:03",
         "success": true
     },
     "propellant-components_hydrogen-peroxide_domestic": {
-        "last_run": "2026-11-25 18:58:58",
+        "last_run": "2026-11-26 18:49:04",
         "success": true
     },
     "propellant-components_hydrogen-peroxide_intl": {
-        "last_run": "2026-11-25 18:58:58",
+        "last_run": "2026-11-26 18:49:04",
         "success": true
     },
     "propellant-components_hydrazine_domestic": {
-        "last_run": "2026-11-25 18:58:59",
+        "last_run": "2026-11-26 18:49:05",
         "success": true
     },
     "propellant-components_hydrazine_intl": {
-        "last_run": "2026-11-25 18:58:59",
+        "last_run": "2026-11-26 18:49:06",
         "success": true
     },
     "propellant-components_kerosene_domestic": {
-        "last_run": "2026-11-25 18:59:00",
+        "last_run": "2026-11-26 18:49:06",
         "success": true
     },
     "propellant-components_kerosene_intl": {
-        "last_run": "2026-11-25 18:59:00",
+        "last_run": "2026-11-26 18:49:07",
         "success": true
     },
     "raw-materials_graphite_domestic": {
-        "last_run": "2026-11-25 18:59:01",
+        "last_run": "2026-11-26 18:49:07",
         "success": true
     },
     "raw-materials_graphite_intl": {
-        "last_run": "2026-11-25 18:59:02",
+        "last_run": "2026-11-26 18:49:08",
         "success": true
     },
     "raw-materials_carbon-fiber_domestic": {
-        "last_run": "2026-11-25 18:59:03",
+        "last_run": "2026-11-26 18:49:08",
         "success": true
     },
     "raw-materials_carbon-fiber_intl": {
-        "last_run": "2026-11-25 18:59:03",
+        "last_run": "2026-11-26 18:49:09",
         "success": true
     },
     "raw-materials_tungsten_domestic": {
-        "last_run": "2026-11-25 18:59:04",
+        "last_run": "2026-11-26 18:49:09",
         "success": true
     },
     "raw-materials_tungsten_intl": {
-        "last_run": "2026-11-25 18:59:05",
+        "last_run": "2026-11-26 18:49:10",
         "success": true
     },
     "raw-materials_magnesium_domestic": {
-        "last_run": "2026-11-25 18:59:06",
+        "last_run": "2026-11-26 18:49:11",
         "success": true
     },
     "raw-materials_magnesium_intl": {
-        "last_run": "2026-11-25 18:59:06",
+        "last_run": "2026-11-26 18:49:11",
         "success": true
     },
     "raw-materials_lithium_domestic": {
-        "last_run": "2026-11-25 18:59:07",
+        "last_run": "2026-11-26 18:49:12",
         "success": true
     },
     "raw-materials_lithium_intl": {
-        "last_run": "2026-11-25 18:59:07",
+        "last_run": "2026-11-26 18:49:12",
         "success": true
     },
     "electronic-components_microchips_domestic": {
-        "last_run": "2026-11-25 18:59:08",
+        "last_run": "2026-11-26 18:49:13",
         "success": true
     },
     "electronic-components_microchips_intl": {
-        "last_run": "2026-11-25 18:59:09",
+        "last_run": "2026-11-26 18:49:13",
         "success": true
     },
     "electronic-components_circuit-boards_domestic": {
-        "last_run": "2026-11-25 18:59:09",
+        "last_run": "2026-11-26 18:49:14",
         "success": true
     },
     "electronic-components_circuit-boards_intl": {
-        "last_run": "2026-11-25 18:59:10",
+        "last_run": "2026-11-26 18:49:14",
         "success": true
     },
     "electronic-components_capacitors_domestic": {
-        "last_run": "2026-11-25 18:59:10",
+        "last_run": "2026-11-26 18:49:15",
         "success": true
     },
     "electronic-components_capacitors_intl": {
-        "last_run": "2026-11-25 18:59:11",
+        "last_run": "2026-11-26 18:49:16",
         "success": true
     },
     "electronic-components_resistors_domestic": {
-        "last_run": "2026-11-25 18:59:12",
+        "last_run": "2026-11-26 18:49:16",
         "success": true
     },
     "electronic-components_resistors_intl": {
-        "last_run": "2026-11-25 18:59:12",
+        "last_run": "2026-11-26 18:49:17",
         "success": true
     },
     "electronic-components_transistors_domestic": {
-        "last_run": "2026-11-25 18:59:13",
+        "last_run": "2026-11-26 18:49:17",
         "success": true
     },
     "electronic-components_transistors_intl": {
-        "last_run": "2026-11-25 18:59:14",
+        "last_run": "2026-11-26 18:49:18",
         "success": true
     },
     "chemicals_industrial-solvents_domestic": {
-        "last_run": "2026-11-25 18:59:14",
+        "last_run": "2026-11-26 18:49:19",
         "success": true
     },
     "chemicals_industrial-solvents_intl": {
-        "last_run": "2026-11-25 18:59:15",
+        "last_run": "2026-11-26 18:49:19",
         "success": true
     },
     "chemicals_adhesives_domestic": {
-        "last_run": "2026-11-25 18:59:15",
+        "last_run": "2026-11-26 18:49:20",
         "success": true
     },
     "chemicals_adhesives_intl": {
-        "last_run": "2026-11-25 18:59:16",
+        "last_run": "2026-11-26 18:49:21",
         "success": true
     },
     "chemicals_specialty-lubricants_domestic": {
-        "last_run": "2026-11-25 18:59:17",
+        "last_run": "2026-11-26 18:49:21",
         "success": true
     },
     "chemicals_specialty-lubricants_intl": {
-        "last_run": "2026-11-25 18:59:17",
+        "last_run": "2026-11-26 18:49:22",
         "success": true
     },
     "chemicals_paint-additives_domestic": {
-        "last_run": "2026-11-25 18:59:18",
+        "last_run": "2026-11-26 18:49:22",
         "success": true
     },
     "chemicals_paint-additives_intl": {
-        "last_run": "2026-11-25 18:59:18",
+        "last_run": "2026-11-26 18:49:23",
         "success": true
     },
     "chemicals_polymer-precursors_domestic": {
-        "last_run": "2026-11-25 18:59:19",
+        "last_run": "2026-11-26 18:49:23",
         "success": true
     },
     "chemicals_polymer-precursors_intl": {
-        "last_run": "2026-11-25 18:59:19",
+        "last_run": "2026-11-26 18:49:24",
         "success": true
     },
     "supply-chain_constraints_domestic": {
-        "last_run": "2026-11-25 18:59:20",
+        "last_run": "2026-11-26 18:49:25",
         "success": true
     },
     "supply-chain_constraints_intl": {
-        "last_run": "2026-11-25 18:59:20",
+        "last_run": "2026-11-26 18:49:25",
         "success": true
     },
     "military-equipment_main-battle-tank_domestic": {
-        "last_run": "2026-11-25 18:59:21",
+        "last_run": "2026-11-26 18:49:26",
         "success": true
     },
     "military-equipment_main-battle-tank_intl": {
-        "last_run": "2026-11-25 18:59:22",
+        "last_run": "2026-11-26 18:49:26",
         "success": true
     },
     "military-equipment_electronic-warfare_domestic": {
-        "last_run": "2026-11-25 18:59:22",
+        "last_run": "2026-11-26 18:49:27",
         "success": true
     },
     "military-equipment_electronic-warfare_intl": {
-        "last_run": "2026-11-25 18:59:23",
+        "last_run": "2026-11-26 18:49:27",
         "success": true
     },
     "military-equipment_uav-drone_domestic": {
-        "last_run": "2026-11-25 18:59:23",
+        "last_run": "2026-11-26 18:49:28",
         "success": true
     },
     "military-equipment_uav-drone_intl": {
-        "last_run": "2026-11-25 18:59:24",
+        "last_run": "2026-11-26 18:49:28",
         "success": true
     },
     "military-equipment_aircraft_domestic": {
-        "last_run": "2026-11-25 18:59:25",
+        "last_run": "2026-11-26 18:49:29",
         "success": true
     },
     "military-equipment_aircraft_intl": {
-        "last_run": "2026-11-25 18:59:26",
+        "last_run": "2026-11-26 18:49:30",
         "success": true
     },
     "military-equipment_aircraft-f35_domestic": {
-        "last_run": "2026-11-25 18:59:26",
+        "last_run": "2026-11-26 18:49:31",
         "success": true
     },
     "military-equipment_aircraft-f35_intl": {
-        "last_run": "2026-11-25 18:59:27",
+        "last_run": "2026-11-26 18:49:31",
         "success": true
     },
     "military-equipment_aircraft-f16_domestic": {
-        "last_run": "2026-11-25 18:59:28",
+        "last_run": "2026-11-26 18:49:32",
         "success": true
     },
     "military-equipment_aircraft-f16_intl": {
-        "last_run": "2026-11-25 18:59:28",
+        "last_run": "2026-11-26 18:49:32",
         "success": true
     },
     "military-equipment_aircraft-c130j_domestic": {
-        "last_run": "2026-11-25 18:59:29",
+        "last_run": "2026-11-26 18:49:33",
         "success": true
     },
     "military-equipment_aircraft-c130j_intl": {
-        "last_run": "2026-11-25 18:59:29",
+        "last_run": "2026-11-26 18:49:33",
         "success": true
     },
     "military-equipment_helicopter-ah64_domestic": {
-        "last_run": "2026-11-25 18:59:30",
+        "last_run": "2026-11-26 18:49:34",
         "success": true
     },
     "military-equipment_helicopter-ah64_intl": {
-        "last_run": "2026-11-25 18:59:31",
+        "last_run": "2026-11-26 18:49:34",
         "success": true
     },
     "military-equipment_helicopter-ch47_domestic": {
-        "last_run": "2026-11-25 18:59:31",
+        "last_run": "2026-11-26 18:49:35",
         "success": true
     },
     "military-equipment_helicopter-ch47_intl": {
-        "last_run": "2026-11-25 18:59:32",
+        "last_run": "2026-11-26 18:49:35",
         "success": true
     },
     "military-equipment_ammunition-40mm_domestic": {
-        "last_run": "2026-11-25 18:59:32",
+        "last_run": "2026-11-26 18:49:37",
         "success": true
     },
     "military-equipment_ammunition-40mm_intl": {
@@ -612,11 +612,11 @@
         "success": true
     },
     "military-equipment_ammunition-12gauge_domestic": {
-        "last_run": "2026-11-25 18:59:33",
+        "last_run": "2026-11-26 18:49:38",
         "success": true
     },
     "military-equipment_ammunition-12gauge_intl": {
-        "last_run": "2026-11-25 18:59:34",
+        "last_run": "2026-11-26 18:49:39",
         "success": true
     },
     "health_alzheimer_domestic": {
@@ -624,211 +624,211 @@
         "success": true
     },
     "health_obesity_domestic": {
-        "last_run": "2026-11-25 18:59:35",
+        "last_run": "2026-11-26 18:49:40",
         "success": true
     },
     "health_nash_domestic": {
-        "last_run": "2026-11-25 18:59:35",
+        "last_run": "2026-11-26 18:49:41",
         "success": true
     },
     "health_ptsd_domestic": {
-        "last_run": "2026-11-25 18:59:36",
+        "last_run": "2026-11-26 18:49:42",
         "success": true
     },
     "health_alzheimer_international": {
-        "last_run": "2026-11-25 18:59:36",
+        "last_run": "2026-11-26 18:49:43",
         "success": true
     },
     "health_obesity_international": {
-        "last_run": "2026-11-25 18:59:37",
+        "last_run": "2026-11-26 18:49:44",
         "success": true
     },
     "health_nash_international": {
-        "last_run": "2026-11-25 18:59:38",
+        "last_run": "2026-11-26 18:49:44",
         "success": true
     },
     "health_ptsd_international": {
-        "last_run": "2026-11-25 18:59:38",
+        "last_run": "2026-11-26 18:49:45",
         "success": true
     },
     "pandemic_general_domestic": {
-        "last_run": "2026-11-25 18:59:40",
+        "last_run": "2026-11-26 18:49:46",
         "success": true
     },
     "pandemic_covid-19_domestic": {
-        "last_run": "2026-11-25 18:59:41",
+        "last_run": "2026-11-26 18:49:47",
         "success": true
     },
     "health_h1n1-swine_domestic": {
-        "last_run": "2026-11-25 18:59:42",
+        "last_run": "2026-11-26 18:49:48",
         "success": true
     },
     "health_mpox_domestic": {
-        "last_run": "2026-11-25 18:59:42",
+        "last_run": "2026-11-26 18:49:48",
         "success": true
     },
     "health_zika_domestic": {
-        "last_run": "2026-11-25 18:59:43",
+        "last_run": "2026-11-26 18:49:49",
         "success": true
     },
     "health_h5n1-avian_domestic": {
-        "last_run": "2026-11-25 18:59:43",
+        "last_run": "2026-11-26 18:49:49",
         "success": true
     },
     "pandemic_general_international": {
-        "last_run": "2026-11-25 18:59:44",
+        "last_run": "2026-11-26 18:49:50",
         "success": true
     },
     "pandemic_covid-19_international": {
-        "last_run": "2026-11-25 18:59:45",
+        "last_run": "2026-11-26 18:49:51",
         "success": true
     },
     "health_h1n1-swine_international": {
-        "last_run": "2026-11-25 18:59:46",
+        "last_run": "2026-11-26 18:49:51",
         "success": true
     },
     "health_mpox_international": {
-        "last_run": "2026-11-25 18:59:46",
+        "last_run": "2026-11-26 18:49:52",
         "success": true
     },
     "health_zika_international": {
-        "last_run": "2026-11-25 18:59:47",
+        "last_run": "2026-11-26 18:49:52",
         "success": true
     },
     "health_h5n1-avian_international": {
-        "last_run": "2026-11-25 18:59:48",
+        "last_run": "2026-11-26 18:49:53",
         "success": true
     },
     "health-research_ai_domestic": {
-        "last_run": "2026-11-25 18:59:48",
+        "last_run": "2026-11-26 18:49:53",
         "success": true
     },
     "health-research_ai_international": {
-        "last_run": "2026-11-25 18:59:49",
+        "last_run": "2026-11-26 18:49:54",
         "success": true
     },
     "llm_general_domestic": {
-        "last_run": "2026-11-25 18:59:52",
+        "last_run": "2026-11-26 18:49:57",
         "success": true
     },
     "llm_openai_domestic": {
-        "last_run": "2026-11-25 18:59:53",
+        "last_run": "2026-11-26 18:49:58",
         "success": true
     },
     "llm_anthropic_domestic": {
-        "last_run": "2026-11-25 18:59:54",
+        "last_run": "2026-11-26 18:49:59",
         "success": true
     },
     "llm_google_domestic": {
-        "last_run": "2026-11-25 18:59:56",
+        "last_run": "2026-11-26 18:50:01",
         "success": true
     },
     "llm_general_international": {
-        "last_run": "2026-11-25 18:59:56",
+        "last_run": "2026-11-26 18:50:02",
         "success": true
     },
     "llm_openai_international": {
-        "last_run": "2026-11-25 18:59:57",
+        "last_run": "2026-11-26 18:50:04",
         "success": true
     },
     "llm_anthropic_international": {
-        "last_run": "2026-11-25 18:59:58",
+        "last_run": "2026-11-26 18:50:05",
         "success": true
     },
     "llm_google_international": {
-        "last_run": "2026-11-25 19:00:00",
+        "last_run": "2026-11-26 18:50:07",
         "success": true
     },
     "health-research_orphan-drug_domestic": {
-        "last_run": "2026-11-25 18:59:49",
+        "last_run": "2026-11-26 18:49:54",
         "success": true
     },
     "health-research_orphan-drug_international": {
-        "last_run": "2026-11-25 18:59:50",
+        "last_run": "2026-11-26 18:49:55",
         "success": true
     },
     "health-research_genomic_domestic": {
-        "last_run": "2026-11-25 18:59:50",
+        "last_run": "2026-11-26 18:49:55",
         "success": true
     },
     "health-research_genomic_international": {
-        "last_run": "2026-11-25 18:59:51",
+        "last_run": "2026-11-26 18:49:56",
         "success": true
     },
     "health-research_healthcare-blockchain_domestic": {
-        "last_run": "2026-11-25 18:59:51",
+        "last_run": "2026-11-26 18:49:56",
         "success": true
     },
     "health-research_healthcare-blockchain_international": {
-        "last_run": "2026-11-25 18:59:51",
+        "last_run": "2026-11-26 18:49:57",
         "success": true
     },
     "bitcoin_adoption_domestic": {
-        "last_run": "2026-11-25 19:00:01",
+        "last_run": "2026-11-26 18:50:08",
         "success": true
     },
     "bitcoin_holdings_domestic": {
-        "last_run": "2026-11-25 19:00:02",
+        "last_run": "2026-11-26 18:50:09",
         "success": true
     },
     "bitcoin_mining_domestic": {
-        "last_run": "2026-11-25 19:00:03",
+        "last_run": "2026-11-26 18:50:09",
         "success": true
     },
     "bitcoin_investment_domestic": {
-        "last_run": "2026-11-25 19:00:04",
+        "last_run": "2026-11-26 18:50:10",
         "success": true
     },
     "bitcoin_risk_domestic": {
-        "last_run": "2026-11-23 20:52:30",
+        "last_run": "2026-11-26 18:50:11",
         "success": true
     },
     "ethereum_adoption_domestic": {
-        "last_run": "2026-11-23 20:52:31",
+        "last_run": "2026-11-26 18:50:11",
         "success": true
     },
     "ethereum_development_domestic": {
-        "last_run": "2026-11-25 19:00:06",
+        "last_run": "2026-11-26 18:50:12",
         "success": true
     },
     "ethereum_risk_domestic": {
-        "last_run": "2026-11-23 20:52:33",
+        "last_run": "2026-11-26 18:50:12",
         "success": true
     },
     "stablecoin_adoption_domestic": {
-        "last_run": "2026-11-23 20:52:34",
+        "last_run": "2026-11-26 18:50:13",
         "success": true
     },
     "stablecoin_regulatory_domestic": {
-        "last_run": "2026-11-25 19:00:07",
+        "last_run": "2026-11-26 18:50:13",
         "success": true
     },
     "stablecoin_risk_domestic": {
-        "last_run": "2026-11-23 20:52:36",
+        "last_run": "2026-11-26 18:50:14",
         "success": true
     },
     "defi_adoption_domestic": {
-        "last_run": "2026-11-23 20:52:37",
+        "last_run": "2026-11-26 18:50:15",
         "success": true
     },
     "defi_protocols_domestic": {
-        "last_run": "2026-11-23 20:52:39",
+        "last_run": "2026-11-26 18:50:15",
         "success": true
     },
     "defi_risk_domestic": {
-        "last_run": "2026-11-23 20:52:39",
+        "last_run": "2026-11-26 18:50:16",
         "success": true
     },
     "nft_adoption_domestic": {
-        "last_run": "2026-11-25 19:00:10",
+        "last_run": "2026-11-26 18:50:16",
         "success": true
     },
     "nft_marketplace_domestic": {
-        "last_run": "2026-11-25 19:00:11",
+        "last_run": "2026-11-26 18:50:17",
         "success": true
     },
     "nft_risk_domestic": {
-        "last_run": "2026-11-25 19:00:12",
+        "last_run": "2026-11-26 18:50:18",
         "success": true
     }
 }
